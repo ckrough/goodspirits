@@ -42,15 +42,15 @@ GOOD TO KNOW
 
 **House-training is not mentioned** when nobody knows it. That is the default for a shelter animal and needs no disclosure.
 
-**No handling instruction survives.** The guarding disclosure stops at the behavior: no management plan, no advice about which toys to put away.
+**No handling instruction survives.** A struggle on the card stops at the behavior: no management plan, no advice about which toys to put away.
 
 ## Open items on this card
 
-This is the card as published. It breaks the rules in `SKILL.md` in six places. Do not copy any of them. The example in `profile-template.md` is the same card written correctly.
+This is the card as published. Six of its lines break the rules in `SKILL.md`. Do not copy any of them. The example to copy is the one in `profile-template.md`.
 
-- **"is possessive of her toys"** softens without giving the reader anything to picture, and "possessive" is a personality label. Write the behavior, where it was seen, and an example: "guards her toys and her bed at the shelter, and may freeze and growl if someone reaches for a toy she is holding."
-- **The card does not disclose wariness with new people.** Where the record shows barking and backing away when a stranger walks up, and coming forward once the person crouches, more than once, that is a recurring pattern with a named trigger, and it belongs on the card in plain words.
+- **The card has room for one more struggle, not two.** Leash barking at dogs in HOUSEHOLD FIT is already one of the card's two. The record holds two more candidates: guarding her toys and her bed, and barking and backing away when a stranger walks up. Pick one, preferring the one the record gives context or progress for: "takes a little time to warm up to new people: she barks and backs away when a stranger walks up, and comes forward once they crouch." The other goes to the history review, and the closing line says so.
+- **"is possessive of her toys"** names no behavior a reader can picture, and "possessive" is a personality label. If guarding is the struggle the card keeps, write the behavior and where it was seen: "likes to keep her toys to herself at the shelter, and may freeze and growl if someone reaches for one she is holding." Otherwise it goes to the history review with the rest.
 - **"Vacuum cleaners frighten her"** needs a source. When nothing in the record mentions vacuums or household noise, the line comes off.
 - **"reacts to passing dogs"** uses the shelter's word. Write "barks and lunges toward dogs she passes."
-- **The Diamond Dog line sits in TRAINING.** Training support before and after adoption is the offset to what GOOD TO KNOW discloses, so it moves down to GOOD TO KNOW, after the behaviors it answers.
-- **"before you take her home"** is the retired closer. It assumes the adoption and defers the disclosure to the last step. For a Diamond Dog, end with the meet-and-greet block in `profile-template.md`, which tells the reader a staff call about her history comes before the introduction. For any other animal with a serious incident on file, write "[Shelter] will review [Name]'s full history with you before you meet [him/her]."
+- **The Diamond Dog line sits in TRAINING, in retired wording.** The program support is the offset to what GOOD TO KNOW discloses, so it moves down to GOOD TO KNOW, after the behaviors it answers, as the Diamond Dog message in `profile-template.md`, word for word.
+- **"before you take her home"** is the retired closer. It assumes the adoption and defers the disclosure to the last step. For a Diamond Dog, the Diamond Dog message replaces it and the support line together, and it says [Shelter] reviews her history before you meet her. For any other animal with a serious incident on file, write "[Shelter] will review [Name]'s full history with you before you meet [him/her]."
