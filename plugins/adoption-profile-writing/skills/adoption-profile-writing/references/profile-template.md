@@ -19,9 +19,13 @@ Breed, age, sex, and weight are structured attributes shown on most profile page
 
 Where the shelter-management system can show all of an animal's notes in one view, start there. `references/sourcing-behavior-facts.md` covers the other sources and how to weigh them.
 
+**The animal's page address can open the copy.** When [Shelter] gives each animal its own page on its website and the listing sites (Petfinder, Adopt-a-Pet) carry the same profile text, put that page's address on its own line above ABOUT THIS PET. On a listing site it is the reader's way back to the full profile. The address is markup, so it does not count toward the word band. The draft checker reports the address when the last line before ABOUT THIS PET is one, and does not require it.
+
 ## Skeleton
 
 ```
+[The animal's page address on the shelter's website, if it has one.]
+
 ABOUT THIS PET
 [A behavior that sets the animal apart. Energy shown through activity: what, how long, how far. What the animal seeks out, as things.]
 
@@ -32,9 +36,10 @@ TRAINING
 [Named cues. Leash manners as observed. House-training or crate comfort, if the record knows it. What it is learning now. How it responds to training.]
 
 GOOD TO KNOW
-[Behaviors an adopter would weigh, each in everyday words with an example.]
-[One sentence naming the support the animal comes with, if any.]
-[The closing: the meet-and-greet block for a Diamond Dog, or the history-review line when the record holds a serious incident.]
+[One or two light struggles, each in everyday words with an example, ending on where it happens or how it is improving.]
+[For an animal in a senior program: the shelter's program block, word for word.]
+[For a Diamond Dog: the Diamond Dog message, word for word, which carries both the support and the closing.]
+[Otherwise: one sentence naming any other support the animal comes with, then the history-review line when the record holds a serious incident or the card held back a struggle.]
 ```
 
 ## ABOUT THIS PET
@@ -46,10 +51,11 @@ This section introduces the animal. A reader should finish it able to picture wh
 - Open with something the animal does that sets it apart. Describe the behavior itself, not a word for its personality. The rubric scores this first sentence on its own: it earns full marks for who the animal is or a concrete behavior, half for a personality adjective, and nothing for breed, age, statistics, or medical status.
 - Show energy level through activity: what the animal does, how long or how far it keeps going, and how it behaves while doing it.
 - Name what the animal seeks out, such as particular toys, games, places, or kinds of attention. Write them as things, not as traits. This is the Likes topic, which the rubric checks separately from the heading.
+- When the record shows the animal is at the shelter through no fault of its own (an owner's move, a landlord, an owner's illness or death, a stray intake, a transfer), say so plainly in one clause. Readers ask, and the plain reason keeps them from guessing at a fault in the dog. An incident or anything that characterizes the surrendering family stays off the card (`SKILL.md`, "Say why the dog is at the shelter").
 
 **Why it matters**
 
-Personality labels ("active," "high energy") leave the reader guessing. In a study of dog adoption ads, only about half of readers recognized "high energy" as a description of a dog that would ask more of them (Kelling et al., 2026). A description of what the animal actually does lets each reader decide whether it fits their home.
+Personality labels ("active," "high energy," "friendly," "gentle") leave the reader guessing, and across 70,733 listings they went with longer stays, positive ones included; "lively" and "eager" beside a behavior went with shorter ones (Nakamura et al., 2019). A description of what the animal actually does lets each reader picture it in their home, and profiles of adopted pets lean on that kind of concrete language (Markowitz, 2020).
 
 **Before moving on**
 
@@ -66,13 +72,14 @@ This section answers the three questions most adopters ask: how the animal does 
 - Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and the rubric scores Dogs, Cats, and Kids as three separate topics.
 - Dogs: say what the record shows, and where it was seen: in playgroup, on leash, at the kennel, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
 - Cats: say what the record shows. If the animal has never been around a cat, say so. That is a complete answer. Do not assume the animal is unsafe with cats because no one has tested it.
-- Children: say what the record shows, including the ages of the children involved.- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reviewer reads a tag beside a hedge about it as a contradiction, and the rubric caps "observed, not promised" at 2 of 4. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
+- Children: say what the record shows, including the ages of the children involved.
+- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reviewer reads a tag beside a hedge about it as a contradiction, and the rubric caps "observed, not promised" at 2 of 4. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
 - When evidence supports a limit, state it as a recommendation about the home: "would do best in a home without young children." The limit stays even when the incident behind it goes to the consultation (see `SKILL.md`, "Serious incidents go to the consultation").
 - Describe what was observed, not what will happen. "Has played well with the dogs at the shelter" reports a fact. "Great with all dogs" makes a promise the shelter cannot back.
 
 **Why it matters**
 
-Readers of adoption ads say they want this information most. When researchers asked readers what was missing from dog adoption ads, they most often asked for more about the dog's behavior, including how it would act around children and other people (Kelling et al., 2026).
+Most adopters are matching the animal to a household they already have, so these three answers decide whether they read on.
 
 Behavior seen at a shelter also does not reliably predict behavior in a home. Dogs flagged for food guarding at the shelter guarded in their new homes less than half the time (McGuire et al., 2020). Reporting what was seen, and where, gives adopters accurate information without overpromising in either direction.
 
@@ -111,20 +118,30 @@ Conditions on the adopter shrink the pool of people who will apply without telli
 
 ## GOOD TO KNOW
 
-This section tells an adopter what they need to know before deciding to meet the animal: behaviors that could affect whether this animal fits their home, and the support the shelter provides.
+This section keeps the card honest with a light touch: one or two struggles an adopter would notice, and the support the shelter provides. The rest of the record goes to the history review before the meet.
 
 **What to write**
 
-- Include behaviors an adopter would want to weigh: guarding food, toys, or space; fears; wariness with new people; and sensitivity to noise or handling. This is the Struggles topic, and the rubric flags a profile that discloses none.
-- For each one, state the behavior in everyday words and give an example of what it looks like. Then stop. Shelter terms such as "resource guarding," "reactive," or "redirects" mean little to most readers. Describe what the animal actually does instead, and name where it was seen ("at the shelter") rather than predicting what it will do.
+- Name one or two struggles, counting any already named in HOUSEHOLD FIT (leash barking at dogs is the common one). Choose the ones an adopter would notice in daily life, such as jumping when excited, pulling on leash, or barking at the door, and prefer ones the record gives context or progress for. `SKILL.md`, "Name one or two light struggles," covers the choice. This is the Struggles topic: the rubric flags a card that names none and marks down one that names more than two.
+- Write each one as a behavior, never a trait word: "takes a little time to warm up: he barks when someone new comes to his door," not "timid." Negative trait words went with the longest stays of any wording in Nakamura et al. (2019).
+- For each one, state the behavior in everyday words and give an example of what it looks like, then end on where it happens or how it is improving when the record says so. Shelter terms such as "resource guarding," "reactive," or "redirects" mean little to most readers. Describe what the animal actually does instead, and name where it was seen ("at the shelter") rather than predicting what it will do.
+- Keep the struggle sentences short: under 20% of the card's words. The support sentence and the closing lines do not count toward that share. A card that graded well ran its two struggles at 35 of 233 words.
 - Describe patterns, not single events. Something seen once is usually not a description of the animal. Leave out dates, who was there, and what led up to it.
-- Serious incidents do not go in the profile. A bite, an attack on another animal, guarding that made contact with a person or animal, anything involving a child, or a serious injury to a cat or small animal is discussed with the adopter in the consultation before they meet the animal. When the record includes one, end the section with: "[Shelter] will review [Name]'s full history with you before you meet [him/her]."
-- Close with the support the animal comes with, in one sentence, if the record shows it is enrolled or eligible: the Diamond Dog Program for training before and after adoption, and the Senior Care Plan for senior animals. Name only what the record supports, and name it without explaining how to use it: "[Shelter] can provide training support before and after adoption" is a fact; "so work with the trainer on his guarding" is a handling instruction. Give the support sentence a paragraph of its own. Scoring tools commonly strip any line that names a program as boilerplate, so a disclosure sharing that line can disappear from the scored profile along with it.
-- For a Diamond Dog, add the meet-and-greet block below after the support sentence. It replaces the closing line about reviewing the animal's history, because it already tells the reader a staff call comes before the introduction:
+- Serious incidents do not go in the profile. A bite, an attack on another animal, guarding that made contact with a person or animal, anything involving a child, or a serious injury to a cat or small animal is discussed with the adopter in the consultation before they meet the animal. When the record includes one, or when the card held back a struggle, end the section with: "[Shelter] will review [Name]'s full history with you before you meet [him/her]."
+- Close with the support the animal comes with, in one sentence, if the record shows it is enrolled or eligible, such as a shelter's senior program. Name only what the record supports, and name it without explaining how to use it: "[Shelter] can provide training support before and after adoption" is a fact; "so work with the trainer on his guarding" is a handling instruction. Give the support sentence a paragraph of its own. Scoring tools commonly strip any line that names a program as boilerplate, so a disclosure sharing that line can disappear from the scored profile along with it.
+- **The program blocks close GOOD TO KNOW, after the struggles, in this order:** a senior program's block for an animal enrolled in one, then the Diamond Dog message for a Diamond Dog. Each goes in word for word with the name, pronouns, and shelter name filled in; change nothing else. The Diamond Dog message is the support line and the closing together, so a Diamond Dog's card carries no other meet-and-greet or history-review line. The draft checker flags a card that names the Diamond Dog program without its message.
+
+A senior program block is the shelter's own description of its offer, such as a waived adoption fee or help with medical costs. Copy it from the shelter's adoption page as one paragraph, with the name and pronouns filled in, and add nothing to it.
+
+Diamond Dog message, two paragraphs:
 
 ```
-To meet [Name], start by submitting an application. A [Shelter] staff member will call you to go over [his/her] history and answer your questions, then set up a meet-and-greet. Thank you for considering [Name]!
+[Name] is a [Shelter] Diamond Dog: [Shelter] provides training and guidance to help you settle [him/her] into [his/her] new home, at no cost to you.
+
+To meet [Name], please submit an adoption application. [Shelter] will then begin the matchmaking process, go over [his/her] full history with you, and set up a meet-and-greet. Thank you for considering [Name]!
 ```
+
+The history review, placed before the meet-and-greet, is this skill's closing line. A program page may also say the program's adopters are screened, or name what it expects of them. Those are conditions on the adopter and stay off the card; "begin the matchmaking process" covers the same step.
 
 **Fill this section even when the record looks clean.** Dropping the heading reads to an adopter as a card with nothing to hide rather than as a card that never asked. Where the record holds nothing an adopter would weigh, say that about the record, not about the animal:
 
@@ -136,15 +153,16 @@ The first is an observation about what has been written down. The second asserts
 
 **Why it matters**
 
-Adopters want behavior information more than anything else in an ad, and half of readers in one study ranked it first (Kelling et al., 2026). The same study found that softened wording hides behavior: readers recognized aggression toward other dogs 88% of the time when it was stated plainly, and 52% of the time when it was described as "picky about his friends." An adopter who learns about a behavior for the first time at the shelter has already pictured the animal in their home, and often leaves feeling misled.
+One or two honest struggles make the rest of the card believable; a card with none reads as a card hiding something. A card that lists every difficulty in the record reads as a warning, and the reader leaves with a picture of the problems rather than the dog. How many struggles a card should carry is an editorial decision, not a research finding.
 
-Serious incidents need a conversation. In the consultation, staff can explain the circumstances and answer questions before the adopter meets the animal, which a web page cannot do. The closing line, or the Diamond Dog block, tells the reader that conversation is coming.
+Serious incidents and held-back struggles need a conversation. In the consultation, staff can explain the circumstances and answer questions before the adopter meets the animal, which a web page cannot do. The closing line, or the Diamond Dog message, tells the reader that conversation is coming.
 
 **Before moving on**
 
-- Does each behavior have an example a reader can picture?
-- Does the record include a serious incident? If so, is it left out of the profile, and is the closing line or the Diamond Dog block present?
-- For a Diamond Dog, is the meet-and-greet block placed after the support sentence?
+- Does the whole card name one or two struggles, each with an example a reader can picture?
+- Are the struggle sentences under 20% of the card?
+- Does the record include a serious incident, or did the card hold back a struggle? If so, is the closing line or the Diamond Dog message present?
+- Does GOOD TO KNOW end with each program block the animal qualifies for, word for word, a senior program before Diamond Dog, and no other support or closing line for a Diamond Dog?
 
 ## Rules across sections
 
@@ -159,50 +177,50 @@ Serious incidents need a conversation. In the consultation, staff can explain th
 | Training | TRAINING |
 | Struggles | GOOD TO KNOW |
 
-A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them; they are not one of the seven topics, so leaving them out when unknown costs nothing.
+A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: the rubric reports both, and leaving one out costs nothing when the record does not know it or the reason cannot be published.
 
-**Program boilerplate is not profile copy.** The blocks that follow the body on eligible animals (Senior Care Plan, senior grants, adoption fee) are program boilerplate. They sit after the last section and do not count toward the word band. The one-sentence support line inside GOOD TO KNOW is profile copy and does count.
+**Program boilerplate is not profile copy.** A senior program block and an adoption-fee block describe the shelter's offer rather than the animal, and they do not count toward the word band wherever they sit: every sentence of such a block names the program, its fee waiver, or its reimbursement, and scoring tools strip those lines. The Diamond Dog message is profile copy and does count.
 
 ## Example
 
-A finished profile for a Diamond Dog whose record supports every line. `[Name]` stands in for the animal's name and `[Shelter]` for the shelter. Copy the format, the register, and how each sentence is built; the facts belong to one dog and do not transfer to another.
+A finished profile for a Diamond Dog. The dog is invented to illustrate the rules; `[Name]` stands in for her name and `[Shelter]` for the shelter. Copy the format, the register, and how each sentence is built; the facts belong to one dog and do not transfer to another.
 
 ```
 ABOUT THIS PET
-[Name] catches a flying disc in midair. She leaps for it, trots it back, and drops it at your feet. She will chase the disc for forty minutes, and she jogs two miles on leash without pulling. She likes squeaky toys, digging in sand, puzzle feeders, and car rides.
+In the shelter's quiet room, [Name] stretches out on the couch beside whoever is reading and rests her chin on their knee. She leans into a hand that scratches her ears and rolls onto her back for belly rubs as soon as someone sits on the floor. After walks, she carries a stuffed toy back to her kennel.
 
 HOUSEHOLD FIT
-[Name] lived with another dog in her last home and plays well with smaller dogs in the shelter playgroup. On leash she barks and lunges toward dogs she passes. She has walked past the shelter cats without reacting, but she stalks birds in the yard. She is more comfortable with older teens and adults, and would do best in a home without young children.
+In shelter playgroups, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats or children.
 
 TRAINING
-[Name] knows sit, down, wait, leave it, and drop it, and she is learning come. She sits at every doorway without being asked and works eagerly for toys.
+[Name] knows sit, down, and wait, and she is learning to come when called. She waits at the kennel door until her walker says "okay," and she works eagerly for treats.
 
 GOOD TO KNOW
-[Name] guards her toys and her bed at the shelter, and may freeze and growl if someone reaches for a toy she is holding. She can be wary of new people: she barks and backs away when a stranger walks up, and comes forward once they crouch.
+[Name] gets mouthy when she is excited to see someone, mostly at the kennel door, and it eases once she is out walking. She pulls toward squirrels on walks and is learning to turn back to her walker.
 
-[Name] is one of [Shelter]'s Diamond Dogs, so [Shelter] can provide training support before and after adoption.
+[Name] is a [Shelter] Diamond Dog: [Shelter] provides training and guidance to help you settle her into her new home, at no cost to you.
 
-To meet [Name], start by submitting an application. A [Shelter] staff member will call you to go over her history and answer your questions, then set up a meet-and-greet. Thank you for considering [Name]!
+To meet [Name], please submit an adoption application. [Shelter] will then begin the matchmaking process, go over her full history with you, and set up a meet-and-greet. Thank you for considering [Name]!
 ```
 
 What it shows:
 
-- The opening sentence is a behavior, and the next three sentences show what the disc game looks like, how long it lasts, and what else she seeks out.
-- Each household answer names its setting: lived with a dog, played in playgroup, barks on leash. The kids limit is stated as a recommendation about the home, with no incident or source behind it.
-- Each GOOD TO KNOW behavior has a picture ("freeze and growl if someone reaches for a toy she is holding," "barks and backs away … comes forward once they crouch") and says where it was seen.
-- Nothing from the record's incident history is on the card. For a Diamond Dog, the meet-and-greet block is the signal that a staff conversation about the animal's history comes first.
+- The opening is a scene a reader can step into, and the rest of ABOUT THIS PET stays on what she seeks out: a knee to rest on, belly rubs, a stuffed toy.
+- Each household answer names its setting: playgroups, on leash. Cats and children are stated as untested, matching the tags, with no hedge attached.
+- GOOD TO KNOW names two light struggles a reader can picture, says where the mouthing happens, and ends on progress. The card stays about the dog.
+- For a Diamond Dog, the Diamond Dog message names the support, the way to meet her, and the history review before the meet.
 
 ## Word count
 
-Count the words in the four sections, including the support sentence and the closing lines of GOOD TO KNOW, and excluding the headings and any program boilerplate after the profile. The target is 175 to 250 words. The meet-and-greet block sits under GOOD TO KNOW, so its words count, about 34 depending on the names. That leaves a Diamond Dog about 215 words for everything else.
+Count the words in the four sections, including the support sentence and the closing lines of GOOD TO KNOW, and excluding the headings and any program boilerplate (an adoption-fee block, a senior program block). The target is 175 to 250 words. The Diamond Dog message counts, about 55 words depending on the name. That leaves a Diamond Dog about 195 words for everything else.
 
-The example above is 240 words (206 without the meet-and-greet block) and covers all seven topics with four disclosures: toy and bed guarding, wariness with new people, leash barking at dogs, and the young-children limit. Measure with `scripts/check_draft.py`; estimates run low.
+The example above is 226 words with a one-word name and shelter name, 38 of them in its two struggles. Measure with `scripts/check_draft.py`; estimates run low.
 
 ## Sources
 
 `references/research-basis.md` summarizes each.
 
+- Nakamura, M., Dhand, N. K., Starling, M. J., & McGreevy, P. D. (2019). Descriptive texts in dog profiles associated with length of stay via an online rescue network. *Animals*, 9(7), 464. https://doi.org/10.3390/ani9070464
 - Markowitz, D. M. (2020). Putting your best pet forward: Language patterns of persuasion in online pet advertisements. *Journal of Applied Social Psychology*, 50(3), 160–173. https://doi.org/10.1111/jasp.12647
 - Humane World for Animals. (2025). *Adopters welcome: Finding, engaging and supporting adopters.* https://humanepro.org/sites/default/files/documents/guides-adopters-welcome-2025-final-digital.pdf
-- Kelling, A. S., Wilson, M. L., Martin, A. L., Barker, S., & Mallavarapu, S. (2026). Exploring best practices in constructing dog adoption advertisements. *Society & Animals*, 34(2), 179–199. https://doi.org/10.1163/15685306-bja10192
 - McGuire, B., et al. (2020). *Animals*, 10(9), 1702. https://pmc.ncbi.nlm.nih.gov/articles/PMC7552731/

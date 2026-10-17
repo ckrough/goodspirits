@@ -19,12 +19,13 @@ A Claude Code plugin marketplace for animal-rescue work. I volunteer with a shel
 
 The skill drafts a profile in four sections: ABOUT, HOUSEHOLD FIT, TRAINING, and GOOD TO KNOW. Its rules come from published adoption research, chiefly Markowitz (2020), which compared 676,004 Petfinder profiles of adopted and unadopted pets, and Kelling et al. (2026), which tested how 561 readers understood adoption-ad wording. `references/research-basis.md` cites both.
 
-- **Analytic over emotional.** It describes behavior that someone observed, and it does not predict how the animal will act in a new home.
+- **Observed behavior, told as a scene.** It describes behavior that someone observed, from the side of a person spending time with the animal, and it does not predict how the animal will act in a new home. It writes behaviors rather than trait labels such as "timid" or "reactive".
+- **One or two light struggles.** Every card names at least one struggle an adopter would notice and no more than two, each with where it happens or how it is improving. The rest of the record goes to the shelter's history review before the meet.
 - **Disclosure without alarm.** Placement constraints stay on the card. Bites, attacks, guarding that made contact, incidents with children, and harm to cats or small animals do not go on the card. Instead the card says the shelter will review the animal's history with the adopter before they meet.
 - **No gatekeeping.** It cuts conditions placed on the applicant ("experienced owners only") and keeps limits on the home ("no cats").
 - **Measured length.** It targets 175 to 250 words and 3 to 5 photos.
 
-`scripts/check_draft.py` checks a draft's headings, word count, and banned phrases. It needs only the Python 3 standard library:
+`scripts/check_draft.py` checks a draft's headings, word count, struggle share, trait words, banned phrases, and the Diamond Dog message. It needs only the Python 3 standard library:
 
 ```
 python3 scripts/check_draft.py path/to/draft.md
