@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "adoption-profile-writing",
   "displayName": "Adoption Profile Writing",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Writes and rewrites adopter-facing copy about an adoptable dog or cat from the animal's own record. Applies a four-section format (About, Household Fit, Training, Good To Know), keeps serious incidents off the card and routes them to a staff conversation, keeps placement constraints, drops social and humanizing words, and checks each draft's headings, word count, and banned phrases with a bundled standard-library script.",
   "author": {
     "name": "Chris Krough",

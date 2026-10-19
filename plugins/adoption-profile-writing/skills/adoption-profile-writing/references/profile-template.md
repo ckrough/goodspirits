@@ -19,7 +19,7 @@ Breed, age, sex, and weight are structured attributes shown on most profile page
 
 Where the shelter-management system can show all of an animal's notes in one view, start there. `references/sourcing-behavior-facts.md` covers the other sources and how to weigh them.
 
-**The animal's page address can open the copy.** When [Shelter] gives each animal its own page on its website and the listing sites (Petfinder, Adopt-a-Pet) carry the same profile text, put that page's address on its own line above ABOUT THIS PET. On a listing site it is the reader's way back to the full profile. The address is markup, so it does not count toward the word band. The draft checker reports the address when the last line before ABOUT THIS PET is one, and does not require it.
+**The animal's page address can open the copy.** When [Shelter] gives each animal its own page on its website and the listing sites (Petfinder, Adopt-a-Pet) carry the same profile text, put that page's address on its own line above ABOUT THIS PET. On a listing site it is the reader's way back to the full profile. It leads the card because it is the call to action: it sends a listing-site reader to the shelter's own page before anything else. The address is markup, so it does not count toward the word band. The draft checker reports the address when the last line before ABOUT THIS PET is one, and does not require it.
 
 ## Skeleton
 
@@ -163,6 +163,7 @@ Serious incidents and held-back struggles need a conversation. In the consultati
 - Are the struggle sentences under 20% of the card?
 - Does the record include a serious incident, or did the card hold back a struggle? If so, is the closing line or the Diamond Dog message present?
 - Does GOOD TO KNOW end with each program block the animal qualifies for, word for word, a senior program before Diamond Dog, and no other support or closing line for a Diamond Dog?
+- If the card carries a page address, is it the first line, above ABOUT THIS PET?
 
 ## Rules across sections
 
@@ -186,6 +187,8 @@ A card can fill all four sections and still miss Likes or Struggles by never nam
 A finished profile for a Diamond Dog. The dog is invented to illustrate the rules; `[Name]` stands in for her name and `[Shelter]` for the shelter. Copy the format, the register, and how each sentence is built; the facts belong to one dog and do not transfer to another.
 
 ```
+https://[shelter-website]/[animal-page]/
+
 ABOUT THIS PET
 In the shelter's quiet room, [Name] stretches out on the couch beside whoever is reading and rests her chin on their knee. She leans into a hand that scratches her ears and rolls onto her back for belly rubs as soon as someone sits on the floor. After walks, she carries a stuffed toy back to her kennel.
 
@@ -209,6 +212,7 @@ What it shows:
 - Each household answer names its setting: playgroups, on leash. Cats and children are stated as untested, matching the tags, with no hedge attached.
 - GOOD TO KNOW names two light struggles a reader can picture, says where the mouthing happens, and ends on progress. The card stays about the dog.
 - For a Diamond Dog, the Diamond Dog message names the support, the way to meet her, and the history review before the meet.
+- The page address opens the card, so a listing-site reader sees the way to the shelter's page first.
 
 ## Word count
 

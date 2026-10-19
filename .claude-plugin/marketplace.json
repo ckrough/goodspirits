@@ -5,14 +5,14 @@
     "email": "chris@krough.org"
   },
   "description": "Claude Code plugins for animal-rescue volunteers and shelter staff: writing adoption profiles that are honest about behavior and built on adoption research.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "plugins": [
     {
       "name": "adoption-profile-writing",
       "source": "./plugins/adoption-profile-writing",
       "displayName": "Adoption Profile Writing",
       "description": "Write and rewrite adoptable-pet profiles from the animal's record in a four-section format, with disclosure rules and research-backed language rules.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Chris Krough",
         "email": "chris@krough.org"
