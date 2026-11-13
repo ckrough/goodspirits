@@ -13,9 +13,9 @@ TRAINING
 GOOD TO KNOW
 ```
 
-Do not write in first person ("How am I with dogs," "Things I struggle with"): it pulls copy toward the narrative register the research finds underperforms, and it makes an unobserved field read as an evasion rather than as a fact.
+Do not write in first person ("How am I with dogs," "Things I struggle with"): among 4,460 rehomed cats, first-person profiles went with longer stays than third-person ones (Rix et al., 2021), it pulls copy toward the narrative register Markowitz finds underperforms, and it makes an unobserved field read as an evasion rather than as a fact.
 
-Breed, age, sex, and weight are structured attributes shown on most profile pages. Do not repeat them in the profile text.
+Breed, age, sex, and weight are structured attributes shown on most profile pages. Do not repeat them in the profile text. The breed label on its own lowered readers' ratings of the same dog (Archer et al., 2025), so the copy never adds a second one (`SKILL.md`, "Keep the breed out of the copy").
 
 Where the shelter-management system can show all of an animal's notes in one view, start there. `references/sourcing-behavior-facts.md` covers the other sources and how to weigh them.
 
@@ -48,9 +48,9 @@ This section introduces the animal. A reader should finish it able to picture wh
 
 **What to write**
 
-- Open with something the animal does that sets it apart. Describe the behavior itself, not a word for its personality. The rubric scores this first sentence on its own: it earns full marks for who the animal is or a concrete behavior, half for a personality adjective, and nothing for breed, age, statistics, or medical status.
+- Open with something the animal does that sets it apart. Describe the behavior itself, not a word for its personality. The first sentence has to work on its own: it should say who the animal is or show a concrete behavior. A personality adjective is weaker, and breed, age, statistics, and medical status do not belong there.
 - Show energy level through activity: what the animal does, how long or how far it keeps going, and how it behaves while doing it.
-- Name what the animal seeks out, such as particular toys, games, places, or kinds of attention. Write them as things, not as traits. This is the Likes topic, which the rubric checks separately from the heading.
+- Name what the animal seeks out, such as particular toys, games, places, or kinds of attention. Write them as things, not as traits. This is the Likes topic, and it has to be in the content, not just implied by the heading.
 - When the record shows the animal is at the shelter through no fault of its own (an owner's move, a landlord, an owner's illness or death, a stray intake, a transfer), say so plainly in one clause. Readers ask, and the plain reason keeps them from guessing at a fault in the dog. An incident or anything that characterizes the surrendering family stays off the card (`SKILL.md`, "Say why the dog is at the shelter").
 
 **Why it matters**
@@ -69,12 +69,12 @@ This section answers the three questions most adopters ask: how the animal does 
 **What to write**
 
 - Write one paragraph, not a labeled list. Move from other dogs, to cats and small animals, to people and children, so the section reads as a picture of the animal in a household. Let related facts share a sentence where they connect ("She has walked past the shelter cats without reacting, but she stalks birds in the yard"), and end on the limit, if there is one.
-- Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and the rubric scores Dogs, Cats, and Kids as three separate topics.
+- Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and Dogs, Cats, and Kids are three separate topics, so each needs its own answer.
 - Dogs: say what the record shows, and where it was seen: in playgroup, on leash, at the kennel, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
 - Cats: say what the record shows. If the animal has never been around a cat, say so. That is a complete answer. Do not assume the animal is unsafe with cats because no one has tested it.
 - Children: say what the record shows, including the ages of the children involved.
-- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reviewer reads a tag beside a hedge about it as a contradiction, and the rubric caps "observed, not promised" at 2 of 4. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
-- When evidence supports a limit, state it as a recommendation about the home: "would do best in a home without young children." The limit stays even when the incident behind it goes to the consultation (see `SKILL.md`, "Serious incidents go to the consultation").
+- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. The exception is a narrowed pair, such as Good with Kids with "No Small Kids (10 or under)": state the limit with the yes (see `SKILL.md`, "A narrowed yes names its limit"). Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reader takes a tag beside a hedge about it as a contradiction, and the card stops reading as a report of what was observed. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
+- When evidence supports a limit, state it as a recommendation about the home: "would do best in a home without young children." The limit stays even when the incident behind it goes to the consultation (see `SKILL.md`, "Serious incidents go to the consultation"), and a narrowing tag is evidence enough on its own (see `SKILL.md`, "A narrowed yes names its limit").
 - Describe what was observed, not what will happen. "Has played well with the dogs at the shelter" reports a fact. "Great with all dogs" makes a promise the shelter cannot back.
 
 **Why it matters**
@@ -122,7 +122,7 @@ This section keeps the card honest with a light touch: one or two struggles an a
 
 **What to write**
 
-- Name one or two struggles, counting any already named in HOUSEHOLD FIT (leash barking at dogs is the common one). Choose the ones an adopter would notice in daily life, such as jumping when excited, pulling on leash, or barking at the door, and prefer ones the record gives context or progress for. `SKILL.md`, "Name one or two light struggles," covers the choice. This is the Struggles topic: the rubric flags a card that names none and marks down one that names more than two.
+- Name one or two struggles, counting any already named in HOUSEHOLD FIT (leash barking at dogs is the common one). Choose the ones an adopter would notice in daily life, such as jumping when excited, pulling on leash, or barking at the door, and prefer ones the record gives context or progress for. `SKILL.md`, "Name one or two light struggles," covers the choice. This is the Struggles topic: a card that names none is not ready to ship, and one that names more than two reads as a list of problems.
 - Write each one as a behavior, never a trait word: "takes a little time to warm up: he barks when someone new comes to his door," not "timid." Negative trait words went with the longest stays of any wording in Nakamura et al. (2019).
 - For each one, state the behavior in everyday words and give an example of what it looks like, then end on where it happens or how it is improving when the record says so. Shelter terms such as "resource guarding," "reactive," or "redirects" mean little to most readers. Describe what the animal actually does instead, and name where it was seen ("at the shelter") rather than predicting what it will do.
 - Keep the struggle sentences short: under 20% of the card's words. The support sentence and the closing lines do not count toward that share. A card that graded well ran its two struggles at 35 of 233 words.
@@ -169,7 +169,7 @@ Serious incidents and held-back struggles need a conversation. In the consultati
 
 **One subject may appear in two sections when each answers a different question.** Leash work is the common case: "jogs two miles on leash without pulling" belongs in ABOUT THIS PET, because it describes stamina and daily life, while "barks and lunges toward dogs she passes" belongs in HOUSEHOLD FIT, because it answers the dogs question. Cut only actual repetition, where the second mention adds no new lens.
 
-**A finished card answers seven topics.** The rubric judges each from the content, not from the headings:
+**A finished card answers seven topics.** Each one has to be answered in the content, not just covered by a heading:
 
 | Topic | Section |
 |---|---|
@@ -178,7 +178,7 @@ Serious incidents and held-back struggles need a conversation. In the consultati
 | Training | TRAINING |
 | Struggles | GOOD TO KNOW |
 
-A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: the rubric reports both, and leaving one out costs nothing when the record does not know it or the reason cannot be published.
+A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: include each when the record supports it, and leave it out when the record does not know it or the reason cannot be published.
 
 **Program boilerplate is not profile copy.** A senior program block and an adoption-fee block describe the shelter's offer rather than the animal, and they do not count toward the word band wherever they sit: every sentence of such a block names the program, its fee waiver, or its reimbursement, and scoring tools strip those lines. The Diamond Dog message is profile copy and does count.
 
@@ -226,5 +226,7 @@ The example above is 226 words with a one-word name and shelter name, 38 of them
 
 - Nakamura, M., Dhand, N. K., Starling, M. J., & McGreevy, P. D. (2019). Descriptive texts in dog profiles associated with length of stay via an online rescue network. *Animals*, 9(7), 464. https://doi.org/10.3390/ani9070464
 - Markowitz, D. M. (2020). Putting your best pet forward: Language patterns of persuasion in online pet advertisements. *Journal of Applied Social Psychology*, 50(3), 160–173. https://doi.org/10.1111/jasp.12647
+- Rix, C., Westman, M., Allum, L., Hall, E., Pockett, J., Pegram, C., & Serlin, R. (2021). The effect of name and narrative voice in online adoption profiles on the length of stay of sheltered cats in the UK. *Animals*, 11(1), 62. https://doi.org/10.3390/ani11010062
+- Archer, C., Hall, N. J., & Andrukonis, A. (2025). The role of breed and personality descriptions in influencing perceptions of shelter dog adoptability. *Animal Welfare*, 34, e75. https://doi.org/10.1017/awf.2025.10043
 - Humane World for Animals. (2025). *Adopters welcome: Finding, engaging and supporting adopters.* https://humanepro.org/sites/default/files/documents/guides-adopters-welcome-2025-final-digital.pdf
 - McGuire, B., et al. (2020). *Animals*, 10(9), 1702. https://pmc.ncbi.nlm.nih.gov/articles/PMC7552731/
