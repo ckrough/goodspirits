@@ -1,4 +1,4 @@
-"""Check an adoption-profile draft against the rubric's mechanical rules.
+"""Check an adoption-profile draft against the mechanical rules in SKILL.md.
 
 Standard library only. Run from anywhere:
 
@@ -10,9 +10,11 @@ title, and any heading after the profile that is not one of the four (an "Open i
 boilerplate block) are ignored.
 
 Checks: all four headings, 175-250 narrative words (and whether a miss is within 20% of
-the band, 140-300, or past it, where the grader takes most of the length points),
+the band, 140-300, or past it),
 struggle sentences over 20% of the card, negative trait words and traits named to deny
-them (positive trait labels are listed for review, not failed), social/humanizing words, adopter screening phrases, absolute claims, platitudes,
+them (positive trait labels are listed for review, not failed), first-person pronouns (the card is
+written about the animal, never as it), breed words (the attribute panel shows the breed),
+social/humanizing words, adopter screening phrases, absolute claims, platitudes,
 em-dashes, a program-name sentence sharing a line with other copy, and, on a card that names the Diamond Dog program, the Diamond Dog message word for word, after any senior program block.
 A page address on its own line above ABOUT THIS PET is reported, not required. Placement constraints are listed but never counted against the draft.
 Exit status is 0 on PASS and 1 when there is something to fix.
@@ -91,6 +93,27 @@ TRAIT_DENIAL_PHRASES = [
     "no behavior issues", "no behavioral issues", "doesn't have a mean bone", "not a mean bone",
 ]
 
+# First-person singular pronouns: the card is written about the animal, never as it. Among
+# 4,460 rehomed cats, first-person profiles went with longer stays (Rix et al. 2021). "I" alone
+# catches "I'm" and "I've" with either apostrophe; the shelter's "we" and "us" are not counted.
+FIRST_PERSON_WORDS = ["i", "me", "my", "mine", "myself"]
+
+# Breed words: the attribute panel shows the breed, and the label itself lowered readers'
+# ratings (Archer et al. 2025).
+BREED_WORDS = [
+    "mixed breed", "lab", "labrador", "labradoodle", "retriever", "goldendoodle", "doodle",
+    "poodle", "pit bull", "pitbull", "pit mix", "pittie", "pibble", "staffordshire", "staffy",
+    "amstaff", "bully breed", "bulldog", "shepherd", "malinois", "hound", "coonhound", "foxhound",
+    "bloodhound", "greyhound", "wolfhound", "dachshund", "beagle", "terrier", "chihuahua",
+    "pinscher", "boxer", "husky", "malamute", "samoyed", "collie", "sheltie", "heeler",
+    "cattle dog", "corgi", "aussie", "catahoula", "plott", "pointer", "setter", "spaniel",
+    "great dane", "mastiff", "bullmastiff", "cane corso", "rottweiler", "rottie", "doberman",
+    "akita", "shiba", "chow chow", "pug", "schnauzer", "pyrenees", "newfoundland", "bernese",
+    "saint bernard", "st. bernard", "dalmatian", "vizsla", "weimaraner", "whippet", "basenji",
+    "pomeranian", "yorkie", "maltese", "shih tzu", "havanese", "bichon", "papillon", "dogo",
+    "presa",
+]
+
 # Support and closing sentences in GOOD TO KNOW. Not struggles, so the struggle share leaves them out.
 SUPPORT_LINE_MARKERS = (
     "diamond dog", "training support", "meet-and-greet", "meet and greet", "full history",
@@ -114,15 +137,16 @@ def _normalize(text: str) -> str:
 
 
 def _has_snippet(template: str, text: str) -> bool:
-    """`template` with any name in the [Name] slots and any shelter name in the [Shelter] slots
-    (the same one each time), either pronoun, and the final period optional."""
+    """`template` with any name in each [Name] slot (a card may open with "Polly Pocket" and
+    close with "Polly"), one shelter name in every [Shelter] slot, either pronoun, and the
+    final period optional."""
     pattern = re.escape(_normalize(template).rstrip("."))
     for slot, alt in (("[his/her]", "(?:his|her)"), ("[him/her]", "(?:him|her)")):
         pattern = pattern.replace(re.escape(slot), alt)
-    for slot, group in (("[name]", "name"), ("[shelter]", "shelter")):
-        first, *rest = pattern.split(re.escape(slot))
-        if rest:
-            pattern = first + rf"(?P<{group}>[\w'&. -]+?)" + rest[0] + "".join(rf"(?P={group})" + part for part in rest[1:])
+    pattern = pattern.replace(re.escape("[name]"), r"[\w'. -]+?")
+    first, *rest = pattern.split(re.escape("[shelter]"))
+    if rest:
+        pattern = first + r"(?P<shelter>[\w'&. -]+?)" + rest[0] + "".join(r"(?P=shelter)" + part for part in rest[1:])
     return re.search(pattern, _normalize(text)) is not None
 
 
@@ -226,12 +250,12 @@ def main(argv: list[str] | None = None) -> int:
 
     print(f"Narrative words: {words} (target 175-250)")
     if 140 <= words <= 300 and not 175 <= words <= 250:
-        problems.append(f"word count {words} outside 175-250 (within 20%: loses a quarter of the length points)")
+        problems.append(f"word count {words} outside 175-250 (within 20%: a small miss)")
     elif not 140 <= words <= 300:
-        problems.append(f"word count {words} more than 20% outside 175-250 (loses most or all of the length points)")
+        problems.append(f"word count {words} more than 20% outside 175-250 (cut filler and repeated facts, or cover the missing topic)")
 
-    # Long struggle sentences cap the grader's struggle balance (rubric 1.6): over 20% of the
-    # card caps it at 3 of 4. The support sentence and closing lines are not struggles.
+    # Struggle sentences over 20% of the card make it read as a list of problems (SKILL.md,
+    # "Name one or two light struggles"). The support sentence and closing lines are not struggles.
     gtk = drop_program_lines(sections.get("GOOD TO KNOW", ""))
     struggle = sum(
         word_count(s)
@@ -263,6 +287,14 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Traits named to deny them: {denials or 'none'}")
     problems += [f"denial '{w}': say what the dog does, or nothing" for w in denials]
     print(f"Positive trait labels (review: keep only beside the behavior that shows them): {hits(prose, POSITIVE_TRAIT_LABELS) or 'none'}")
+
+    first_person = hits(prose, FIRST_PERSON_WORDS)
+    print(f"First-person pronouns: {first_person or 'none'}")
+    if first_person:
+        problems.append(f"first person ({len(first_person)} pronouns): write about the animal, never as it")
+    breed = hits(prose, BREED_WORDS)
+    print(f"Breed words: {breed or 'none'}")
+    problems += [f"breed word '{w}': the attribute panel shows the breed; cut it from the copy" for w in breed]
 
     print(f"Placement constraints (listed, not penalized): {hits(prose, PLACEMENT_CONSTRAINT_PHRASES) or 'none'}")
 
