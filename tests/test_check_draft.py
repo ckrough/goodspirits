@@ -67,6 +67,30 @@ class CheckDraftTest(unittest.TestCase):
         self.assertEqual(code, 1, out)
         self.assertIn("first person (", out)
 
+    def test_shelter_setting_hits(self):
+        text = (
+            "kennel door, kennels, kennel fence, playgroups, play yard, quiet room, intake, "
+            "adoption floor, dog runs, runs, run, shelter, at the shelter, in a group of dogs"
+        )
+        self.assertEqual(
+            sorted(CHECKER.shelter_setting_hits(text)),
+            ["adoption floor", "dog run", "intake", "kennel", "kennel door", "kennel fence",
+             "play yard", "playgroup", "quiet room"],
+        )
+
+    def test_shelter_setting_words_do_not_fail(self):
+        card = example_card().replace(
+            "ABOUT THIS PET\n",
+            "ABOUT THIS PET\nShe naps in the quiet room by the kennel door.\n",
+            1,
+        )
+        code, out = self.run_checker(card)
+        self.assertEqual(code, 0, out)
+        lines = [ln for ln in out.splitlines() if ln.startswith("Shelter-setting words (review:")]
+        self.assertEqual(len(lines), 1, out)
+        self.assertIn("'kennel door'", lines[0])
+        self.assertIn("'quiet room'", lines[0])
+
 
 if __name__ == "__main__":
     unittest.main()
