@@ -25,6 +25,9 @@ def load_checker():
     return module
 
 
+CHECKER = load_checker()
+
+
 def example_card() -> str:
     text = (SKILL / "references/profile-template.md").read_text()
     section = text.split("\n## Example\n", 1)[1]
@@ -35,13 +38,12 @@ def example_card() -> str:
 
 class CheckDraftTest(unittest.TestCase):
     def run_checker(self, card: str) -> tuple[int, str]:
-        checker = load_checker()
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "draft.txt"
             path.write_text(card)
             out = io.StringIO()
             with contextlib.redirect_stdout(out):
-                code = checker.main([str(path)])
+                code = CHECKER.main([str(path)])
         return code, out.getvalue()
 
     def test_example_card_passes(self):
