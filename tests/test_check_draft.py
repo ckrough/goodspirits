@@ -29,9 +29,12 @@ CHECKER = load_checker()
 
 
 def example_card() -> str:
-    text = (SKILL / "references/profile-template.md").read_text()
-    section = text.split("\n## Example\n", 1)[1]
-    card = re.search(r"```\n(.*?)\n```", section, re.DOTALL).group(1)
+    text = (SKILL / "references/profile-template.md").read_text(encoding="utf-8")
+    _, found, section = text.partition("\n## Example\n")
+    match = re.search(r"```\n(.*?)\n```", section, re.DOTALL)
+    if not found or not match:
+        raise AssertionError("profile-template.md has no fenced card under '## Example'")
+    card = match.group(1)
     # The Diamond Dog matcher rejects square brackets; writers replace both placeholders.
     return card.replace("[Name]", "Polly").replace("[Shelter]", "Riverside")
 
@@ -40,7 +43,7 @@ class CheckDraftTest(unittest.TestCase):
     def run_checker(self, card: str) -> tuple[int, str]:
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "draft.txt"
-            path.write_text(card)
+            path.write_text(card, encoding="utf-8")
             out = io.StringIO()
             with contextlib.redirect_stdout(out):
                 code = CHECKER.main([str(path)])
