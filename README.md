@@ -25,7 +25,7 @@ The skill drafts a profile in four sections: ABOUT, HOUSEHOLD FIT, TRAINING, and
 - **No gatekeeping.** It cuts conditions placed on the applicant ("experienced owners only") and keeps limits on the home ("no cats"). When a tag narrows a broad one, such as "No Small Kids" beside "Good with Kids", the card states the limit with the yes.
 - **Measured length.** It targets 175 to 250 words and 3 to 5 photos.
 
-`scripts/check_draft.py` checks a draft's headings, word count, struggle share, trait words, first-person pronouns, breed words, banned phrases, and the Diamond Dog message. It needs only the Python 3 standard library:
+`scripts/check_draft.py` checks a draft's headings, word count, struggle share, trait words, shelter-setting words (for review), first-person pronouns, breed words, banned phrases, and the Diamond Dog message. It needs only the Python 3 standard library:
 
 ```
 python3 scripts/check_draft.py path/to/draft.md

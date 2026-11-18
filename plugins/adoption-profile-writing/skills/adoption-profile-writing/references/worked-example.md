@@ -7,7 +7,7 @@ ABOUT THIS PET
 [Name] catches a flying disc in midair. She leaps for it, trots it back, and drops it at your feet. She will chase the disc for forty minutes, and she jogs two miles on leash without pulling. She likes squeaky toys, digging in sand, puzzle feeders, and car rides.
 
 HOUSEHOLD FIT
-[Name] lived with another dog in her last home and plays well with smaller dogs in the shelter playgroup. On leash, she reacts to passing dogs. She has walked past the shelter cats without reacting, but she stalks birds in the yard. She is more comfortable with older teens and adults, and would do best in a home without young children.
+[Name] lived with another dog in her last home and plays well with smaller dogs at the shelter. On leash, she reacts to passing dogs. She has walked past the shelter cats without reacting, but she stalks birds in the yard. She is more comfortable with older teens and adults, and would do best in a home without young children.
 
 TRAINING
 [Name] knows sit, down, wait, leave it, and drop it, and she is learning come. She sits at every doorway without being asked and works eagerly for toys. She is one of [Shelter]'s Diamond Dogs, so [Shelter] can provide training support before and after adoption.
@@ -20,7 +20,7 @@ GOOD TO KNOW
 
 **The opening is a behavior, not a category.** "[Name] catches a flying disc in midair," then three verbs describing exactly what the game looks like with her. An adopter can picture the yard.
 
-**Every household-fit answer is present, and each names its setting.** Lived with another dog, plays in playgroup, reacts on leash. The three settings carry different behavior, and a single "good with dogs" label would have hidden that.
+**Every household-fit answer is present, and each names its setting.** Lived with another dog, plays in groups of dogs at the shelter, reacts on leash. The three settings carry different behavior, and a single "good with dogs" label would have hidden that.
 
 **The cat answer reports the observation rather than a label.** It says what she did around the cats she has passed. If a "No Cats" tag sat beside this sentence with no observation behind it, that would be a tag contradiction for staff to settle before the card ships.
 
@@ -38,7 +38,7 @@ GOOD TO KNOW
 
 **Affection claims the record does not support come out.** "Volunteer favorite," "big softie," snuggles, and belly rubs stay off a card when no note records them, and especially when the recorded close-contact observations are cautionary. An adopter who reaches for a belly rub is acting on the card.
 
-**Intake-week language comes out.** "Settling into my new surroundings" describes a newly arrived animal, not one that has been at the shelter for months.
+**Language for a newly arrived dog comes out.** "Settling into my new surroundings" describes a newly arrived animal, not one that has been at the shelter for months.
 
 **House-training is not mentioned** when nobody knows it. That is the default for a shelter animal and needs no disclosure.
 

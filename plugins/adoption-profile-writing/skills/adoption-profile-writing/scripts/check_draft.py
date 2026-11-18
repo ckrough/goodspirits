@@ -12,7 +12,8 @@ boilerplate block) are ignored.
 Checks: all four headings, 175-250 narrative words (and whether a miss is within 20% of
 the band, 140-300, or past it),
 struggle sentences over 20% of the card, negative trait words and traits named to deny
-them (positive trait labels are listed for review, not failed), first-person pronouns (the card is
+them (positive trait labels are listed for review, not failed), shelter place and routine
+words (listed for review, not failed), first-person pronouns (the card is
 written about the animal, never as it), breed words (the attribute panel shows the breed),
 social/humanizing words, adopter screening phrases, absolute claims, platitudes,
 em-dashes, a program-name sentence sharing a line with other copy, and, on a card that names the Diamond Dog program, the Diamond Dog message word for word, after any senior program block.
@@ -78,6 +79,13 @@ POSITIVE_TRAIT_LABELS = [
     "intelligent", "obedient", "trainable", "well-behaved", "well-mannered", "mellow",
     "laid-back", "easygoing", "easy-going", "energetic", "active", "high energy", "high-energy",
     "happy-go-lucky",
+]
+
+# Shelter place and routine names are shelter vocabulary (Humane World for Animals, 2025, p. 19,
+# "Avoid shelter jargon"). The list is for review: it is printed and never fails a draft.
+SHELTER_SETTING_WORDS = [
+    "kennel", "kennel door", "kennel fence", "dog run", "play yard", "playgroup", "quiet room",
+    "intake", "adoption floor",
 ]
 
 # Negative trait words: the costliest way to report a struggle. Write the behavior instead.
@@ -227,6 +235,16 @@ def hits(text: str, phrases: list[str]) -> list[str]:
     return [p for p in phrases for _ in re.finditer(r"\b" + re.escape(p) + r"\b", low)]
 
 
+def shelter_setting_hits(text: str) -> list[str]:
+    low = text.lower()
+    found: list[str] = []
+    for term in sorted(SHELTER_SETTING_WORDS, key=len, reverse=True):
+        pattern = r"\b" + re.escape(term) + r"s?\b"
+        found += [term for _ in re.finditer(pattern, low)]
+        low = re.sub(pattern, " ", low)
+    return found
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("draft", type=Path)
@@ -287,6 +305,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"Traits named to deny them: {denials or 'none'}")
     problems += [f"denial '{w}': say what the dog does, or nothing" for w in denials]
     print(f"Positive trait labels (review: keep only beside the behavior that shows them): {hits(prose, POSITIVE_TRAIT_LABELS) or 'none'}")
+    print(f"Shelter-setting words (review: name the setting in adopter words): {shelter_setting_hits(prose) or 'none'}")
 
     first_person = hits(prose, FIRST_PERSON_WORDS)
     print(f"First-person pronouns: {first_person or 'none'}")
