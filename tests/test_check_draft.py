@@ -91,6 +91,12 @@ class CheckDraftTest(unittest.TestCase):
         self.assertIn("'kennel door'", lines[0])
         self.assertIn("'quiet room'", lines[0])
 
+    def test_example_card_has_no_shelter_setting_words(self):
+        _, out = self.run_checker(example_card())
+        self.assertIn(
+            "Shelter-setting words (review: name the setting in adopter words): none", out
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

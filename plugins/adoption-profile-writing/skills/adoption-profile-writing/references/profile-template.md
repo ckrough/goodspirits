@@ -51,7 +51,7 @@ This section introduces the animal. A reader should finish it able to picture wh
 - Open with something the animal does that sets it apart. Describe the behavior itself, not a word for its personality. The first sentence has to work on its own: it should say who the animal is or show a concrete behavior. A personality adjective is weaker, and breed, age, statistics, and medical status do not belong there.
 - Show energy level through activity: what the animal does, how long or how far it keeps going, and how it behaves while doing it.
 - Name what the animal seeks out, such as particular toys, games, places, or kinds of attention. Write them as things, not as traits. This is the Likes topic, and it has to be in the content, not just implied by the heading.
-- When the record shows the animal is at the shelter through no fault of its own (an owner's move, a landlord, an owner's illness or death, a stray intake, a transfer), say so plainly in one clause. Readers ask, and the plain reason keeps them from guessing at a fault in the dog. An incident or anything that characterizes the surrendering family stays off the card (`SKILL.md`, "Say why the dog is at the shelter").
+- When the record shows the animal is at the shelter through no fault of its own (an owner's move, a landlord, an owner's illness or death, arriving as a stray, a transfer), say so plainly in one clause. Readers ask, and the plain reason keeps them from guessing at a fault in the dog. An incident or anything that characterizes the surrendering family stays off the card (`SKILL.md`, "Say why the dog is at the shelter").
 
 **Why it matters**
 
@@ -70,7 +70,7 @@ This section answers the three questions most adopters ask: how the animal does 
 
 - Write one paragraph, not a labeled list. Move from other dogs, to cats and small animals, to people and children, so the section reads as a picture of the animal in a household. Let related facts share a sentence where they connect ("She has walked past the shelter cats without reacting, but she stalks birds in the yard"), and end on the limit, if there is one.
 - Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and Dogs, Cats, and Kids are three separate topics, so each needs its own answer.
-- Dogs: say what the record shows, and where it was seen: in playgroup, on leash, at the kennel, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
+- Dogs: say what the record shows, and where it was seen: in a group of dogs, on leash, at the shelter, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
 - Cats: say what the record shows. If the animal has never been around a cat, say so. That is a complete answer. Do not assume the animal is unsafe with cats because no one has tested it.
 - Children: say what the record shows, including the ages of the children involved.
 - When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. The exception is a narrowed pair, such as Good with Kids with "No Small Kids (10 or under)": state the limit with the yes (see `SKILL.md`, "A narrowed yes names its limit"). Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reader takes a tag beside a hedge about it as a contradiction, and the card stops reading as a report of what was observed. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
@@ -190,16 +190,16 @@ A finished profile for a Diamond Dog. The dog is invented to illustrate the rule
 https://[shelter-website]/[animal-page]/
 
 ABOUT THIS PET
-In the shelter's quiet room, [Name] stretches out on the couch beside whoever is reading and rests her chin on their knee. She leans into a hand that scratches her ears and rolls onto her back for belly rubs as soon as someone sits on the floor. After walks, she carries a stuffed toy back to her kennel.
+On a couch at the shelter, [Name] stretches out beside whoever is reading and rests her chin on their knee. She leans into a hand that scratches her ears and rolls onto her back for belly rubs as soon as someone sits on the floor. After walks, she carries a stuffed toy back inside with her.
 
 HOUSEHOLD FIT
-In shelter playgroups, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats or children.
+In groups of dogs at the shelter, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats or children.
 
 TRAINING
-[Name] knows sit, down, and wait, and she is learning to come when called. She waits at the kennel door until her walker says "okay," and she works eagerly for treats.
+[Name] knows sit, down, and wait, and she is learning to come when called. She waits at her door until her walker says "okay," and she works eagerly for treats.
 
 GOOD TO KNOW
-[Name] gets mouthy when she is excited to see someone, mostly at the kennel door, and it eases once she is out walking. She pulls toward squirrels on walks and is learning to turn back to her walker.
+[Name] gets mouthy when she is excited to see someone, mostly when she greets people at her door, and it eases once she is out walking. She pulls toward squirrels on walks and is learning to turn back to her walker.
 
 [Name] is a [Shelter] Diamond Dog: [Shelter] provides training and guidance to help you settle her into her new home, at no cost to you.
 
@@ -209,16 +209,17 @@ To meet [Name], please submit an adoption application. [Shelter] will then begin
 What it shows:
 
 - The opening is a scene a reader can step into, and the rest of ABOUT THIS PET stays on what she seeks out: a knee to rest on, belly rubs, a stuffed toy.
-- Each household answer names its setting: playgroups, on leash. Cats and children are stated as untested, matching the tags, with no hedge attached.
+- Each household answer names its setting: groups of dogs at the shelter, on leash. Cats and children are stated as untested, matching the tags, with no hedge attached.
 - GOOD TO KNOW names two light struggles a reader can picture, says where the mouthing happens, and ends on progress. The card stays about the dog.
 - For a Diamond Dog, the Diamond Dog message names the support, the way to meet her, and the history review before the meet.
+- The card tells shelter observations as life with her, the common case when a record has no foster notes.
 - The page address opens the card, so a listing-site reader sees the way to the shelter's page first.
 
 ## Word count
 
 Count the words in the four sections, including the support sentence and the closing lines of GOOD TO KNOW, and excluding the headings and any program boilerplate (an adoption-fee block, a senior program block). The target is 175 to 250 words. The Diamond Dog message counts, about 55 words depending on the name. That leaves a Diamond Dog about 195 words for everything else.
 
-The example above is 226 words with a one-word name and shelter name, 38 of them in its two struggles. Measure with `scripts/check_draft.py`; estimates run low.
+The example above is 230 words with a one-word name and shelter name, 41 of them in its two struggles. Measure with `scripts/check_draft.py`; estimates run low.
 
 ## Sources
 
