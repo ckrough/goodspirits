@@ -24,6 +24,7 @@ Healthy `make check` output:
 ```
 python3 -m unittest discover -s tests
 ...
+----------------------------------------------------------------------
 Ran N tests in N.NNNs
 
 OK

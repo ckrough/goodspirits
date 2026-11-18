@@ -65,7 +65,7 @@ class CheckDraftTest(unittest.TestCase):
         )
         code, out = self.run_checker(card)
         self.assertEqual(code, 1, out)
-        self.assertIn("first-person", out.lower())
+        self.assertIn("first person (", out)
 
 
 if __name__ == "__main__":
