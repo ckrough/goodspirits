@@ -97,6 +97,45 @@ class CheckDraftTest(unittest.TestCase):
             "Shelter-setting words (review: name the setting in adopter words): none", out
         )
 
+    PROGRAM_BLOCK = (
+        "Polly is part of the Senior Care Plan: Riverside waives the adoption fee and "
+        "reimburses up to $1,500 in vet costs for her first year. "
+        "Polly is supported by a grant from the Example Fund for senior dogs."
+    )
+
+    def card_with_program_block(self, block: str) -> str:
+        marker = "Polly is a Riverside Diamond Dog"
+        card = example_card()
+        self.assertIn(marker, card)
+        return card.replace(marker, block + "\n\n" + marker, 1)
+
+    def test_program_block_with_funder_credit_passes(self):
+        code, out = self.run_checker(self.card_with_program_block(self.PROGRAM_BLOCK))
+        self.assertEqual(code, 0, out)
+        self.assertNotIn("shares a line", out)
+
+    def test_program_sentence_with_animal_sentence_fails(self):
+        card = self.card_with_program_block(self.PROGRAM_BLOCK + " She loves car rides.")
+        code, out = self.run_checker(card)
+        self.assertEqual(code, 1, out)
+        self.assertIn("shares a line", out)
+
+    def test_grant_in_animal_history_is_not_program_block(self):
+        history = (
+            "Polly had knee surgery last spring, funded by a grant from the Friends of Riverside. "
+            "Now she runs the length of the yard and jumps into the car on her own."
+        )
+        card = example_card().replace("ABOUT THIS PET\n", "ABOUT THIS PET\n" + history + " ", 1)
+        _, out = self.run_checker(card)
+        self.assertNotIn("shares a line", out)
+
+    def test_short_history_line_with_funder_phrase_is_still_checked(self):
+        history = "Her surgery was funded by a grant from Friends of Riverside, and this aggressive little angel is a buddy."
+        card = example_card().replace("ABOUT THIS PET\n", "ABOUT THIS PET\n" + history + "\n", 1)
+        code, out = self.run_checker(card)
+        self.assertEqual(code, 1, out)
+        self.assertIn("aggressive", out)
+
 
 if __name__ == "__main__":
     unittest.main()

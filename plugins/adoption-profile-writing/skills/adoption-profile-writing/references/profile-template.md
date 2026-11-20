@@ -180,7 +180,7 @@ Serious incidents and held-back struggles need a conversation. In the consultati
 
 A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: include each when the record supports it, and leave it out when the record does not know it or the reason cannot be published.
 
-**Program boilerplate is not profile copy.** A senior program block and an adoption-fee block describe the shelter's offer rather than the animal, and they do not count toward the word band wherever they sit: every sentence of such a block names the program, its fee waiver, or its reimbursement, and scoring tools strip those lines. The Diamond Dog message is profile copy and does count.
+**Program boilerplate is not profile copy.** A senior program block and an adoption-fee block describe the shelter's offer rather than the animal, and they do not count toward the word band wherever they sit: every sentence of such a block names the program, its fee waiver, its reimbursement, or the grant that funds it, and scoring tools strip those lines. The Diamond Dog message is profile copy and does count.
 
 ## Example
 

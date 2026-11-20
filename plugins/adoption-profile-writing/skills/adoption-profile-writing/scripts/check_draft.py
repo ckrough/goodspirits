@@ -162,8 +162,10 @@ def has_diamond_dog_snippet(text: str) -> bool:
     return _has_snippet(DIAMOND_DOG_SNIPPET, text)
 
 
-# Lines naming a program are often stripped as boilerplate by scoring tools.
+# Lines naming a program or its offer are often stripped as boilerplate by scoring tools.
 PROGRAM_MARKERS = ("senior care plan", "senior program", "grey muzzle", "waives the adoption fee", "waives her adoption fee", "waives his adoption fee", "reimburses up to")
+# A funder credit counts as part of a program block only beside a program sentence, because an animal's history can name a grant too.
+FUNDER_MARKERS = ("supported by a grant from", "funded by a grant from", "made possible by a grant from")
 
 _HEADING_LINE = re.compile(r"^\s*(?:#{1,6}\s*)?[*_]*\s*(.+?)\s*[*_:]*\s*$")
 _MD_HEADING = re.compile(r"^\s*#{1,6}\s")
@@ -215,9 +217,17 @@ def page_address(text: str) -> str | None:
     return before[-1] if before and _PAGE_ADDRESS.match(before[-1]) else None
 
 
+def _is_program_line(line: str) -> bool:
+    """A line of program sentences, or a program sentence followed by its funder credit."""
+    sentences = [s.lower() for s in re.split(r"(?<=[.!?])\s+", line.strip()) if s]
+    has_program = any(mk in s for s in sentences for mk in PROGRAM_MARKERS)
+    all_marked = all(any(mk in s for mk in PROGRAM_MARKERS + FUNDER_MARKERS) for s in sentences)
+    return bool(sentences) and has_program and all_marked
+
+
 def drop_program_lines(text: str) -> str:
     """Program-name lines count as boilerplate, not profile copy."""
-    return "\n".join(ln for ln in text.splitlines() if not any(mk in ln.lower() for mk in PROGRAM_MARKERS))
+    return "\n".join(ln for ln in text.splitlines() if not _is_program_line(ln))
 
 
 def strip_markup(text: str) -> str:
@@ -337,8 +347,7 @@ def main(argv: list[str] | None = None) -> int:
             problems.append("put the senior program block before the Diamond Dog message")
 
     for ln in body.splitlines():
-        sentences = [s for s in re.split(r"(?<=[.!?])\s+", ln.strip()) if s]
-        if sentences and all(any(mk in s.lower() for mk in PROGRAM_MARKERS) for s in sentences):
+        if _is_program_line(ln):
             continue  # a program block on its own line
         if any(mk in ln.lower() for mk in PROGRAM_MARKERS) and len(ln.split()) > 25:
             print(f"Program name shares a line with other copy: {ln.strip()[:100]!r}")
