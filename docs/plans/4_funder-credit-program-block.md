@@ -13,7 +13,7 @@ This fixes the reproduction in #4. A card whose GOOD TO KNOW ends with a senior 
 
 The own-line check (`check_draft.py:339-345`) skips a line only when every sentence on it contains a `PROGRAM_MARKERS` entry. The funder sentence contains none, and the line runs past 25 words, so the check reports it.
 
-The fix adds the generic marker "a grant from" to `PROGRAM_MARKERS` (`check_draft.py:166`). It matches "supported by", "funded by", and "made possible by a grant from", and it names no shelter or fund. The issue's other option, treating the sentences after a program sentence on the same line as part of the block, is rejected. It would accept "…reimburses up to $1,500. She loves car rides.", which breaks acceptance criterion 2.
+The fix adds the markers "supported by a grant from", "funded by a grant from", and "made possible by a grant from" to `PROGRAM_MARKERS` (`check_draft.py:166`), and they name no shelter or fund. Departure from the first draft, which used the bare marker "a grant from": review found it also matched animal history prose such as "paid for by a grant from the Friends of Riverside", dropping that paragraph from the word count. The issue's other option, treating the sentences after a program sentence on the same line as part of the block, is rejected. It would accept "…reimburses up to $1,500. She loves car rides.", which breaks acceptance criterion 2.
 
 The marker goes into `PROGRAM_MARKERS` rather than a separate tuple, so all three of its uses stay consistent:
 
@@ -34,9 +34,9 @@ Out of scope: the 25-word threshold at `check_draft.py:343` is unchanged. A shor
 
 ## Work order
 
-1. Add `test_program_block_with_funder_credit_passes` and `test_program_sentence_with_animal_sentence_fails` to `tests/test_check_draft.py`. Commit them while the first test fails, since it reproduces the bug.
+1. Add `test_program_block_with_funder_credit_passes` and `test_program_sentence_with_animal_sentence_fails`, and `test_grant_in_animal_history_is_not_program_block` (added after review) to `tests/test_check_draft.py`. Commit them while the first test fails, since it reproduces the bug.
 2. Make these changes, and commit when `make check` exits 0:
-   - Add "a grant from" to `PROGRAM_MARKERS`.
+   - Add "supported by a grant from", "funded by a grant from", and "made possible by a grant from" to `PROGRAM_MARKERS`.
    - Change the comment at `check_draft.py:165` to "Lines naming a program, its offer, or its funder are often stripped as boilerplate by scoring tools."
    - In `profile-template.md:183`, change "names the program, its fee waiver, or its reimbursement" to "names the program, its fee waiver, its reimbursement, or the grant that funds it".
    - Bump the version from 0.4.0 to 0.4.1 in `plugin.json` and in both entries of `marketplace.json`.
@@ -48,7 +48,7 @@ Out of scope: the 25-word threshold at `check_draft.py:343` is unchanged. A shor
 
 ## Verification
 
-- `make check` exits 0 and reports `Ran 8 tests` and `OK`, with `test_program_block_with_funder_credit_passes` among them.
+- `make check` exits 0 and reports `Ran 9 tests` and `OK`, with `test_program_block_with_funder_credit_passes` among them.
 - `make verify` exits 0.
 - On step 1's commit, `python3 -m unittest tests.test_check_draft` fails only `test_program_block_with_funder_credit_passes`.
 
