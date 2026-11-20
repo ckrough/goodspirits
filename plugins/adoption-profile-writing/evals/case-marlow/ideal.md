@@ -4,7 +4,7 @@ Hand Marlow a leash and a trail, and he is ready to go: he has hiked three miles
 
 HOUSEHOLD FIT
 
-In a group of dogs, Marlow digs, wrestles, and wanders the yard with the others, and he has played with many dogs at the shelter. He met a cat at the shelter, gave it space, and barked when it hissed; he would do best in an adult-only home without cats.
+In a group of dogs, Marlow digs, wrestles, and wanders the yard with the others, and he has played with many dogs at the shelter. He would do best in an adult-only home without cats.
 
 TRAINING
 

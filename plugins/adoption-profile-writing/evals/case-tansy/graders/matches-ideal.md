@@ -13,11 +13,11 @@ Tansy wants to check out everything: on a walk she is on the go the whole time, 
 
 HOUSEHOLD FIT
 
-Tansy has played with several dogs in groups at the shelter, giving play bows and hopping around them. At a foster home she locked onto the cats and could not settle, so she would do best in a home without cats. She has not been tested with children.
+Tansy has played with several dogs in groups at the shelter, giving play bows and hopping around them. She has met cats in a foster home, and she would do best in a home without cats. She has not been tested with children.
 
 TRAINING
 
-Tansy knows sit, down, come, and look, and she is learning roll over. She rides well in the car and seems to be house-trained. She works for bits of jerky and cheese.
+Tansy loves to learn: she sits, lies down, and comes when called, and she picked up roll over in a single session. On walks she turns to her person at the cue "look" for a bit of jerky or cheese.
 
 GOOD TO KNOW
 

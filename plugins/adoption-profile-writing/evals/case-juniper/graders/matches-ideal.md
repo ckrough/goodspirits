@@ -9,19 +9,19 @@ Reference Description:
 
 ABOUT THIS PET
 
-Juniper is a fetch champ, and half the time he drops the tennis ball right into his walker's hand. He'll walk the trails for hours, then asks for one more loop. Afterward he curls up next to his person on a bench. He used to take a while with new people, and now most first-time walkers see no shyness at all.
+Juniper is a fetch champ, and half the time he drops the tennis ball right into his walker's hand. He walks the trails for over an hour, then taps his feet for one more loop. He swims after a stick, and he could not get enough of a wading pool. Afterward he curls up next to his person on a bench.
 
 HOUSEHOLD FIT
 
-Juniper has played with many dogs in groups at the shelter, and he has done best with relaxed dogs. He chases birds, rabbits, and squirrels, and would do best in a home without cats or other small animals. Children of every age, teens included, frighten him, and he would do best in an adult-only home.
+In a group of dogs at the shelter, Juniper has wrestled and played with many of them, and relaxed dogs are his favorites. On the trails he watches other dogs go by with a wag of his tail and stays put when his walker asks. He would do best in a home without cats or other small animals, and in an adult-only home.
 
 TRAINING
 
-Juniper knows sit, down, wait, come, touch, and look, and he walks on a loose leash. He works hardest for a squeaky toy or a tennis ball.
+Out on a walk, Juniper keeps the leash loose, and when his walker stops he sits and looks up at them. He knows down, wait, come, and touch too, and a squeaky toy or a tennis ball gets his best work.
 
 GOOD TO KNOW
 
-Juniper gets worried when he is left alone, and he has had accidents in the house when his people left the room. A few particular dogs at the shelter get him barking and jumping at the fence.
+Juniper gets worried when he is left alone, to the point of accidents in the house when his people leave the room.
 
 Juniper is a Hollowbrook Animal Rescue Diamond Dog: Hollowbrook Animal Rescue provides training and guidance to help you settle him into his new home, at no cost to you.
 
