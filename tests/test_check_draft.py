@@ -97,6 +97,29 @@ class CheckDraftTest(unittest.TestCase):
             "Shelter-setting words (review: name the setting in adopter words): none", out
         )
 
+    PROGRAM_BLOCK = (
+        "Polly is part of the Senior Care Plan: Riverside waives the adoption fee and "
+        "reimburses up to $1,500 in vet costs for her first year. "
+        "Polly is supported by a grant from the Example Fund for senior dogs."
+    )
+
+    def card_with_program_block(self, block: str) -> str:
+        marker = "Polly is a Riverside Diamond Dog"
+        card = example_card()
+        self.assertIn(marker, card)
+        return card.replace(marker, block + "\n\n" + marker, 1)
+
+    def test_program_block_with_funder_credit_passes(self):
+        code, out = self.run_checker(self.card_with_program_block(self.PROGRAM_BLOCK))
+        self.assertEqual(code, 0, out)
+        self.assertNotIn("shares a line", out)
+
+    def test_program_sentence_with_animal_sentence_fails(self):
+        card = self.card_with_program_block(self.PROGRAM_BLOCK + " She loves car rides.")
+        code, out = self.run_checker(card)
+        self.assertEqual(code, 1, out)
+        self.assertIn("shares a line", out)
+
 
 if __name__ == "__main__":
     unittest.main()
