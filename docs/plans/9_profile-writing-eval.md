@@ -26,6 +26,7 @@ Departures from the spec, each deliberate:
 
 - **Ideals.** At the operator's direction, Claude drafts each ideal from the published Description, anonymized and corrected until `check_draft.py` lists no fixes, and the case carries the tag `ideal-pending` until the operator rewrites or approves its ideal; removing the tag records that approval. The spec's "The operator writes each ideal Description" is met when the last tag is removed. Pending cases run in `make eval` like the rest, and the report names them by tag.
 - **Tags** live in `case.yaml`, a documented top-level key, not `prompt.md` (experiment below), and `ideal-pending` joins the three rule names.
+- **Record delivery.** The spec's `context.add_dirs: [resources]` did not reach the agent: on Claude Code 2.1.329 the session started with no additional directories and every read outside the working directory was denied. Each case instead carries `fixture.sh`, a `context.scaffold_script` that copies `resources/` into the empty workspace, the plugin-eval scaffold pattern and the agentskills.io input-files pattern. `make eval` passes `--scaffold`, which runs that script as the operator, so every case's `fixture.sh` must be byte-identical to the one copy-only script, enforced by the test.
 - **The bite expectation.** The spec's example grader "discloses the bite on day 4 in plain words" contradicts the skill: a bite stays off the card and GOOD TO KNOW ends with the history-review line (`SKILL.md` "Serious incidents go to the consultation", `references/profile-template.md` line 130). The graders follow the skill.
 
 A marketplace install copies the whole plugin directory, so `evals/` ships to installers. The cases are anonymized and the repository is public, so this adds no exposure the intent has not accepted; the plugin version moves to 0.5.0 because installs change.
@@ -43,11 +44,11 @@ A marketplace install copies the whole plugin directory, so `evals/` ships to in
 
 ## Work order
 
-1. **Harness spike, then the make target.** Build a made-up toy case (a dog "Pat" with three observations) in a scratch copy of the plugin under the session scratchpad and have the operator run it once outside the Claude sandbox, where `claude plugin eval` can start its agent: `! claude plugin eval <scratch copy> --runs 1 --ablation none --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --keep-temp --trust-plugin`. Read the kept workspace and trace to settle where `resources/` appears to the agent, whether naming `resources/record.md` in the prompt works, whether an `llm` grader carrying a reference text and told to grade only the text under the four headings votes sensibly, and how many turns and seconds a drafting run takes. Fix the case template from what it shows, and set `max_turns` and `timeout_seconds` at twice the observed values. Then add the `eval` target and `JUDGE_MODEL ?= claude-sonnet-5-5` to `Makefile` (`claude plugin eval plugins/adoption-profile-writing --judge-model $(JUDGE_MODEL) --threshold 0 --no-publish`), add `plugins/adoption-profile-writing/evals/results/` to `.gitignore`, run `make check`, and commit.
+1. **Harness spike, then the make target.** Build a made-up toy case (a dog "Pat" with three observations) in a scratch copy of the plugin under the session scratchpad and have the operator run it once outside the Claude sandbox, where `claude plugin eval` can start its agent: `! claude plugin eval <scratch copy> --runs 1 --ablation none --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --keep-temp --trust-plugin`. Read the kept workspace and trace to settle where `resources/` appears to the agent, whether naming `resources/record.md` in the prompt works, whether an `llm` grader carrying a reference text and told to grade only the text under the four headings votes sensibly, and how many turns and seconds a drafting run takes. Fix the case template from what it shows, and set `max_turns` and `timeout_seconds` at twice the observed values. Then add the `eval` target and `JUDGE_MODEL ?= claude-sonnet-5-5` to `Makefile` (`claude plugin eval plugins/adoption-profile-writing --judge-model $(JUDGE_MODEL) --threshold 0 --no-publish --scaffold`), add `plugins/adoption-profile-writing/evals/results/` to `.gitignore`, run `make check`, and commit.
 2. **Build the four cases, stopping for the operator.** For each animal, in the scratchpad:
    - Read the memos and volunteer notes in date order. Write `resources/record.md` with the pseudonym, no person's name (staff and volunteers become roles: "a volunteer", "the behavior team"), no ShelterLuv ID, address, or calendar date, dates rewritten relative to intake ("day 4", "month 7"), breed and age generalized.
    - Write `deidentification.md` listing each change by technique (`pseudonymization`, `generalization`, `suppression`), citing ISO/IEC 20889 without its year.
-   - Write `case.yaml` in flow form (`schema_version`, `name`, `tags: [..]`, `context:` with `add_dirs: [resources]`) and `prompt.md` (`runs`, `max_turns`, `timeout_seconds`, `allowed_tools: [Read, Glob, Grep, Skill]`, a writer's request naming `resources/record.md`).
+   - Write `case.yaml` (`schema_version: "1.1"`, `name`, `tags: [..]` in flow form, `context:` with `scaffold_script: fixture.sh`), copy the shared `fixture.sh`, and write `prompt.md` (`runs`, `max_turns`, `timeout_seconds`, `allowed_tools: [Read, Glob, Grep, Skill]`, a writer's request naming `resources/record.md`).
    - Write the graders. Every `llm` grader's criteria say to grade only the text under the four headings and ignore notes before or after it.
      - `graders/matches-ideal.md`: `llm`, weight 3, the ideal plus PASS when the card carries the ideal's behavior facts and placement terms and adds none.
      - `bite` and any serious incident: `graders/no-incident-words.md`, `regex`, `match: not_contains`, `pattern: '\b(bite[sd]?|bitten|biting|nipped|snapped at|attack(ed)?)\b'`, `flags: i`, weight 2; and `graders/history-review.md`, `regex`, `pattern: 'full history with you'`, `flags: i`, weight 2.
@@ -67,8 +68,8 @@ A marketplace install copies the whole plugin directory, so `evals/` ships to in
 `tests/test_evals.py`, standard library only, in `make test`:
 
 - finds 3 to 5 case directories under `plugins/adoption-profile-writing/evals/`, skipping `results/`;
-- each holds `case.yaml`, `prompt.md`, `resources/record.md`, `deidentification.md`, `graders/matches-ideal.md`, `graders/skill-fired.md`, and the four heading graders;
-- each `case.yaml` lists `resources` under `add_dirs`, and its `tags` hold only `bite`, `placement-constraint`, `changed-record`, and `ideal-pending`, with the three rule tags covered across the set;
+- each holds `case.yaml`, `prompt.md`, `fixture.sh`, `resources/record.md`, `deidentification.md`, `graders/matches-ideal.md`, `graders/skill-fired.md`, and the four heading graders;
+- each `case.yaml` names `fixture.sh` as its `scaffold_script`, every `fixture.sh` is byte-identical to the copy-only script, and each `case.yaml`'s `tags` hold only `bite`, `placement-constraint`, `changed-record`, and `ideal-pending`, with the three rule tags covered across the set;
 - a case tagged `bite` holds the incident-words and history-review graders;
 - each `deidentification.md` names at least one of `pseudonymization`, `generalization`, `suppression`;
 - no case file holds a `YYYY-MM-DD` date, a `M/D/YYYY` date, or a four-digit year from 1990 to 2099;
@@ -80,7 +81,7 @@ The test proves the suite's shape and the de-identification rules a machine can 
 
 - `make check` exits 0.
 - `make verify` exits 0 (`claude plugin validate` on the marketplace and the plugin at 0.5.0).
-- `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0 --no-publish`.
+- `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --scaffold`.
 - `make -n check` and `make -n verify` do not mention `eval`; `git diff main -- .github/workflows/check.yml` is empty.
 - `git check-ignore plugins/adoption-profile-writing/evals/results/x` succeeds.
 - The operator runs `! make eval` once outside the sandbox; it loads all four cases without a load error, and the report shows WITH, W/OUT, and Δ per case with each grader's verdict. The result counts as done when every case runs, whatever its score.
@@ -92,7 +93,8 @@ The test proves the suite's shape and the de-identification rules a machine can 
 - `tags` read from `prompt.md` frontmatter: unknown; the result JSON carried no tags. Plan change: tags go in `case.yaml`.
 - An inline `(?m)` in a `regex` grader: ruled out. Evidence: graders use JavaScript regex, which rejects it as an invalid group. Plan change: `flags: m`, enforced by the test.
 - The `tool_used: Skill` grader under the default with-without ablation: supported as an indicator only, outside the score (plugin-evals documentation). Plan change: none.
-- The path at which `add_dirs` exposes `resources/`, and a reference-carrying `llm` grader's votes: unknown, since no agent run started in the sandbox. Plan change: step 1's operator-run spike.
+- `context.add_dirs` gives the agent read access to `resources/`: ruled out. Evidence: two operator-run spikes on Claude Code 2.1.329; the trace's init shows `additional_directories: []`, and Glob, Grep, and Read outside the working directory were denied in `dontAsk` mode. Plan change: a copy-only `scaffold_script` and `--scaffold`.
+- A `scaffold_script` puts `resources/record.md` where the prompt names it: supported. Evidence: the third spike read `home/cwd/resources/record.md`, invoked the skill, and drafted the four sections in 6 turns and 36 seconds for $0.30; the `llm` grader graded only the text under the headings. Plan change: `max_turns: 15` and `timeout_seconds: 120`, twice the observed values rounded up for records longer than the toy's three entries.
 
 ## Architect review
 
