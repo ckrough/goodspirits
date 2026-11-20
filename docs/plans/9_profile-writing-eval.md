@@ -27,6 +27,10 @@ Departures from the spec, each deliberate:
 - **Ideals.** At the operator's direction, Claude drafts each ideal from the published Description, anonymized and corrected until `check_draft.py` lists no fixes, and the case carries the tag `ideal-pending` until the operator rewrites or approves its ideal; removing the tag records that approval. The spec's "The operator writes each ideal Description" is met when the last tag is removed. Pending cases run in `make eval` like the rest, and the report names them by tag.
 - **Tags** live in `case.yaml`, a documented top-level key, not `prompt.md` (experiment below), and `ideal-pending` joins the three rule names.
 - **Record delivery.** The spec's `context.add_dirs: [resources]` did not reach the agent: on Claude Code 2.1.329 the session started with no additional directories and every read outside the working directory was denied. Each case instead carries `fixture.sh`, a `context.scaffold_script` that copies `resources/` into the empty workspace, the plugin-eval scaffold pattern and the agentskills.io input-files pattern. `make eval` passes `--scaffold`, which runs that script as the operator, so every case's `fixture.sh` must be byte-identical to the one copy-only script, enforced by the test.
+- **Graded file.** Each prompt asks the skill to save the finished profile to `profile.md`, `allowed_tools` adds `Write` (granted with `--allow-tools Write`), and every grader reads that file (`target`/`focus: {source: file, path: profile.md}`) with a `file_exists` grader `profile-saved` beside them. A `regex` grader cannot be limited to the text under the headings, and the skill's notes after a draft name the incidents it held back. `make eval` also passes `--trust-plugin`, since a run without a terminal cannot answer the trust prompt.
+- **`matches-ideal`** passes when the draft carries the ideal's behavior facts and placement terms and contradicts none; facts the ideal lacks do not fail it (operator decision after the first case run).
+- **Marlow** has no serious incident under the skill's five: the lunge and the guarding made no contact. The case instead tests that the guarding is named as an ordinary struggle and that the senior program block precedes the Diamond Dog message.
+- **Recorded history** (operator requirement, amending the intent): `evals/record_eval.py` and `make eval-record` write a committed summary per kept run to `evals/history/`.
 - **The bite expectation.** The spec's example grader "discloses the bite on day 4 in plain words" contradicts the skill: a bite stays off the card and GOOD TO KNOW ends with the history-review line (`SKILL.md` "Serious incidents go to the consultation", `references/profile-template.md` line 130). The graders follow the skill.
 
 A marketplace install copies the whole plugin directory, so `evals/` ships to installers. The cases are anonymized and the repository is public, so this adds no exposure the intent has not accepted; the plugin version moves to 0.5.0 because installs change.
@@ -37,6 +41,7 @@ A marketplace install copies the whole plugin directory, so `evals/` ships to in
 - `plugins/adoption-profile-writing/.claude-plugin/plugin.json`
 - `.claude-plugin/marketplace.json`
 - `tests/test_evals.py`
+- `tests/test_record_eval.py`
 - `Makefile`
 - `.gitignore`
 - `CLAUDE.md`
@@ -61,19 +66,22 @@ A marketplace install copies the whole plugin directory, so `evals/` ships to in
    - **Stop and show the operator the record, the de-identification log, the graders, and the draft ideal. Copy a case into `plugins/adoption-profile-writing/evals/` only after the operator approves its anonymization.**
 
    Then write `tests/test_evals.py`, run `make check`, and commit the cases with the test.
-3. **Docs and version.** Add `make eval` and `JUDGE_MODEL` to the `CLAUDE.md` Commands table, with a note that the eval runs outside the Claude sandbox (`! make eval`) and stays out of `check`, `verify`, and CI. Add an "Evals" part to the README's plugin section: what the suite measures, how to run it, that `evals/` ships with installs, and how to add a case (the files, `case.yaml` in flow form, the tags, `ideal-pending`, the de-identification rule, and no year on any citation in a case file). Bump `version` to 0.5.0 in `plugin.json` and in both places in `marketplace.json`. Run `make check` and commit. Steps 2 and 3 touch disjoint files and may run in parallel once step 1 lands.
+3. **Recorder.** Write `tests/test_record_eval.py` first against a fixture result, then `plugins/adoption-profile-writing/evals/record_eval.py` and the `eval-record` target; add `--trust-plugin` and `--allow-tools Write` to `eval`. Run `make check` and commit.
+4. **Docs and version.** Add `make eval`, `make eval-record`, and `JUDGE_MODEL` to the `CLAUDE.md` Commands table, with a note that the eval runs outside the Claude sandbox (`! make eval`) and stays out of `check`, `verify`, and CI. Add an "Evals" part to the README's plugin section: what the suite measures, how to run it, that `evals/` ships with installs, and how to add a case (the files, `case.yaml` in flow form, the tags, `ideal-pending`, the de-identification rule, and no year on any citation in a case file). Bump `version` to 0.5.0 in `plugin.json` and in both places in `marketplace.json`. Run `make check` and commit. Steps 2 and 3 touch disjoint files and may run in parallel once step 1 lands.
 
 ## Tests
 
 `tests/test_evals.py`, standard library only, in `make test`:
 
-- finds 3 to 5 case directories under `plugins/adoption-profile-writing/evals/`, skipping `results/`;
-- each holds `case.yaml`, `prompt.md`, `fixture.sh`, `resources/record.md`, `deidentification.md`, `graders/matches-ideal.md`, `graders/skill-fired.md`, and the four heading graders;
+- finds 3 to 5 case directories under `plugins/adoption-profile-writing/evals/`, skipping `results/` and `history/`;
+- each holds `case.yaml`, `prompt.md`, `fixture.sh`, `resources/record.md`, `deidentification.md`, `graders/matches-ideal.md`, `graders/profile-saved.md`, `graders/skill-fired.md`, and the four heading graders, and every scored grader reads `profile.md`;
 - each `case.yaml` names `fixture.sh` as its `scaffold_script`, every `fixture.sh` is byte-identical to the copy-only script, and each `case.yaml`'s `tags` hold only `bite`, `placement-constraint`, `changed-record`, and `ideal-pending`, with the three rule tags covered across the set;
 - a case tagged `bite` holds the incident-words and history-review graders;
 - each `deidentification.md` names at least one of `pseudonymization`, `generalization`, `suppression`;
 - no case file holds a `YYYY-MM-DD` date, a `M/D/YYYY` date, or a four-digit year from 1990 to 2099;
 - no grader pattern holds an inline flag group (`(?i)`, `(?m)`), which the JavaScript regex engine rejects, and each heading grader carries `flags: m`.
+
+`tests/test_record_eval.py` feeds `record_eval.py` a small fixture `aggregate-result.json` and a fake git state, and checks the summary's commit, versions, per-case with, without, and Δ, and per-grader pass rates, and that it refuses when the plugin has uncommitted changes.
 
 The test proves the suite's shape and the de-identification rules a machine can check; the name search and the operator's review in step 2 cover names and recognizable detail.
 
@@ -81,7 +89,8 @@ The test proves the suite's shape and the de-identification rules a machine can 
 
 - `make check` exits 0.
 - `make verify` exits 0 (`claude plugin validate` on the marketplace and the plugin at 0.5.0).
-- `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --scaffold`.
+- `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --scaffold --trust-plugin --allow-tools Write`.
+- The operator runs `! make eval-record` on a clean tree and commits the summary it writes.
 - `make -n check` and `make -n verify` do not mention `eval`; `git diff main -- .github/workflows/check.yml` is empty.
 - `git check-ignore plugins/adoption-profile-writing/evals/results/x` succeeds.
 - The operator runs `! make eval` once outside the sandbox; it loads all four cases without a load error, and the report shows WITH, W/OUT, and Δ per case with each grader's verdict. The result counts as done when every case runs, whatever its score.

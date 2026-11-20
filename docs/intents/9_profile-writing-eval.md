@@ -12,7 +12,7 @@ A change to the `adoption-profile-writing` skill ships once `check_draft.py` pas
 
 ## Outcome
 
-The plugin carries its own eval suite: 3 to 5 anonymized cases, each pairing an animal's record (its shelter memos and behavior observations) with an ideal Description the operator provides, together covering a bite on file, a placement constraint, and a record that changed over time. Before shipping a skill change, the maintainer runs one command that has the current skill write a Description from every case's record and scores each draft against that case's ideal, so the maintainer can see whether the change helped or hurt. The eval tests only the skill: a set of inputs, the template and prompts, and the Description it produces.
+The plugin carries its own eval suite: 3 to 5 anonymized cases, each pairing an animal's record (its shelter memos and behavior observations) with an ideal Description the operator provides, together covering a bite on file, a placement constraint, and a record that changed over time. Before shipping a skill change, the maintainer runs one command that has the current skill write a Description from every case's record and scores each draft against that case's ideal, so the maintainer can see whether the change helped or hurt. Each run the maintainer keeps is recorded in the repository with the commit hash of the skill it scored, so performance can be tracked over time. The eval tests only the skill: a set of inputs, the template and prompts, and the Description it produces.
 
 ## Constraints
 
@@ -47,5 +47,5 @@ None.
 - `make eval` runs `claude plugin eval` on the working-tree plugin with a named judge model.
 - `make check` and CI do not run the eval, and `make check` passes on a machine without an API key.
 - The eval report shows each case's score and its graders' verdicts on their own, and declares no set-wide pass or fail.
-- Eval results are gitignored and never committed.
+- Raw eval results are gitignored; a summary of each run the maintainer records, naming the commit hash of the skill it scored, is committed under the plugin's `evals/` directory (operator requirement).
 - The goodspirits `CLAUDE.md` Commands table and the README document `make eval` and how to add a case.

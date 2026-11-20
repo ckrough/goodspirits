@@ -16,10 +16,11 @@ date: 2026-11-20
 6. No case names a real volunteer, staff member, or adopter, or carries the animal's real name, its ShelterLuv ID, an address, or a calendar date; record dates are relative to intake ("day 1", "week 3"), and the animal carries one pseudonym across the record and the ideal.
 7. `make eval` runs `claude plugin eval plugins/adoption-profile-writing` with a named judge model (`JUDGE_MODEL`, default `claude-sonnet-5-5`) and `--threshold 0`, so a low score reports without failing the command.
 8. The run keeps the default with-without ablation, so the report shows each case's score with the skill, without it, and the difference.
-9. Eval results under `plugins/adoption-profile-writing/evals/results/` are gitignored.
+9. Raw eval results under `plugins/adoption-profile-writing/evals/results/` are gitignored.
 10. `make check` and CI do not run the eval, and `make check` passes on a machine with no API key; `.github/workflows/check.yml` is unchanged.
 11. A standard-library test checks every case's structure, tags, de-identification record, and the absence of calendar dates, and runs in `make test`.
-12. The goodspirits `CLAUDE.md` Commands table and the README document `make eval`, `JUDGE_MODEL`, and how to add a case.
+12. The goodspirits `CLAUDE.md` Commands table and the README document `make eval`, `make eval-record`, `JUDGE_MODEL`, and how to add a case.
+13. `make eval-record` writes a summary of the latest run to `plugins/adoption-profile-writing/evals/history/<timestamp>_<short-hash>.json`, naming the commit hash of the skill it scored, the Claude Code version, the judge model, each case's score with and without the skill and the difference, and each grader's pass rate in each arm; it refuses to record when the plugin has uncommitted changes, so the hash names the skill that ran. The operator commits the summary.
 
 ## Design
 
@@ -43,6 +44,8 @@ The prompt body reads like a writer's request: write the Description for this an
 **Ideal examples.** The operator writes each ideal Description, starting from the published profile where that helps, and it lives only in `graders/matches-ideal.md`. The rule graders state their expectation as facts, so they do not repeat the ideal.
 
 **Scoring.** `claude plugin eval` scores a run as the weighted share of graders that pass, a case as the mean of its runs (3 by default), and votes each `llm` grader PASS on 2 of 3 judge calls. `--threshold 0` keeps the exit status for load and run errors only. The HTML report and `aggregate-result.json` land in `evals/results/<timestamp>/`.
+
+**History.** `evals/record_eval.py`, standard library only, reads the newest `aggregate-result.json` (or one named on the command line), takes the commit from `git rev-parse HEAD`, refuses when `git status --porcelain` lists a change under the plugin outside `evals/results/` and `evals/history/`, and writes the summary JSON. `make eval-record` runs it.
 
 **Make target.** `eval` in the `Makefile`, with `JUDGE_MODEL ?= claude-sonnet-5-5`. It is not a prerequisite of `check` or `verify`.
 
@@ -70,6 +73,7 @@ The prompt body reads like a writer's request: write the Description for this an
 - Requirement 7: `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0`.
 - Requirement 8: one `make eval` run's report shows WITH, W/OUT, and Δ per case.
 - Requirement 9: `git check-ignore plugins/adoption-profile-writing/evals/results/x` succeeds.
+- Requirement 13: a unit test feeds the recorder a fixture `aggregate-result.json` and checks the summary fields and the refusal on a dirty plugin; the operator records one real run and commits it.
 - Requirement 10: `make -n check` does not mention `eval`; `make check` passes in CI on the pull request; `git diff main -- .github/workflows/check.yml` is empty.
 - Requirement 11: `make test` runs `tests/test_evals.py`.
 - Requirement 12: reading the `CLAUDE.md` Commands table and the README section.
