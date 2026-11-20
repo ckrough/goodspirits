@@ -9,7 +9,7 @@ Reference Description:
 
 ABOUT THIS PET
 
-Bramble will drop whatver he is doing for a treat. He loves to play fetch, he'll play for as long as you want, bringing the ball back every time. He is curious and always on the move, checking every corner and trotting back now and then to check in with his person. Once he gets to know someone, he leans into them with a big smile while they pet him.
+Bramble will drop whatever he is doing for a treat. He loves to play fetch, he'll play for as long as you want, bringing the ball back every time. He is curious and always on the move, checking every corner and trotting back now and then to check in with his person. Once he gets to know someone, he leans into them with a big smile while they pet him.
 
 HOUSEHOLD FIT
 
@@ -17,7 +17,7 @@ Bramble came to Hollowbrook Animal Rescue with his brother. Apart from his broth
 
 TRAINING
 
-Bramble plays fetch, and treats get his attention fast. On walks he pulls and changes direction often as he takes in everything around him. He willing steps into his harness or a slip lead for walks.
+Bramble plays fetch, and treats get his attention fast. On walks he pulls and changes direction often as he takes in everything around him. He willingly steps into his harness or a slip lead for walks.
 
 GOOD TO KNOW
 
