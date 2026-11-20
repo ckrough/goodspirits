@@ -1,4 +1,4 @@
-"""Tests for evals/record_eval.py, which commits a summary of one plugin-eval run."""
+"""Tests for evals/record_eval.py, which commits a summary of each model's run in a make-eval sweep."""
 
 from __future__ import annotations
 
@@ -25,6 +25,7 @@ def load_recorder():
 RECORDER = load_recorder()
 
 RUN_START = "2026-01-02T10:00:00.000Z"
+SWEEP = "2026-01-02T09-59-00Z"
 
 
 def grader(name, passed, weight=1, scored=True, with_only=False):
@@ -87,9 +88,13 @@ class RecordEvalTest(unittest.TestCase):
         git(self.repo, "init", "-q")
         git(self.repo, "add", ".")
         git(self.repo, "commit", "-q", "-m", "init", date="2026-01-01T00:00:00Z")
-        self.result = self.plugin / "evals/results/2026-01-02T10-00-00-000Z/aggregate-result.json"
-        self.result.parent.mkdir(parents=True)
-        self.result.write_text(json.dumps(fixture_result()))
+        self.result = self.write_result(SWEEP, "agent-y")
+
+    def write_result(self, sweep: str, model: str) -> Path:
+        path = self.plugin / "evals/results" / sweep / model / "aggregate-result.json"
+        path.parent.mkdir(parents=True)
+        path.write_text(json.dumps(fixture_result()))
+        return path
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -108,9 +113,11 @@ class RecordEvalTest(unittest.TestCase):
         self.assertEqual(code, 0, out)
         [path] = self.history()
         head = git(self.repo, "rev-parse", "HEAD")
-        self.assertEqual(path.name, f"2026-01-02T10-00-00Z_{head[:12]}.json")
+        self.assertEqual(path.name, f"2026-01-02T10-00-00Z_{head[:12]}_agent-y.json")
         summary = json.loads(path.read_text())
         self.assertEqual(summary["commit"], head)
+        self.assertEqual(summary["model"], "agent-y")
+        self.assertEqual(summary["sweep"], SWEEP)
         self.assertEqual(summary["claude_version"], "9.9.9")
         self.assertEqual(summary["judge_model"], "judge-x")
         self.assertEqual(summary["plugin_version"], "1.2.3")
@@ -120,6 +127,20 @@ class RecordEvalTest(unittest.TestCase):
         self.assertEqual(case["graders"]["matches-ideal"], {"weight": 3, "scored": True, "with": 0.5, "without": 0.0})
         self.assertEqual(case["graders"]["heading"]["without"], 0.5)
         self.assertEqual(case["graders"]["skill-fired"], {"weight": 1, "scored": False, "with": 1.0, "without": None})
+
+    def test_records_every_model_in_the_newest_sweep(self):
+        self.write_result(SWEEP, "agent-z")
+        self.write_result("2026-01-02T08-00-00Z", "agent-old")
+        code, out = self.record()
+        self.assertEqual(code, 0, out)
+        models = sorted(json.loads(p.read_text())["model"] for p in self.history())
+        self.assertEqual(models, ["agent-y", "agent-z"])
+
+    def test_model_flag_names_the_model_of_a_named_result(self):
+        code, out = self.record("--model", "agent-q", str(self.result))
+        self.assertEqual(code, 0, out)
+        [path] = self.history()
+        self.assertEqual(json.loads(path.read_text())["model"], "agent-q")
 
     def test_refuses_uncommitted_plugin_change(self):
         (self.plugin / "SKILL.md").write_text("edited\n")

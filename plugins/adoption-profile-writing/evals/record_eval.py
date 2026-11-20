@@ -1,11 +1,13 @@
-"""Record a summary of one `claude plugin eval` run in evals/history/, for committing.
+"""Record a summary of each model's `claude plugin eval` run in evals/history/, for committing.
 
-Usage: python3 record_eval.py [--plugin DIR] [aggregate-result.json]
+Usage: python3 record_eval.py [--plugin DIR] [--model MODEL] [aggregate-result.json ...]
 
-With no result named, reads the newest evals/results/<timestamp>/aggregate-result.json.
-The summary names the commit of the skill that ran, so it refuses when the plugin has
-uncommitted changes, or when the plugin's last commit is newer than the run. Standard
-library only.
+`make eval` runs the suite once per writer model into evals/results/<sweep>/<model>/.
+With no result named, this records every model's run in the newest sweep, one file each,
+named <run-start>_<commit>_<model>.json. The result file does not name the writer model,
+so it is read from the run's directory, or from --model for a named result. Each summary
+names the commit of the skill that ran, so it refuses when the plugin has uncommitted
+changes, or when the plugin's last commit is newer than a run. Standard library only.
 """
 
 from __future__ import annotations
@@ -26,11 +28,13 @@ def git(cwd: Path, *args: str) -> str:
     return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True, text=True).stdout
 
 
-def newest_result(plugin: Path) -> Path:
-    found = sorted((plugin / "evals/results").glob("*/aggregate-result.json"))
+def newest_sweep(plugin: Path) -> list[Path]:
+    """Each model's aggregate-result.json in the newest evals/results/<sweep>/<model>/."""
+    found = sorted((plugin / "evals/results").glob("*/*/aggregate-result.json"))
     if not found:
-        raise SystemExit(f"no aggregate-result.json under {plugin / 'evals/results'}; run make eval first")
-    return found[-1]
+        raise SystemExit(f"no <sweep>/<model>/aggregate-result.json under {plugin / 'evals/results'}; run make eval first")
+    sweep = found[-1].parent.parent
+    return [p for p in found if p.parent.parent == sweep]
 
 
 def uncommitted_changes(plugin: Path) -> list[str]:
@@ -71,7 +75,7 @@ def pass_rates(runs: list[dict]) -> dict[str, dict]:
     return {name: {"weight": e["weight"], "scored": e["scored"], "rate": round(e["passes"] / e["runs"], 4)} for name, e in rates.items()}
 
 
-def summarize(result: dict, commit: str, plugin: Path) -> dict:
+def summarize(result: dict, commit: str, plugin: Path, model: str, sweep: str) -> dict:
     suite = result.get("suite", {})
     plugins = suite.get("plugins") or [{}]
     cases = {}
@@ -102,6 +106,8 @@ def summarize(result: dict, commit: str, plugin: Path) -> dict:
         "started_at": result.get("startedAt"),
         "claude_version": result.get("claudeVersion"),
         "plugin_version": plugins[0].get("version"),
+        "sweep": sweep,
+        "model": model,
         "judge_model": suite.get("judgeModel"),
         "ablation": suite.get("ablation"),
         "duration_seconds": result.get("durationSeconds"),
@@ -113,8 +119,9 @@ def summarize(result: dict, commit: str, plugin: Path) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("result", nargs="?", type=Path, help="aggregate-result.json (default: the newest run)")
+    parser.add_argument("results", nargs="*", type=Path, help="aggregate-result.json files (default: every model's run in the newest sweep)")
     parser.add_argument("--plugin", type=Path, default=Path(__file__).resolve().parent.parent, help="plugin directory")
+    parser.add_argument("--model", help="writer model of the named results (default: each result's directory name)")
     args = parser.parse_args(argv)
     plugin = args.plugin.resolve()
 
@@ -124,21 +131,26 @@ def main(argv: list[str] | None = None) -> int:
         print("\n".join(changes), file=sys.stderr)
         return 1
 
-    path = args.result or newest_result(plugin)
-    result = json.loads(path.read_text(encoding="utf-8"))
-    started = datetime.fromisoformat(result["startedAt"])
-    if last_plugin_commit_time(plugin) > started:
-        print(f"refusing to record: the run started {result['startedAt']}, before the plugin's last commit, so it scored an older skill", file=sys.stderr)
-        return 1
+    paths = args.results or newest_sweep(plugin)
+    runs = []
+    for path in paths:
+        result = json.loads(path.read_text(encoding="utf-8"))
+        started = datetime.fromisoformat(result["startedAt"])
+        if last_plugin_commit_time(plugin) > started:
+            print(f"refusing to record: {path} started {result['startedAt']}, before the plugin's last commit, so it scored an older skill", file=sys.stderr)
+            return 1
+        runs.append((path, result, started))
 
     commit = git(plugin, "rev-parse", "HEAD").strip()
-    summary = summarize(result, commit, plugin)
-    out = plugin / "evals/history" / f"{started.strftime('%Y-%m-%dT%H-%M-%SZ')}_{commit[:12]}.json"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
-    print(f"recorded {out}")
-    for name, case in summary["cases"].items():
-        print(f"  {name}: with {case['score_with']}  without {case['score_without']}  delta {case['delta']}")
+    for path, result, started in runs:
+        model = args.model or path.parent.name
+        summary = summarize(result, commit, plugin, model, path.parent.parent.name)
+        out = plugin / "evals/history" / f"{started.strftime('%Y-%m-%dT%H-%M-%SZ')}_{commit[:12]}_{model}.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+        print(f"recorded {out}")
+        for name, case in summary["cases"].items():
+            print(f"  {name}: with {case['score_with']}  without {case['score_without']}  delta {case['delta']}")
     return 0
 
 

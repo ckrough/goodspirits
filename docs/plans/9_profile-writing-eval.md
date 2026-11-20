@@ -31,7 +31,7 @@ Departures from the spec, each deliberate:
 - **`matches-ideal`** passes when the draft carries the ideal's behavior facts and placement terms and contradicts none; facts the ideal lacks do not fail it (operator decision after the first case run).
 - **Marlow** has no serious incident under the skill's five: the lunge and the guarding made no contact. The case instead tests that the guarding is named as an ordinary struggle and that the senior program block precedes the Diamond Dog message.
 - **`ideal.md` stays in each case** as the copy the operator edits; `tests/test_evals.py` fails when `graders/matches-ideal.md` no longer embeds it word for word.
-- **Recorded history** (operator requirement, amending the intent): `evals/record_eval.py` and `make eval-record` write a committed summary per kept run to `evals/history/`.
+- **Recorded history** (operator requirement, amending the intent): `evals/record_eval.py` and `make eval-record` write a committed summary per kept run to `evals/history/`. `make eval` runs one sweep per call: the suite once for each writer model in `MODELS` (Haiku, Sonnet, and Opus 5.5), each pinned with `--model` and written to `evals/results/<sweep>/<model>/`, to show where quality falls off. `make eval-record` writes one summary per model, naming the model from its run directory, since the result file names only the judge. An unpinned run would score whatever the account's default model is, and a later change of default would move the history with nothing recording why (operator decision after the first full run started).
 - **The bite expectation.** The spec's example grader "discloses the bite on day 4 in plain words" contradicts the skill: a bite stays off the card and GOOD TO KNOW ends with the history-review line (`SKILL.md` "Serious incidents go to the consultation", `references/profile-template.md` line 130). The graders follow the skill.
 
 A marketplace install copies the whole plugin directory, so `evals/` ships to installers. The cases are anonymized and the repository is public, so this adds no exposure the intent has not accepted; the plugin version moves to 0.5.0 because installs change.
@@ -90,7 +90,7 @@ The test proves the suite's shape and the de-identification rules a machine can 
 
 - `make check` exits 0.
 - `make verify` exits 0 (`claude plugin validate` on the marketplace and the plugin at 0.5.0).
-- `make -n eval` shows `claude plugin eval plugins/adoption-profile-writing --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --scaffold --trust-plugin --allow-tools Write`.
+- `make -n eval` shows a loop over `claude-haiku-5-5 claude-sonnet-5-5 claude-opus-5-5` running `claude plugin eval plugins/adoption-profile-writing --model $model --judge-model claude-sonnet-5-5 --threshold 0 --no-publish --scaffold --trust-plugin --allow-tools Write --output-dir plugins/adoption-profile-writing/evals/results/$sweep/$model`.
 - The operator runs `! make eval-record` on a clean tree and commits the summary it writes.
 - `make -n check` and `make -n verify` do not mention `eval`; `git diff main -- .github/workflows/check.yml` is empty.
 - `git check-ignore plugins/adoption-profile-writing/evals/results/x` succeeds.

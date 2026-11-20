@@ -14,10 +14,10 @@ goodspirits is a Claude Code plugin marketplace. Its one plugin, `adoption-profi
 | `make format` | `uvx ruff@0.17.5 format plugins tests` |
 | `make check` | `make test`, then `make lint` |
 | `make verify` | `make check`, then `claude plugin validate` on the marketplace and on the plugin |
-| `make eval` | `claude plugin eval` on the working-tree plugin with `--judge-model $(JUDGE_MODEL)` (default `claude-sonnet-5-5`), `--threshold 0`, `--no-publish`, `--scaffold`, `--trust-plugin`, and `--allow-tools Write` |
-| `make eval-record` | `evals/record_eval.py`: writes the newest run's summary to `evals/history/<run-start>_<hash>.json`, refusing when the plugin has uncommitted changes or a commit newer than the run |
+| `make eval` | One sweep: `claude plugin eval` on the working-tree plugin once per writer model in `$(MODELS)` (default `claude-haiku-5-5 claude-sonnet-5-5 claude-opus-5-5`), each with `--model`, `--judge-model $(JUDGE_MODEL)` (default `claude-sonnet-5-5`), `--threshold 0`, `--no-publish`, `--scaffold`, `--trust-plugin`, `--allow-tools Write`, and `--output-dir evals/results/<sweep>/<model>/` |
+| `make eval-record` | `evals/record_eval.py`: writes a summary of each model's run in the newest sweep, with the model and judge, to `evals/history/<run-start>_<hash>_<model>.json`, refusing when the plugin has uncommitted changes or a commit newer than a run |
 
-`make eval` makes paid model calls (about $9 for the four cases at three runs each) and cannot start its agents inside the Claude sandbox, so run it as `! make eval`. It stays out of `check`, `verify`, and CI. Its raw output under `evals/results/` is gitignored; commit only the summary `make eval-record` writes. Override the judge with `make eval JUDGE_MODEL=<model>`, and compare scores only between runs with the same judge.
+`make eval` makes paid model calls (each model runs the four cases three times with and three times without the skill, 24 runs, about 30 minutes) and cannot start its agents inside the Claude sandbox, so run it as `! make eval`. It stays out of `check`, `verify`, and CI. Its raw output under `evals/results/` is gitignored; commit only the summaries `make eval-record` writes. Narrow the sweep with `make eval MODELS=<model>` and change the judge with `JUDGE_MODEL=<model>`. Compare scores only between runs with the same writer model and judge.
 
 `format` is kept out of `check` on purpose, so the curated phrase lists in `check_draft.py` stay dense.
 
