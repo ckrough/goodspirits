@@ -162,8 +162,8 @@ def has_diamond_dog_snippet(text: str) -> bool:
     return _has_snippet(DIAMOND_DOG_SNIPPET, text)
 
 
-# Lines naming a program are often stripped as boilerplate by scoring tools.
-PROGRAM_MARKERS = ("senior care plan", "senior program", "grey muzzle", "waives the adoption fee", "waives her adoption fee", "waives his adoption fee", "reimburses up to")
+# Lines naming a program, its offer, or its funder are often stripped as boilerplate by scoring tools.
+PROGRAM_MARKERS = ("senior care plan", "senior program", "grey muzzle", "waives the adoption fee", "waives her adoption fee", "waives his adoption fee", "reimburses up to", "a grant from")
 
 _HEADING_LINE = re.compile(r"^\s*(?:#{1,6}\s*)?[*_]*\s*(.+?)\s*[*_:]*\s*$")
 _MD_HEADING = re.compile(r"^\s*#{1,6}\s")
