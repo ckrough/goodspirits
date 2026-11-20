@@ -13,13 +13,9 @@ This fixes the reproduction in #4. A card whose GOOD TO KNOW ends with a senior 
 
 The own-line check (`check_draft.py:339-345`) skips a line only when every sentence on it contains a `PROGRAM_MARKERS` entry. The funder sentence contains none, and the line runs past 25 words, so the check reports it.
 
-The fix adds the markers "supported by a grant from", "funded by a grant from", and "made possible by a grant from" to `PROGRAM_MARKERS` (`check_draft.py:166`), and they name no shelter or fund. Departure from the first draft, which used the bare marker "a grant from": review found it also matched animal history prose such as "paid for by a grant from the Friends of Riverside", dropping that paragraph from the word count. The issue's other option, treating the sentences after a program sentence on the same line as part of the block, is rejected. It would accept "…reimburses up to $1,500. She loves car rides.", which breaks acceptance criterion 2.
+The fix adds a separate `FUNDER_MARKERS` tuple ("supported by a grant from", "funded by a grant from", "made possible by a grant from") beside `PROGRAM_MARKERS` (`check_draft.py:166`). The markers name no shelter or fund. A new helper `_is_program_line` treats a line as program boilerplate only when it carries at least one `PROGRAM_MARKERS` sentence and every sentence carries a program or funder marker. Departure from the first draft, which put a bare "a grant from" into `PROGRAM_MARKERS`: review found that matched animal history prose such as "her surgery was funded by a grant from Friends of Riverside", dropping that paragraph from the word count and letting a short one bypass the banned-word checks. The issue's other option, treating the sentences after a program sentence on the same line as part of the block, is rejected. It would accept "…reimburses up to $1,500. She loves car rides.", which breaks acceptance criterion 2.
 
-The marker goes into `PROGRAM_MARKERS` rather than a separate tuple, so all three of its uses stay consistent:
-
-- `drop_program_lines` drops the funder sentence from the word count, because it is shelter boilerplate (per `profile-template.md:183`).
-- The own-line check counts the funder sentence as part of the block.
-- The Diamond Dog order check flags a funder credit placed after the Diamond Dog message.
+`drop_program_lines` and the own-line check both call `_is_program_line`. The Diamond Dog order check keeps `PROGRAM_MARKERS` only, so a funder credit apart from a program sentence is not flagged there. A funder credit in its own paragraph apart from a program sentence still fails the own-line check, since it is not part of a block. A line that mixes a program sentence with other copy is no longer dropped from the word count; the own-line check still reports it past 25 words.
 
 Out of scope: the 25-word threshold at `check_draft.py:343` is unchanged. A short line that mixes an animal sentence with a program or funder sentence still goes unreported, as it does today for the existing markers.
 
@@ -34,9 +30,9 @@ Out of scope: the 25-word threshold at `check_draft.py:343` is unchanged. A shor
 
 ## Work order
 
-1. Add `test_program_block_with_funder_credit_passes` and `test_program_sentence_with_animal_sentence_fails`, and `test_grant_in_animal_history_is_not_program_block` (added after review) to `tests/test_check_draft.py`. Commit them while the first test fails, since it reproduces the bug.
+1. Add `test_program_block_with_funder_credit_passes` and `test_program_sentence_with_animal_sentence_fails`, `test_grant_in_animal_history_is_not_program_block`, and `test_short_history_line_with_funder_phrase_is_still_checked` (the last two added after review) to `tests/test_check_draft.py`. Commit them while the first test fails, since it reproduces the bug.
 2. Make these changes, and commit when `make check` exits 0:
-   - Add "supported by a grant from", "funded by a grant from", and "made possible by a grant from" to `PROGRAM_MARKERS`.
+   - Add `FUNDER_MARKERS` and `_is_program_line`, and call the helper from `drop_program_lines` and the own-line check.
    - Change the comment at `check_draft.py:165` to "Lines naming a program, its offer, or its funder are often stripped as boilerplate by scoring tools."
    - In `profile-template.md:183`, change "names the program, its fee waiver, or its reimbursement" to "names the program, its fee waiver, its reimbursement, or the grant that funds it".
    - Bump the version from 0.4.0 to 0.4.1 in `plugin.json` and in both entries of `marketplace.json`.
@@ -45,10 +41,12 @@ Out of scope: the 25-word threshold at `check_draft.py:343` is unchanged. A shor
 
 - `test_program_block_with_funder_credit_passes` inserts the issue's senior program block and funder sentence into the example card (Polly, Riverside, "Example Fund"). The block goes in as its own paragraph, before the Diamond Dog paragraph. The test expects exit 0 and no "shares a line". It fails before the fix, which proves the bug.
 - `test_program_sentence_with_animal_sentence_fails` uses the same block with "She loves car rides." appended on the same line. It expects exit 1 and "shares a line", which guards acceptance criterion 2.
+- `test_grant_in_animal_history_is_not_program_block` puts a long history sentence with "funded by a grant from" at the start of ABOUT THIS PET and expects no "shares a line" report.
+- `test_short_history_line_with_funder_phrase_is_still_checked` puts a short history line with that phrase and banned words on its own line. It expects exit 1 and "aggressive", which proves the line is not dropped as boilerplate.
 
 ## Verification
 
-- `make check` exits 0 and reports `Ran 9 tests` and `OK`, with `test_program_block_with_funder_credit_passes` among them.
+- `make check` exits 0 and reports `Ran 10 tests` and `OK`, with `test_program_block_with_funder_credit_passes` among them.
 - `make verify` exits 0.
 - On step 1's commit, `python3 -m unittest tests.test_check_draft` fails only `test_program_block_with_funder_credit_passes`.
 
@@ -58,7 +56,7 @@ No experiment warranted: the reproduction was run against c954959 and failed as 
 
 ## Architect review
 
-- Nit: "supported by a grant from" covers one wording only -> amended to the shorter marker "a grant from".
+- Nit: "supported by a grant from" covers one wording only -> amended to funder markers gated on a program sentence after review found the bare marker over-matched.
 - Nit: a short mixed line under 25 words goes unreported -> not amended, because the threshold is pre-existing; Context now records it as out of scope.
 - Nit: the third verification bullet named no runnable file -> amended to the `make check` test count and a red check on step 1's commit.
 - Nit: step 1's test name read as a leftover edit -> amended.

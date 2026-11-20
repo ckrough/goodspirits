@@ -122,12 +122,19 @@ class CheckDraftTest(unittest.TestCase):
 
     def test_grant_in_animal_history_is_not_program_block(self):
         history = (
-            "Polly had knee surgery last spring, paid for by a grant from the Friends of Riverside. "
+            "Polly had knee surgery last spring, funded by a grant from the Friends of Riverside. "
             "Now she runs the length of the yard and jumps into the car on her own."
         )
         card = example_card().replace("ABOUT THIS PET\n", "ABOUT THIS PET\n" + history + " ", 1)
         _, out = self.run_checker(card)
         self.assertNotIn("shares a line", out)
+
+    def test_short_history_line_with_funder_phrase_is_still_checked(self):
+        history = "Her surgery was funded by a grant from Friends of Riverside, and this aggressive little angel is a buddy."
+        card = example_card().replace("ABOUT THIS PET\n", "ABOUT THIS PET\n" + history + "\n", 1)
+        code, out = self.run_checker(card)
+        self.assertEqual(code, 1, out)
+        self.assertIn("aggressive", out)
 
 
 if __name__ == "__main__":
