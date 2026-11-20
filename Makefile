@@ -1,4 +1,4 @@
-.PHONY: setup test lint format check verify eval
+.PHONY: setup test lint format check verify eval eval-record
 
 JUDGE_MODEL ?= claude-sonnet-5-5
 
@@ -22,4 +22,8 @@ verify: check
 
 # Paid model calls; runs outside the Claude sandbox (`! make eval`), never in check, verify, or CI.
 eval:
-	claude plugin eval plugins/adoption-profile-writing --judge-model $(JUDGE_MODEL) --threshold 0 --no-publish --scaffold
+	claude plugin eval plugins/adoption-profile-writing --judge-model $(JUDGE_MODEL) --threshold 0 --no-publish --scaffold --trust-plugin --allow-tools Write
+
+# Summarize the newest run into evals/history/ for committing; refuses on an uncommitted plugin.
+eval-record:
+	python3 plugins/adoption-profile-writing/evals/record_eval.py
