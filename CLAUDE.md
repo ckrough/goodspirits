@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
-goodspirits is a Claude Code plugin marketplace. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
+goodspirits is a Claude Code plugin marketplace. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is two standard-library Python scripts, the draft checker `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py` and the eval recorder `plugins/adoption-profile-writing/evals/record_eval.py`, plus Markdown skill files and the eval suite under `plugins/adoption-profile-writing/evals/`.
 
 ## Commands
 
@@ -14,6 +14,10 @@ goodspirits is a Claude Code plugin marketplace. Its one plugin, `adoption-profi
 | `make format` | `uvx ruff@0.17.5 format plugins tests` |
 | `make check` | `make test`, then `make lint` |
 | `make verify` | `make check`, then `claude plugin validate` on the marketplace and on the plugin |
+| `make eval` | `claude plugin eval` on the working-tree plugin with `--judge-model $(JUDGE_MODEL)` (default `claude-sonnet-5-5`), `--threshold 0`, `--no-publish`, `--scaffold`, `--trust-plugin`, and `--allow-tools Write` |
+| `make eval-record` | `evals/record_eval.py`: writes the newest run's summary to `evals/history/<run-start>_<hash>.json`, refusing when the plugin has uncommitted changes or a commit newer than the run |
+
+`make eval` makes paid model calls (about $9 for the four cases at three runs each) and cannot start its agents inside the Claude sandbox, so run it as `! make eval`. It stays out of `check`, `verify`, and CI. Its raw output under `evals/results/` is gitignored; commit only the summary `make eval-record` writes. Override the judge with `make eval JUDGE_MODEL=<model>`, and compare scores only between runs with the same judge.
 
 `format` is kept out of `check` on purpose, so the curated phrase lists in `check_draft.py` stay dense.
 

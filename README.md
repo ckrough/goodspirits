@@ -35,6 +35,31 @@ Run it from the skill folder. It exits 0 when the draft passes and 1 when it lis
 
 The profile examples use `[Name]` and `[Shelter]` placeholders. Replace them with your animal and your organization.
 
+#### Evals
+
+The plugin carries an eval suite under `plugins/adoption-profile-writing/evals/`, run by Claude Code's built-in `claude plugin eval`. Each case gives the skill one anonymized shelter record and asks for a profile, then scores the draft against an ideal profile written for that record, plus graders for the rules the record tests: a bite kept off the card, a placement limit stated as a limit on the home, and a record whose later entries overrule its earlier ones. Every case also runs without the skill, so the report shows each case's score with the skill, without it, and the difference.
+
+```
+make eval          # run every case (paid model calls; run outside the Claude sandbox)
+make eval-record   # write the newest run's summary to evals/history/, for committing
+```
+
+`make eval-record` refuses when the plugin has uncommitted changes, so each committed summary names the commit of the skill it scored. A score is a signal to read per case, not a verdict: the judge is a Claude model grading a Claude draft, and four cases cannot show a small difference between two versions of the skill.
+
+A marketplace install copies the whole plugin folder, so `evals/` ships with it. The cases are de-identified.
+
+To add a case, create `evals/case-<pseudonym>/` with:
+
+- `resources/record.md`: the record, de-identified. No real name of an animal or a person, no shelter ID, address, or calendar date; dates become days, weeks, or months from intake. No year anywhere in the case, citations included.
+- `deidentification.md`: each change, named by its ISO/IEC 20889 technique (pseudonymization, generalization, or suppression).
+- `ideal.md`: the ideal profile, passing `check_draft.py`.
+- `case.yaml`: `schema_version: "1.1"`, `name`, `tags: [..]` in flow form (`bite`, `placement-constraint`, `changed-record`, and `ideal-pending` until the ideal is approved), and `context: scaffold_script: fixture.sh`.
+- `fixture.sh`, copied unchanged from another case: it copies `resources/` into the run's workspace.
+- `prompt.md`: the request, asking for the profile saved to `profile.md`.
+- `graders/`: copy the shared graders from another case and paste the ideal into `matches-ideal.md`; add a grader per rule the record tests.
+
+`tests/test_evals.py`, part of `make check`, checks each case's files, tags, and graders, that `matches-ideal.md` embeds `ideal.md`, and that no case holds a calendar date.
+
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE) for the full text.
