@@ -35,3 +35,30 @@ All checks passed!
 ## Issue tracker
 
 GitHub Issues on `origin` (`ckrough/goodspirits`). The repository is user-owned and cannot set native issue types, so each issue carries a type label (`bug`, `feature`, or `task`) and a priority label (`p0` through `p4`).
+
+## Plugin enablement
+
+This section is for maintainers with access to the private `backchainai/daedalus` repository. Other contributors skip it; the tracked `permissions.deny` in `.claude/settings.json` still applies to them.
+
+daedalus and its dependencies are enabled per clone in the gitignored `.claude/settings.local.json`, not in the tracked `.claude/settings.json`, because the `backchain` marketplace is private and this repository is public. The file holds:
+
+```json
+{
+  "enabledPlugins": {
+    "daedalus@backchain": true,
+    "github@claude-plugins-official": true,
+    "astral@astral-sh": true
+  },
+  "extraKnownMarketplaces": {
+    "backchain": { "source": { "source": "github", "repo": "backchainai/daedalus" } },
+    "claude-plugins-official": { "source": { "source": "github", "repo": "anthropics/claude-plugins-official" } },
+    "astral-sh": { "source": { "source": "github", "repo": "astral-sh/claude-code-plugins" } }
+  }
+}
+```
+
+This departs from daedalus's documented setup on purpose. A `/daedalus:setup` rerun merges `enabledPlugins` and `extraKnownMarketplaces` into `.claude/settings.json`; keep both keys out of that file.
+
+`.worktreeinclude` copies `.claude/settings.local.json` into worktrees made by `claude --worktree` or EnterWorktree. A worktree made with `git worktree add` needs the file copied in by hand.
+
+To disable daedalus, set `daedalus@backchain` to `false` or remove it in `.claude/settings.local.json`, in each checkout and worktree. Editing `.claude/settings.json` does nothing.
