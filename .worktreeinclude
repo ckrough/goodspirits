@@ -1,0 +1,2 @@
+# Copied into each new worktree: local plugin enablement (gitignored)
+.claude/settings.local.json

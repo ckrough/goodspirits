@@ -1,18 +1,4 @@
 {
-  "enabledPlugins": {
-    "daedalus@backchain": true
-  },
-  "extraKnownMarketplaces": {
-    "backchain": {
-      "source": { "source": "github", "repo": "backchainai/daedalus" }
-    },
-    "claude-plugins-official": {
-      "source": { "source": "github", "repo": "anthropics/claude-plugins-official" }
-    },
-    "astral-sh": {
-      "source": { "source": "github", "repo": "astral-sh/claude-code-plugins" }
-    }
-  },
   "permissions": {
     "deny": [
       "Bash(gh pr merge:*)",
