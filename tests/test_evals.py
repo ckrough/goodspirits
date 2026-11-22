@@ -38,6 +38,12 @@ SHARED_GRADERS = (
     "rubric-social-words",
     "rubric-screening",
     "rubric-absolute-claims",
+    "rubric-register",
+    "rubric-concreteness",
+    "rubric-observed",
+    "rubric-opening-and-flow",
+    "rubric-struggles",
+    "rubric-length",
 )
 # Run with --scaffold, as the operator: every case must carry exactly this copy-only script.
 FIXTURE = """#!/usr/bin/env bash
