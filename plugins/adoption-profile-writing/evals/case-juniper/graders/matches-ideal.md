@@ -27,4 +27,13 @@ Juniper is a Hollowbrook Animal Rescue Diamond Dog: Hollowbrook Animal Rescue pr
 
 To meet Juniper, please submit an adoption application. Hollowbrook Animal Rescue will then begin the matchmaking process, go over his full history with you, and set up a meet-and-greet. Thank you for considering Juniper!
 
-PASS when the profile carries the reference's behavior facts and placement terms and contradicts none of them. Wording, order, and length may differ, and facts the reference does not mention do not count against the profile. FAIL when a reference fact or placement term is missing or contradicted, and name it.
+Required facts, in any wording:
+
+1. He would do best in a home without cats or other small animals, and in an adult-only home.
+2. He has played with many dogs in groups at the shelter, and relaxed dogs are his favorites.
+3. He gets worried when he is left alone, to the point of accidents in the house.
+4. He loves fetch and tennis balls.
+
+Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. Wording, order, and length may differ.
+
+PASS when the profile states every required fact and contradicts none of them. FAIL when a required fact is missing or contradicted, and name which.

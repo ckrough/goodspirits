@@ -27,4 +27,13 @@ Through the Hollowbrook Animal Rescue senior program, Bramble's adoption fee is 
 
 Hollowbrook Animal Rescue will review Bramble's full history with you before you meet him.
 
-PASS when the profile carries the reference's behavior facts and placement terms and contradicts none of them. Wording, order, and length may differ, and facts the reference does not mention do not count against the profile. FAIL when a reference fact or placement term is missing or contradicted, and name it.
+Required facts, in any wording:
+
+1. He would do best in an adult-only home, without children.
+2. Apart from his brother, he has not been tested with other dogs, or with cats.
+3. He takes time to warm up to being touched and growls when he is not ready, especially at his legs or belly.
+4. He loves treats and plays fetch.
+
+Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. Wording, order, and length may differ.
+
+PASS when the profile states every required fact and contradicts none of them. FAIL when a required fact is missing or contradicted, and name which.

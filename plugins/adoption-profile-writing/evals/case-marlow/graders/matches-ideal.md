@@ -29,4 +29,14 @@ Marlow is a Hollowbrook Animal Rescue Diamond Dog: Hollowbrook Animal Rescue pro
 
 To meet Marlow, please submit an adoption application. Hollowbrook Animal Rescue will then begin the matchmaking process, go over his full history with you, and set up a meet-and-greet. Thank you for considering Marlow!
 
-PASS when the profile carries the reference's behavior facts and placement terms and contradicts none of them. Wording, order, and length may differ, and facts the reference does not mention do not count against the profile. FAIL when a reference fact or placement term is missing or contradicted, and name it.
+Required facts, in any wording:
+
+1. He would do best in an adult-only home without cats.
+2. He has played well with many dogs in groups at the shelter.
+3. He guards food, treats, and things he has claimed, and grumbles or barks when someone reaches for them, described as a behavior rather than with the term "resource guarding".
+4. He prefers that strangers not lean over him or get in his face.
+5. He loves hikes and trail walks.
+
+Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. How quickly he warms up to new people is optional too, so a profile that says he warms up fairly quickly does not fail for it. Wording, order, and length may differ.
+
+PASS when the profile states every required fact and contradicts none of them. FAIL when a required fact is missing or contradicted, and name which.
