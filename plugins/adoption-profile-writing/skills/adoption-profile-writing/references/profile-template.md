@@ -72,8 +72,8 @@ This section answers the three questions most adopters ask: how the animal does 
 - Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and Dogs, Cats, and Kids are three separate topics, so each needs its own answer.
 - Dogs: say what the record shows, and where it was seen: in a group of dogs, on leash, at the shelter, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
 - Cats: say what the record shows. If the animal has never been around a cat, say so. That is a complete answer. Do not assume the animal is unsafe with cats because no one has tested it.
-- Children: say what the record shows, including the ages of the children involved.
-- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. The exception is a narrowed pair, such as Good with Kids with "No Small Kids (10 or under)": state the limit with the yes (see `SKILL.md`, "A narrowed yes names its limit"). Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reader takes a tag beside a hedge about it as a contradiction, and the card stops reading as a report of what was observed. Record gaps go to the open items for staff. Write "has not been tested" only when the tag itself is unknown or to be determined.
+- Children: say what the record shows, including the ages of the children involved. Shelters do not test animals with children: what is known comes from the animal's past or from what staff and volunteers have seen. When the record shows neither, say it is not known ("How she does with children is not known"), never that she has not been tested.
+- When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. The exception is a narrowed pair, such as Good with Kids with "No Small Kids (10 or under)": state the limit with the yes (see `SKILL.md`, "A narrowed yes names its limit"). Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reader takes a tag beside a hedge about it as a contradiction, and the card stops reading as a report of what was observed. Record gaps go to the open items for staff. Write "has not been tested" with dogs or cats, or "is not known" for children, only when the tag itself is unknown or to be determined.
 - When evidence supports a limit, state it as a recommendation about the home: "would do best in a home without young children." The limit stays even when the incident behind it goes to the consultation (see `SKILL.md`, "Serious incidents go to the consultation"), and a narrowing tag is evidence enough on its own (see `SKILL.md`, "A narrowed yes names its limit").
 - Describe what was observed, not what will happen. "Has played well with the dogs at the shelter" reports a fact. "Great with all dogs" makes a promise the shelter cannot back.
 
@@ -178,7 +178,7 @@ Serious incidents and held-back struggles need a conversation. In the consultati
 | Training | TRAINING |
 | Struggles | GOOD TO KNOW |
 
-A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested" or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: include each when the record supports it, and leave it out when the record does not know it or the reason cannot be published.
+A card can fill all four sections and still miss Likes or Struggles by never naming what the animal enjoys or what it finds hard. Stating a topic "untested," "not known," or "has not been around cats" counts as covering it. House-training and crating belong in TRAINING when the record knows them, and a no-fault reason for being at the shelter belongs in ABOUT THIS PET. Neither is one of the seven topics: include each when the record supports it, and leave it out when the record does not know it or the reason cannot be published.
 
 **Program boilerplate is not profile copy.** A senior program block and an adoption-fee block describe the shelter's offer rather than the animal, and they do not count toward the word band wherever they sit: every sentence of such a block names the program, its fee waiver, its reimbursement, or the grant that funds it, and scoring tools strip those lines. The Diamond Dog message is profile copy and does count.
 
@@ -193,7 +193,7 @@ ABOUT THIS PET
 On a couch at the shelter, [Name] stretches out beside whoever is reading and rests her chin on their knee. She leans into a hand that scratches her ears and rolls onto her back for belly rubs as soon as someone sits on the floor. After walks, she carries a stuffed toy back inside with her.
 
 HOUSEHOLD FIT
-In groups of dogs at the shelter, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats or children.
+In groups of dogs at the shelter, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats, and how she does with children is not known.
 
 TRAINING
 [Name] knows sit, down, and wait, and she is learning to come when called. She waits at her door until her walker says "okay," and she works eagerly for treats.
@@ -209,7 +209,7 @@ To meet [Name], please submit an adoption application. [Shelter] will then begin
 What it shows:
 
 - The opening is a scene a reader can step into, and the rest of ABOUT THIS PET stays on what she seeks out: a knee to rest on, belly rubs, a stuffed toy.
-- Each household answer names its setting: groups of dogs at the shelter, on leash. Cats and children are stated as untested, matching the tags, with no hedge attached.
+- Each household answer names its setting: groups of dogs at the shelter, on leash. Cats are stated as untested and children as not known, matching the tags, with no hedge attached.
 - GOOD TO KNOW names two light struggles a reader can picture, says where the mouthing happens, and ends on progress. The card stays about the dog.
 - For a Diamond Dog, the Diamond Dog message names the support, the way to meet her, and the history review before the meet.
 - The card tells shelter observations as life with her, the common case when a record has no foster notes.

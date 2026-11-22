@@ -7,6 +7,11 @@ Color: white
 Sex: male, neutered
 Age: senior (about 10 years)
 
+Listing attributes:
+- Kids: No Kids
+- Dogs: To Be Determined
+- Cats: To Be Determined
+
 Entries from the shelter-management system's memos and the volunteer walk log, in date order. Days count from intake (day 1).
 
 ## Day 1, memo (disclaimer)

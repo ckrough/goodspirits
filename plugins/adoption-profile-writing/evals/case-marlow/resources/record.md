@@ -7,6 +7,11 @@ Color: white
 Sex: male, neutered
 Age: senior (about 8 years)
 
+Listing attributes:
+- Kids: No Kids
+- Dogs: Good with Dogs
+- Cats: No Cats
+
 Entries from the shelter-management system's memos and the volunteer walk log, in date order. Months count from intake (month 1). Other shelter dogs and the shelter cat are named by letter (Dog A, Dog B, ..., Cat A).
 
 ## Month 1, intake memo

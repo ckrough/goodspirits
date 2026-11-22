@@ -8,6 +8,12 @@ Sex: male, neutered
 Age: young adult (about 4 years)
 Weight: about 55 lb
 
+Listing attributes:
+- Kids: No Kids
+- Dogs: Good with Dogs, Dog Selective
+- Cats: No Cats
+- Small animals: No Small Animals
+
 Entries from the shelter-management system's memos and the volunteer walk log, in date order. Months count from intake (month 1). Other shelter dogs are named by letter (Dog A, Dog B, ...).
 
 ## Month 1, intake memo

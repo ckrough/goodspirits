@@ -8,6 +8,11 @@ Sex: female, spayed
 Age: young adult (about 3 years)
 Weight: about 22 lb
 
+Listing attributes:
+- Kids: To Be Determined
+- Dogs: Good with Dogs
+- Cats: No Cats
+
 Entries from the shelter-management system's memos, the volunteer walk log, and foster notes, in date order. Weeks count from intake (week 1). Other shelter dogs are named by letter (Dog A, Dog B, ...).
 
 ## Week 1, memo (pop-up)

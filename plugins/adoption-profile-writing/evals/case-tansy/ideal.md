@@ -4,7 +4,7 @@ Tansy wants to check out everything: on a walk she is on the go the whole time, 
 
 HOUSEHOLD FIT
 
-Tansy has played with several dogs in groups at the shelter, giving play bows and hopping around them. She has met cats in a foster home, and she would do best in a home without cats. She has not been tested with children.
+Tansy has played with several dogs in groups at the shelter, giving play bows and hopping around them. She has met cats in a foster home, and she would do best in a home without cats. How she does with children is not known.
 
 TRAINING
 

@@ -47,6 +47,7 @@ A marketplace install copies the whole plugin directory, so `evals/` ships to in
 - `.gitignore`
 - `CLAUDE.md`
 - `README.md`
+- `plugins/adoption-profile-writing/skills/adoption-profile-writing/SKILL.md` and `plugins/adoption-profile-writing/skills/adoption-profile-writing/references/profile-template.md`: departure, at the operator's direction. Shelters do not test animals with children; how an animal does with children is known or not known. The skill said "has not been tested with children", which every eval run copied.
 
 ## Work order
 
