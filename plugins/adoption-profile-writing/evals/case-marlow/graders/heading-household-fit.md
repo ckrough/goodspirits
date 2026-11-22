@@ -1,6 +1,6 @@
 ---
 type: regex
-weight: 1
+weight: 0.5
 target: {source: file, path: profile.md}
 pattern: '^\s*#{0,6}\s*[*_]*\s*HOUSEHOLD FIT\s*[*_:]*\s*$'
 flags: m
