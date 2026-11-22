@@ -56,9 +56,9 @@ To add a case, create `evals/case-<pseudonym>/` with:
 - `case.yaml`: `schema_version: "1.1"`, `name`, `tags: [..]` in flow form (`bite`, `placement-constraint`, `changed-record`, and `ideal-pending` until the ideal is approved), and `context: scaffold_script: fixture.sh`.
 - `fixture.sh`, copied unchanged from another case: it copies `resources/` into the run's workspace.
 - `prompt.md`: the request, asking for the profile saved to `profile.md`.
-- `graders/`: copy the shared graders from another case and paste the ideal into `matches-ideal.md` and list under it the 3 to 5 required facts a card must state; the ideal's other facts are optional. Add a grader per rule the record tests.
+- `graders/`: copy the shared graders unchanged from another case (`profile-saved`, `skill-fired`, the four headings, and the `rubric-*` regexes, which carry the FOHA profile grader's lexicons for first-person voice, social words, adopter screening, and absolute claims), then paste the ideal into `matches-ideal.md` and list under it the 3 to 5 required facts a card must state; the ideal's other facts are optional. Add a grader per rule the record tests.
 
-`tests/test_evals.py`, part of `make check`, checks each case's files, tags, and graders, that `matches-ideal.md` embeds `ideal.md`, and that no case holds a calendar date.
+`tests/test_evals.py`, part of `make check`, checks each case's files, tags, and graders, that the shared graders are identical in every case, that each ideal passes its case's regex graders, that `matches-ideal.md` embeds `ideal.md`, and that no case holds a calendar date.
 
 ## License
 

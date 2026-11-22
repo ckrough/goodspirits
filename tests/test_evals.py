@@ -29,6 +29,16 @@ REQUIRED = (
     "graders/skill-fired.md",
     *(f"graders/heading-{h}.md" for h in HEADINGS),
 )
+# Graders that score the rubric's case-independent rules; every case carries the same copy.
+SHARED_GRADERS = (
+    "profile-saved",
+    "skill-fired",
+    *(f"heading-{h}" for h in HEADINGS),
+    "rubric-first-person",
+    "rubric-social-words",
+    "rubric-screening",
+    "rubric-absolute-claims",
+)
 # Run with --scaffold, as the operator: every case must carry exactly this copy-only script.
 FIXTURE = """#!/usr/bin/env bash
 # Copy the case's input files into the empty eval workspace.
@@ -44,7 +54,7 @@ DATE_PATTERNS = (
 
 
 def cases() -> list[Path]:
-    return sorted(p for p in EVALS.iterdir() if p.is_dir() and p.name not in NOT_CASES)
+    return sorted(p for p in EVALS.iterdir() if p.is_dir() and p.name not in NOT_CASES and not p.name.startswith("."))
 
 
 def frontmatter(path: Path) -> dict[str, str]:
@@ -95,6 +105,32 @@ class EvalSuiteTest(unittest.TestCase):
             if "bite" in tags(case):
                 for grader in ("no-incident-words", "history-review"):
                     self.assertTrue((case / f"graders/{grader}.md").is_file(), f"{case.name} lacks {grader}")
+
+    def test_shared_graders_are_identical_in_every_case(self):
+        first, *rest = cases()
+        for name in SHARED_GRADERS:
+            reference = first / f"graders/{name}.md"
+            self.assertTrue(reference.is_file(), f"{first.name} lacks {name}")
+            for case in rest:
+                path = case / f"graders/{name}.md"
+                self.assertTrue(path.is_file(), f"{case.name} lacks {name}")
+                self.assertEqual(path.read_text(encoding="utf-8"), reference.read_text(encoding="utf-8"), f"{case.name}/{name}")
+
+    def test_each_ideal_passes_its_regex_graders(self):
+        for case in cases():
+            ideal = (case / "ideal.md").read_text(encoding="utf-8")
+            for path in sorted((case / "graders").glob("*.md")):
+                fields = frontmatter(path)
+                if fields.get("type") != "regex":
+                    continue
+                pattern = fields["pattern"].strip("'")
+                flags = re.IGNORECASE if "i" in fields.get("flags", "") else 0
+                flags |= re.MULTILINE if "m" in fields.get("flags", "") else 0
+                found = re.search(pattern, ideal, flags)
+                if fields.get("match") == "not_contains":
+                    self.assertIsNone(found, f"{case.name}/{path.name}: {found and found.group(0)}")
+                else:
+                    self.assertIsNotNone(found, f"{case.name}/{path.name}")
 
     def test_matches_ideal_embeds_the_ideal(self):
         for case in cases():
