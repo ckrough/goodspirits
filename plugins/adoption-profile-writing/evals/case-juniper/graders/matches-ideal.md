@@ -29,10 +29,11 @@ To meet Juniper, please submit an adoption application. Hollowbrook Animal Rescu
 
 Required facts, in any wording:
 
-1. He would do best in a home without cats or other small animals, and in an adult-only home.
-2. He has played with many dogs in groups at the shelter, and relaxed dogs are his favorites.
-3. He gets worried when he is left alone, to the point of accidents in the house.
-4. He loves fetch and tennis balls.
+1. Children of any age frighten him: when he sees one, even at a distance, he tucks his tail and tries to get away.
+2. He wants to chase small animals such as birds, rabbits, and squirrels.
+3. He has played with many dogs in groups, and relaxed dogs are his favorites.
+4. He gets worried when he is left alone, to the point of accidents in the house.
+5. He loves fetch and tennis balls.
 
 Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. Wording, order, and length may differ.
 

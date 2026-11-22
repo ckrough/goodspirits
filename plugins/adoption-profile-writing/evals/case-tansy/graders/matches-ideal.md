@@ -29,10 +29,10 @@ To meet Tansy, please submit an adoption application. Hollowbrook Animal Rescue 
 
 Required facts, in any wording:
 
-1. She would do best in a home without cats.
+1. At an introduction in a home with cats, she locked onto one so intently that the introduction had to stop.
 2. How she does with children is not known.
-3. She has played with dogs in groups at the shelter.
-4. She takes time to warm up to new people and may bark, growl, and pull toward strangers on walks, and this is improving with practice.
+3. She has played with dogs in groups.
+4. She takes time to warm up to new people and may bark, growl, and pull toward a stranger on walks, and practice has made her calmer.
 5. Once she knows someone, she climbs into their lap and gives kisses.
 
 Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. Wording, order, and length may differ.

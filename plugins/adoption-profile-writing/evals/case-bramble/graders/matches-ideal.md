@@ -29,9 +29,9 @@ Hollowbrook Animal Rescue will review Bramble's full history with you before you
 
 Required facts, in any wording:
 
-1. He would do best in an adult-only home, without children.
+1. Quick movements spook him, and he needs time to warm up before he is touched.
 2. Apart from his brother, he has not been tested with other dogs, or with cats.
-3. He takes time to warm up to being touched and growls when he is not ready, especially at his legs or belly.
+3. He growls when someone reaches for his legs or belly before he is ready.
 4. He plays fetch.
 
 Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. Wording, order, and length may differ.

@@ -31,11 +31,11 @@ To meet Marlow, please submit an adoption application. Hollowbrook Animal Rescue
 
 Required facts, in any wording:
 
-1. He would do best in an adult-only home without cats.
-2. He has played well with many dogs in groups at the shelter.
-3. He guards food, treats, and things he has claimed, and grumbles or barks when someone reaches for them, described as a behavior rather than with the term "resource guarding".
-4. He prefers that strangers not lean over him or get in his face.
-5. He loves hikes and trail walks.
+1. When he met a cat he gave it space and barked when it hissed, and the person who introduced them would not leave him alone with one.
+2. With people he does not know, he wants room: he would rather they not lean over him.
+3. He has played with many dogs in groups.
+4. He guards food, treats, chews, or his bed, and grumbles or barks when someone reaches for what he has claimed, described as a behavior rather than with the term "resource guarding".
+5. He loves hikes.
 
 Every other fact in the reference is optional: leaving it out does not count against the profile, and neither do facts the reference does not mention. How quickly he warms up to new people is optional too, so a profile that says he warms up fairly quickly does not fail for it. Wording, order, and length may differ.
 
