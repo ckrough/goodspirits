@@ -9,19 +9,19 @@ Reference Description:
 
 ABOUT THIS PET
 
-Hand Marlow a leash and a trail, and he is ready to go: he has hiked three miles with volunteers, waded in a stream, and likes to stretch out and roll in the grass after a hike. When someone comes to his door, he walks up with his mouth open and his tail wagging gently. On quieter days he would rather sit in the shade close to his walker.
+Marlow is a hiker. He has done three miles at a stretch and waded into a stream along the way, and when the hike is over he likes to roll in the grass. On a hot day he would rather sit in the shade, close to you. He has gone along on trips into town and to the pet store, leaving the toys on the shelves alone.
 
 HOUSEHOLD FIT
 
-In a group of dogs, Marlow digs, wrestles, and wanders the yard with the others, and he has played with many dogs at the shelter. He would do best in an adult-only home without cats.
+Put Marlow in a group of dogs and he digs, wrestles, or just wanders alongside his favorites; he has played with many. When he met a cat he gave it the space it asked for and barked when it hissed, and the person who introduced them would not leave him alone with one. With people he does not know, he likes room: he would rather they not lean over him.
 
 TRAINING
 
-Marlow knows sit and touch, comes when called, and works hard for food. He walks easily on leash, pulling a little only when he is excited.
+Call Marlow's name and he comes running and sits for a treat. He knows touch too. He walks easily on leash, pulling a little only when he is excited.
 
 GOOD TO KNOW
 
-Marlow guards food, treats, chews, and his bed: at the shelter he grumbles or barks when someone reaches for something he has claimed. He takes time to warm up to new people and prefers that strangers not lean over him.
+Marlow guards food, treats, chews, and his bed: he grumbles or barks when someone reaches for something he has claimed.
 
 Marlow is eligible for the Hollowbrook Animal Rescue senior program: Hollowbrook Animal Rescue waives his adoption fee and reimburses up to $1,500 in qualifying medical expenses.
 

@@ -14,7 +14,7 @@ EVALS = Path(__file__).resolve().parent.parent / "plugins/adoption-profile-writi
 NOT_CASES = {"results", "history", "__pycache__"}
 
 RULE_TAGS = {"bite", "placement-constraint", "changed-record"}
-ALLOWED_TAGS = RULE_TAGS | {"ideal-pending"}
+ALLOWED_TAGS = RULE_TAGS | {"tag-conflict", "foster-notes", "ideal-pending"}
 TECHNIQUES = ("pseudonymization", "generalization", "suppression")
 HEADINGS = ("about-this-pet", "household-fit", "training", "good-to-know")
 REQUIRED = (

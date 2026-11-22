@@ -5,7 +5,7 @@ Techniques are named in ISO/IEC 20889 terms. The source is one animal's shelter-
 | Field | Technique | Change |
 |---|---|---|
 | Animal name and nickname | pseudonymization | Replaced with "Juniper" in the record and the ideal |
-| Other shelter dogs' names | pseudonymization | Replaced with "Dog A" through "Dog F" |
+| Other shelter dogs' names | pseudonymization | Replaced with "Dog A" through "Dog G" |
 | Shelter name and address | pseudonymization | Replaced with "Hollowbrook Animal Rescue"; address removed |
 | Shelter ID, microchip number | suppression | Removed |
 | Staff, volunteer, and foster names, memo authors, initials | suppression | Removed; entries name the role ("a volunteer", "a staff member", "the behavior team") |
@@ -16,5 +16,5 @@ Techniques are named in ISO/IEC 20889 terms. The source is one animal's shelter-
 | Outing and training program names | generalization | "the trail-outing program", "behavior plan level" |
 | The shelter he was returned to | suppression | Removed |
 | Feeding schedule, medical expenses, a skin lesion and its follow-up, a training-plan link | suppression | Removed as detail the profile does not use |
-| Volunteer walk log | suppression | Repeated and routine entries removed; each kind of observation kept at least once |
+| Volunteer walk log | suppression | Routine one-line entries and handling incidents removed; scenes of play, rest, and outings kept, including several of each, so the record carries the volume a writer has to choose from |
 | Published profile and its page address | suppression | Removed from the record; the ideal Description is written from the record |

@@ -52,8 +52,8 @@ To add a case, create `evals/case-<pseudonym>/` with:
 
 - `resources/record.md`: the record, de-identified, opening with a `Listing attributes:` block (Kids, Dogs, Cats, as the shelter's listing shows them). No real name of an animal or a person, no shelter ID, address, or calendar date; dates become days, weeks, or months from intake. No year anywhere in the case, citations included.
 - `deidentification.md`: each change, named by its ISO/IEC 20889 technique (pseudonymization, generalization, or suppression).
-- `ideal.md`: the ideal profile, passing `check_draft.py`.
-- `case.yaml`: `schema_version: "1.1"`, `name`, `tags: [..]` in flow form (`bite`, `placement-constraint`, `changed-record`, and `ideal-pending` until the ideal is approved), and `context: scaffold_script: fixture.sh`.
+- `ideal.md`: the ideal profile, passing `check_draft.py`. `case-clover` is the one exception: its ideal is a published Description kept word for word, and the longer pseudonyms put it 3 words over the length band.
+- `case.yaml`: `schema_version: "1.1"`, `name`, `tags: [..]` in flow form (`bite`, `placement-constraint`, `changed-record`, `tag-conflict`, `foster-notes`, and `ideal-pending` until the ideal is approved), and `context: scaffold_script: fixture.sh`.
 - `fixture.sh`, copied unchanged from another case: it copies `resources/` into the run's workspace.
 - `prompt.md`: the request, asking for the profile saved to `profile.md`.
 - `graders/`: copy the shared graders unchanged from another case (`profile-saved`, `skill-fired`, the four headings, and the `rubric-*` graders: regexes carrying the FOHA profile grader's lexicons for first-person voice, social words, adopter screening, and absolute claims, and judge graders for its register, concreteness, observed-not-promised, opening and flow, struggle balance, and length dimensions), then paste the ideal into `matches-ideal.md` and list under it the 3 to 5 required facts a card must state; the ideal's other facts are optional. Add a grader per rule the record tests.

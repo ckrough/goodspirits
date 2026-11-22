@@ -1,18 +1,18 @@
 ABOUT THIS PET
 
-Tansy wants to check out everything: on a walk she is on the go the whole time, nose down, and a squirrel gets her full attention. In her foster home she sleeps curled up against her person and likes to be tucked under a blanket. Once she knows someone, she climbs into their lap, gives kisses, and leans in.
+Tansy is a lap dog once she knows you: she climbs in, gives kisses, and leans against you. In her foster home she naps on the couch tucked under a blanket and ends the night curled up against her person. Outdoors she is all business, on the go the whole walk, and a squirrel gets her full attention.
 
 HOUSEHOLD FIT
 
-Tansy has played with several dogs in groups at the shelter, giving play bows and hopping around them. She has met cats in a foster home, and she would do best in a home without cats. How she does with children is not known.
+Tansy play bows and hops around her favorite dogs, and she has played with several in groups. Cats are another matter: in a home with cats, she locked onto one so intently that the introduction had to stop. How she does with children is not known.
 
 TRAINING
 
-Tansy loves to learn: she sits, lies down, and comes when called, and she picked up roll over in a single session. On walks she turns to her person at the cue "look" for a bit of jerky or cheese.
+Tansy loves to learn: she sits, lies down, and comes when called, and she picked up roll over in a day. On walks she turns to you at the cue "look" for a bit of jerky.
 
 GOOD TO KNOW
 
-Tansy takes time to warm up to new people: on walks she may bark, growl, and pull toward a stranger, and her foster has seen this improve over three months of practice. When she is excited to see someone she jumps and mouths.
+Tansy takes time to warm up to new people: on walks she may bark, growl, and pull toward a stranger, and months of practice with her foster have made her calmer. When she is excited to see you she jumps and mouths.
 
 Tansy is a Hollowbrook Animal Rescue Diamond Dog: Hollowbrook Animal Rescue provides training and guidance to help you settle her into her new home, at no cost to you.
 

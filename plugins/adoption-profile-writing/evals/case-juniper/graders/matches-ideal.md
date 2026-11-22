@@ -9,15 +9,15 @@ Reference Description:
 
 ABOUT THIS PET
 
-Juniper is a fetch champ, and half the time he drops the tennis ball right into his walker's hand. He walks the trails for over an hour, then taps his feet for one more loop. He swims after a stick, and he could not get enough of a wading pool. Afterward he curls up next to his person on a bench.
+Throw a tennis ball and Juniper is off: he runs it down and, half the time, drops it right back into your hand. He is just as easy on a walk, keeping the leash loose and checking in with you along the way. When it is time for a rest, he curls up next to you on a bench and watches the dogs and people go by.
 
 HOUSEHOLD FIT
 
-In a group of dogs at the shelter, Juniper has wrestled and played with many of them, and relaxed dogs are his favorites. On the trails he watches other dogs go by with a wag of his tail and stays put when his walker asks. He would do best in a home without cats or other small animals, and in an adult-only home.
+Relaxed dogs are Juniper's favorites, and he has played with many of them in groups. Birds, rabbits, and squirrels catch his eye, and he wants to chase them. Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away. Indoors, he has hopped onto the couch, stretched across a lap, and rolled over for belly rubs.
 
 TRAINING
 
-Out on a walk, Juniper keeps the leash loose, and when his walker stops he sits and looks up at them. He knows down, wait, come, and touch too, and a squeaky toy or a tennis ball gets his best work.
+Juniper knows sit, down, wait, come, and touch. Ask for a sit on a walk and he stops, looks up at you, and takes his treat gently.
 
 GOOD TO KNOW
 

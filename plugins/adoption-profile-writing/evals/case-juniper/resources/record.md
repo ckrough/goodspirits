@@ -88,6 +88,7 @@ Meet-and-greet note: prefers squeaky toys and tennis balls (fetch) over treats. 
 
 Confident and eager to go for a walk. Did some agility work on the ramps with ease, more motivated by a chew toy than a treat. At cool-down time he was more than happy to lean against, or on, me.
 A morning out on the trail-outing program: a couple of miles at a park. Awesome and well behaved in all aspects. Not a sign of shyness.
+Enjoyed playing with squishy toys and the walk. Very well behaved on the walk, and loved praise and being called "good boy".
 
 ## Month 15, volunteer walk note
 
@@ -102,6 +103,7 @@ Walked the trails, play yard, then another shorter walk (he insisted). Then he s
 
 Went for a walk on the trail and did a few cuddles on the bench. Played fetch. He did not give me a hard time going back into the building.
 Walked the trail, play yard, another short walk. He didn't want to go back into the building; a staff member got him to follow her inside.
+He notices the other dogs on the trail, watches them, and wags his tail (most of the time). We played fetch on and off in the play yard, but he would stop to see what was going on with the other dogs in the area.
 
 ## Month 18, volunteer walk note
 
@@ -121,17 +123,20 @@ One of my favorite dogs to walk. He never pulls and he is always very friendly w
 
 Juniper is deathly afraid of being out in public places: he will sit down or not move at all. If you take him somewhere with lots of people, he will hide in the car. You have to walk him very early and very late to go to the bathroom. He is very reactive to dog sounds on the internet. He can be a cuddler when he wants to be and loves to be petted, and he loves to be close to you. He needs patience and guidance to overcome his fears.
 
-## Month 21, volunteer walk note
+## Month 21, volunteer walk notes
 
 First time walking him, and he was not shy of me at all. The only jumping he did was in the kennel before I opened it. Easy to walk. He favored his left front paw for part of the walk but seemed fine by the end.
+I was his second walk of the day, and I think he tired out in the middle of the trails. We found a bench and he lay on the ground beside it (he didn't want to sit up with me this time), and I think he could have stayed there all afternoon. He enjoyed his treats. We saw Dog G not far off, and his tail was wagging.
 
 ## Month 22, memo (disclaimer)
 
 Behavior plan level: this level supports dogs that may need extra help with a specific, manageable behavior that can be addressed with a written behavior plan.
 
-## Month 22, volunteer walk note
+## Month 22, volunteer walk notes
 
 Calm, attentive, and relaxed on the trails. Easy to redirect and rests easy. Responds most to positive reinforcement and loves to sit/down/watch in a peaceful area. Can be triggered by dogs and tends to be jumpy and mouthy in the kennel and backyard. Froze when walking by the play yard and locking eyes with a dog at a distance.
+Barky at first, but ran right out of the kennel and started play bowing. Great walk manners.
+Lounged under the covered play yard and watched dogs and people go by. Afterward we had a long walk; he hesitated for just a moment in front of his building, then headed inside.
 
 ## Month 22, staff notes
 
@@ -146,6 +151,7 @@ Walked all the trails. His easygoing self, and he went straight back to the buil
 Sees other dogs (wags tail) but listens and stays put.
 Very good on leash and calm. Smart and gentle. Knows come, sit, and lie down.
 Saw another volunteer with a dog twice and could not persuade him to change direction; he wasn't looking to fight, just interested.
+We saw a deer poking its head out of the bushes. He and I watched from a distance, and once we were both sure it was a deer, we headed off in a different direction together.
 
 ## Month 25, volunteer walk note
 
@@ -157,6 +163,7 @@ Reminder to beware of Dog A any time he's nearby; the two intensely dislike each
 Wound up about a dog he saw and was jumping up at the fence corner.
 Found a squeaky toy in the yard and really enjoyed it; started to tear into it, and after a treat he just sat on the ground with it.
 Great on leash, hardly shy for a first visit from me. Loves the green squeaky toy in the office.
+Walked the back trail a bit. When we came back he kept hanging around the office building; I think he sensed Dog A was out. Sure enough, they spotted each other across the lawn, but both behaved themselves.
 
 ## Month 26, behavior/trainer notes (internal)
 
@@ -169,7 +176,8 @@ Juniper has a behavior profile, along with handouts (decompression, shy/fearful 
 ## Month 27, volunteer walk notes
 
 Didn't show any shyness; super excited to go for a walk and did not want to go back.
-Used the wading pool for the first time and couldn't get enough of it. Let me dry him off with a towel, no problem.
+Used the wading pool for the first time and couldn't get enough of it. At one point it looked like he was bobbing for apples, though there were only a few leaves in the water. Let me dry him off with a towel, no problem. Another volunteer got him moving back toward his building with chicken jerky.
+Walked him for over an hour in the late afternoon. In the covered play yard he kept watching the cars and people closely.
 He didn't react to anything except a child who walked past us.
 Add Dog D to the list of dogs Juniper reacts to. He definitely doesn't react to all (or even most) dogs, but when he does he can get pretty excited.
 
@@ -182,6 +190,10 @@ Met Dog E in group. He ran in with energy she was not ready for, backed off, the
 Can be shy, but not nearly as shy as he used to be. Good on leash! TERRIFIED of children of ALL ages.
 Reacts to certain dogs: Dog D, Dog F.
 Recommendations: reward check-ins; in-kennel enrichment; continue basic cues training for stimulation (sit, off, stay/wait, down).
+
+## Month 28, volunteer walk note
+
+Coming out of the building we passed Dog A, and the two snarled and growled at each other; I got him onto the other side of the rail and up the trail. After the lower trail his ears perked up and he reversed direction, and we walked the lower and upper trails nonstop, like he was on a mission. Then the lower play yard, a little fetch, and a rest. Heading back he stalled for a while, so we went to the upper play yard for one last round, and then he was ready to go in.
 
 ## Month 29, volunteer walk note
 

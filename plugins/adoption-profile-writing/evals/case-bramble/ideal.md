@@ -1,18 +1,18 @@
 ABOUT THIS PET
 
-Bramble will drop whatever he is doing for a treat. He gets wiggly and excited when he sees a ball, and he brings the ball back for another throw during fetch. He is always on the move, sniffing into every corner, then trotting back to check in with his person before heading off again. Once he gets to know someone, he leans into them while they pet him.
+Bramble is always on the move, looking for something new, and every now and then he comes back to check in with you. Bring out a ball and he will play fetch. Once he warms up to someone, he leans against them while they pet him. Bramble came to the shelter with his brother.
 
 HOUSEHOLD FIT
 
-Bramble came to Hollowbrook Animal Rescue with his brother. Apart from his brother, he has not been tested with other dogs, or with cats. He is more comfortable with adults, and would do best in an adult-only home without children.
+Bramble gets riled up when he and his brother are together, and the two have done better since living apart; on his own he is the calmer one. Apart from his brother, he has not been tested with other dogs, or with cats. With people he likes to set the pace: quick movements spook him, and he needs time to warm up before he is touched. On a walk he has barked at strangers, then leaned against them while they petted him.
 
 TRAINING
 
-When it is time for a walk, Bramble steps willingly into his harness or a slip lead, and once outside he zigzags along, pulling toward whatever has caught his eye. A treat gets his attention fast.
+Bramble has been patient with volunteers fitting his harness, and he has let one pick him up and hold him for a while. On leash he pulls and changes direction often.
 
 GOOD TO KNOW
 
-Bramble takes a little time to warm up to being touched: he growls when he is not ready, most of all when a stranger reaches for his legs or belly.
+Bramble growls as a warning when someone reaches for his legs or belly before he is ready, which can make putting on his harness slow going.
 
 Through the Hollowbrook Animal Rescue senior program, Bramble's adoption fee is waived and he is eligible for up to $1,500 in medical reimbursement.
 
