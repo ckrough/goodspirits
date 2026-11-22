@@ -46,8 +46,9 @@ GOOD TO KNOW
 
 ## Open items on this card
 
-This is the card as published. Six of its lines break the rules in `SKILL.md`. Do not copy any of them. The example to copy is the one in `profile-template.md`.
+This is the card as published. Seven of its lines break the rules in `SKILL.md`. Do not copy any of them. The example to copy is the one in `profile-template.md`.
 
+- **ABOUT THIS PET ends as a list.** The disc scene builds, but "She likes squeaky toys, digging in sand, puzzle feeders, and car rides" is an inventory, and the jog could sit anywhere in the paragraph. Build the picture from the same facts (`SKILL.md`, "Build the picture"): "Throw a flying disc and [Name] leaps to catch it in midair, trots it back, and drops it at your feet, again and again for forty minutes. Then she'll jog two miles beside you without pulling on the leash." The likes that have no scene in the record (squeaky toys, sand, puzzle feeders, car rides) either join a moment the record supports or come out; a list of likes tacked on the end tells a reader less than one scene.
 - **The card has room for one more struggle, not two.** Leash barking at dogs in HOUSEHOLD FIT is already one of the card's two. The record holds two more candidates: guarding her toys and her bed, and barking and backing away when a stranger walks up. Pick one, preferring the one the record gives context or progress for: "takes a little time to warm up to new people: she barks and backs away when a stranger walks up, and comes forward once they crouch." The other goes to the history review, and the closing line says so.
 - **"is possessive of her toys"** names no behavior a reader can picture, and "possessive" is a personality label. If guarding is the struggle the card keeps, write the behavior and where it was seen: "likes to keep her toys to herself at the shelter, and may freeze and growl if someone reaches for one she is holding." Otherwise it goes to the history review with the rest.
 - **"Vacuum cleaners frighten her"** needs a source. When nothing in the record mentions vacuums or household noise, the line comes off.
