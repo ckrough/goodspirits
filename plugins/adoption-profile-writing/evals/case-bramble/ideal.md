@@ -8,11 +8,11 @@ Bramble gets riled up when he and his brother are together, and the two have don
 
 TRAINING
 
-Bramble has been patient with volunteers fitting his harness, and he has let one pick him up and hold him for a while. On leash he pulls and changes direction often.
+Bramble has been patient with volunteers fitting his harness, and he has let one pick him up and hold him for a while.
 
 GOOD TO KNOW
 
-Bramble growls as a warning when someone reaches for his legs or belly before he is ready, which can make putting on his harness slow going.
+Bramble is uncomfortable being touched until he has had time to warm up, most of all around his legs and belly, which can make putting on his harness slow going. He growls as a warning.
 
 Through the Hollowbrook Animal Rescue senior program, Bramble's adoption fee is waived and he is eligible for up to $1,500 in medical reimbursement.
 

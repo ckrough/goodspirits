@@ -1,6 +1,6 @@
 ABOUT THIS PET
 
-Tansy is a lap dog once she knows you: she climbs in, gives kisses, and leans against you. In her foster home she naps on the couch tucked under a blanket and ends the night curled up against her person. Outdoors she is all business, on the go the whole walk, and a squirrel gets her full attention.
+Tansy is a lap dog once she knows you: she climbs in, gives kisses, and leans against you. In her foster home she snuggles on the couch, likes to be tucked under a blanket, and ends the night curled up against her person. Take her out for a walk and a squirrel gets her full attention.
 
 HOUSEHOLD FIT
 

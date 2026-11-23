@@ -25,6 +25,7 @@ REQUIRED = (
     "resources/record.md",
     "deidentification.md",
     "graders/matches-ideal.md",
+    "graders/record-fidelity.md",
     "graders/profile-saved.md",
     "graders/skill-fired.md",
     *(f"graders/heading-{h}.md" for h in HEADINGS),
@@ -143,6 +144,15 @@ class EvalSuiteTest(unittest.TestCase):
             ideal = (case / "ideal.md").read_text(encoding="utf-8").strip()
             grader = (case / "graders/matches-ideal.md").read_text(encoding="utf-8")
             self.assertIn(ideal, grader, f"{case.name}: graders/matches-ideal.md is out of date with ideal.md")
+
+    def test_record_fidelity_embeds_the_record(self):
+        heads = set()
+        for case in cases():
+            record = (case / "resources/record.md").read_text(encoding="utf-8")
+            grader = (case / "graders/record-fidelity.md").read_text(encoding="utf-8")
+            self.assertTrue(grader.endswith(record), f"{case.name}: graders/record-fidelity.md is out of date with record.md")
+            heads.add(grader[: -len(record)])
+        self.assertEqual(len(heads), 1, "record-fidelity.md instructions differ between cases")
 
     def test_scored_graders_read_the_saved_profile(self):
         for case in cases():

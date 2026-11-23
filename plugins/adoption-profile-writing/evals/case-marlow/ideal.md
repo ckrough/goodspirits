@@ -1,6 +1,6 @@
 ABOUT THIS PET
 
-Marlow is a hiker. He has done three miles at a stretch and waded into a stream along the way, and when the hike is over he likes to roll in the grass. On a hot day he would rather sit in the shade, close to you. He has gone along on trips into town and to the pet store, leaving the toys on the shelves alone.
+Marlow is a hiker. Take him out on the trails and he is good for three miles at a stretch, and after a day out there he has stretched out in the grass for a good roll. Come to a stream and he may wade right in. Some days he is cuddly instead and just wants to sit in the shade, close to you. He is easy company in town too: he has walked through the pet store and left the toys on the shelves alone.
 
 HOUSEHOLD FIT
 
@@ -12,7 +12,7 @@ Call Marlow's name and he comes running and sits for a treat. He knows touch too
 
 GOOD TO KNOW
 
-Marlow guards food, treats, chews, and his bed: he grumbles or barks when someone reaches for something he has claimed.
+Marlow guards food, treats, bones, and his space: he has barked to keep a bag of treats he had grabbed.
 
 Marlow is eligible for the Hollowbrook Animal Rescue senior program: Hollowbrook Animal Rescue waives his adoption fee and reimburses up to $1,500 in qualifying medical expenses.
 
