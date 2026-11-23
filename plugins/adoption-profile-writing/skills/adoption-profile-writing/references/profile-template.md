@@ -30,7 +30,7 @@ ABOUT THIS PET
 [A behavior that sets the animal apart. Energy shown through activity: what, how long, how far. What the animal seeks out, as things.]
 
 HOUSEHOLD FIT
-[One paragraph that moves from other dogs, to cats and small animals, to people and children: what the record shows about each and where it was seen, ending on any supported limit stated as a recommendation about the home.]
+[One paragraph that moves from other dogs, to cats and small animals, to people and children: what the record shows about each and where it was seen, showing any household limit through the behavior behind it.]
 
 TRAINING
 [Named cues. Leash manners as observed. House-training or crate comfort, if the record knows it. What it is learning now. How it responds to training.]
@@ -69,13 +69,13 @@ This section answers the three questions most adopters ask: how the animal does 
 
 **What to write**
 
-- Write one paragraph, not a labeled list. Move from other dogs, to cats and small animals, to people and children, so the section reads as a picture of the animal in a household. Let related facts share a sentence where they connect ("She has walked past the shelter cats without reacting, but she stalks birds in the yard"), and end on the limit, if there is one.
+- Write one paragraph, not a labeled list. Move from other dogs, to cats and small animals, to people and children, so the section reads as a picture of the animal in a household. Let related facts share a sentence where they connect ("She has walked past the shelter cats without reacting, but she stalks birds in the yard"), and show any limit through the behavior behind it.
 - Answer all three every time, even when the record has nothing to say. A missing answer looks like nobody checked, and Dogs, Cats, and Kids are three separate topics, so each needs its own answer.
 - Dogs: say what the record shows, and where it was seen: in a group of dogs, on leash, at the shelter, or living in a home. Animals often act differently in each setting, so name the setting rather than giving one overall verdict.
 - Cats: say what the record shows. If the animal has never been around a cat, say so. That is a complete answer. Do not assume the animal is unsafe with cats because no one has tested it.
 - Children: say what the record shows, including the ages of the children involved. Shelters do not test animals with children: what is known comes from the animal's past or from what staff and volunteers have seen. When the record shows neither, say it is not known ("How she does with children is not known"), never that she has not been tested.
 - When a tag answers the question and the record adds nothing, state the tag's answer plainly ("He has done well with children") and stop. The exception is a narrowed pair, such as Good with Kids with "No Small Kids (10 or under)": state the limit with the yes (see `SKILL.md`, "A narrowed yes names its limit"). Do not attach a gap to it in the copy ("the ages of the children are not recorded," "his listing marks this as to be determined"): a reader takes a tag beside a hedge about it as a contradiction, and the card stops reading as a report of what was observed. Record gaps go to the open items for staff. Write "has not been tested" with dogs or cats, or "is not known" for children, only when the tag itself is unknown or to be determined.
-- When evidence supports a limit, state it as a recommendation about the home: "would do best in a home without young children." The limit stays even when the incident behind it goes to the consultation (see `SKILL.md`, "Serious incidents go to the consultation"), and a narrowing tag is evidence enough on its own (see `SKILL.md`, "A narrowed yes names its limit").
+- When the record supports a limit, describe the behavior behind it, as it was seen, and let the reader judge their own household: "Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away," not "he would do best in an adult-only home." Do not add the limit after the description. State the limit as a recommendation about the home only when its sole source is a serious incident held for the consultation, or when the record gives no reason for it, such as a narrowing tag with nothing behind it (see `SKILL.md`, "Placement limits: describe the behavior behind them").
 - Describe what was observed, not what will happen. "Has played well with the dogs at the shelter" reports a fact. "Great with all dogs" makes a promise the shelter cannot back.
 
 **Why it matters**

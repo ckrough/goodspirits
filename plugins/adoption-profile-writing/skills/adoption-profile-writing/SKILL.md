@@ -39,7 +39,7 @@ Choose the two from the record:
 
 1. **Prefer what an adopter would notice in daily life** (jumping when excited, pulling on leash, barking at the door) over what shows up only in a specific setting or under handling.
 2. **Prefer struggles that come with context or progress in the record** ("mostly at the shelter," "getting better with training"), so the sentence can end on something true and hopeful.
-3. **A behavior mentioned anywhere on the card counts toward the two.** Leash barking at dogs in HOUSEHOLD FIT is one of them. Placement constraints ("would do best in a home without young children"), unknowns ("has not been tested with cats"), and the support line do not count.
+3. **A difficulty of daily life counts toward the two wherever it appears**: being left alone, guarding, handling, jumping and mouthing, pulling on leash. HOUSEHOLD FIT's account of how the animal behaves around other dogs, cats, small animals, children, and people it does not know shows who it can live with, and does not count, even where the behavior is hard ("children frighten him"). Neither do a stated limit, unknowns ("has not been tested with cats"), or the support line. A struggle never goes in ABOUT THIS PET.
 
 Everything else goes to the history review. Staff go over it with the adopter before the meet, where a person can give the circumstances and answer questions. Holding a struggle back makes the closing line required (see "The closing line is required" below), so the card still tells the reader that a conversation is waiting.
 
@@ -63,7 +63,7 @@ Five kinds of incident stay off the card however the record words them, and the 
 
 In the consultation a person can state the circumstances and the date and answer what the adopter asks back, which a web page cannot do. One entry is enough to route an incident there, and the entry does not decay with age: `references/sourcing-behavior-facts.md` covers why recency weighting never buries one.
 
-**The incident goes; the limit it supports stays.** A child-related incident usually carries a placement limit, and that limit is true of the animal, so it publishes in HOUSEHOLD FIT as a recommendation about the home: "He is more comfortable with older teens and adults, and would do best in a home without young children." The incident behind it, and whoever reported it, does not. The same holds for a "no cats" or "only dog" limit behind an attack.
+**The incident goes; the limit it supports stays.** A child-related incident usually carries a placement limit, and that limit is true of the animal. When the incident is its only source, there is no behavior on the card to describe, so the limit publishes in HOUSEHOLD FIT as a recommendation about the home: "He is more comfortable with older teens and adults, and would do best in a home without young children." The incident behind it, and whoever reported it, does not. The same holds for a "no cats" or "only dog" limit behind an attack. When ordinary observed behavior also supports the limit, describe that behavior instead (see "Placement limits: describe the behavior behind them").
 
 **The closing line is required when the record holds one, or when the card held back a struggle.** With nothing about the incident or the held-back struggles on the card, the closer is the only signal an adopter gets that a conversation is waiting for them:
 
@@ -78,17 +78,26 @@ The cut phrasing assumes the adoption is happening and puts the disclosure at th
 
 The card's silence works only if the consultation really comes before the adopter meets the animal. If the record suggests it did not, tell the person you are writing for so they can raise it with shelter staff.
 
-#### Placement constraints stay, and cost nothing
+#### Placement limits: describe the behavior behind them
 
-Constraints that are true of the animal ("only dog," "no cats," "a home without young children") stay in the copy. Shelter-management systems usually publish them as structured attributes and push them to listing sites such as Petfinder and Adopt-a-Pet, where they drive the search filters, so deleting the sentence widens the funnel by nobody. It only hides the reason from the adopter and makes the prose disagree with the attribute panel printed beside it.
+Limits that are true of the animal ("only dog," "no cats," "a home without young children") are real, and shelter-management systems usually publish them as structured attributes and push them to listing sites such as Petfinder and Adopt-a-Pet, where they drive the search filters. The card does a different job: it shows the behavior that set the limit, as it was seen, and lets the reader judge their own household. "When he sees a child, even across a parking lot, he tucks his tail and tries to get away" tells a family with children everything "would do best in an adult-only home" does, and it tells every other reader what the dog is like. Write it in HOUSEHOLD FIT and stop there: the description replaces the limit, it does not sit beside it, and the attribute panel already carries the filter.
 
-The question to ask about a constraint is provenance, not presence: does the record support it? See "When the filter and the record disagree" below when it does not.
+State the limit itself, as a recommendation about the home ("would do best in a home without young children"), in two cases only:
 
-**Do not spin a constraint into a compliment.** The standard rewrite in shelter promotion guidance turns "must go to a home without children" into a charm sentence, on the theory that the plain version scares off even childless readers. Strip the charm from it and no constraint is left: a reader can no longer say what the limit is.
+1. **Its only source is a serious incident.** The incident goes to the consultation, so there is no behavior on the card to describe (see "The incident goes; the limit it supports stays").
+2. **The record gives no reason for it.** A tag or a matchmaking note with no observation behind it leaves nothing to describe. Never invent the behavior.
+
+When an ordinary observed behavior supports the limit alongside an incident, describe the behavior. This is the operator's editorial decision: no study in `references/research-basis.md` compares a described behavior with a stated limit.
+
+The question to ask about a limit is provenance, not presence: does the record support it? See "When the filter and the record disagree" below when it does not.
+
+**Do not spin a limit into a compliment.** The standard rewrite in shelter promotion guidance turns "must go to a home without children" into a charm sentence, on the theory that the plain version scares off even childless readers. Strip the charm from it and neither the limit nor a behavior is left: a reader can no longer say what the dog does or what household it fits.
 
 | Keep | Cut |
 |---|---|
-| "He is more comfortable with older teens and adults, and would do best in a home without young children." | "He's such a goofy bundle of energy that he might be a bit too much for small children." |
+| "Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away." | "He would do best in an adult-only home." |
+| "In a home with cats, she locked onto one so intently that the introduction had to stop." | "She would do best in a home without cats." |
+| "He is more comfortable with older teens and adults, and would do best in a home without young children." (only source: an incident held for the consultation) | "He's such a goofy bundle of energy that he might be a bit too much for small children." |
 
 The same guidance says to lead with positives and put the challenge last. Ordering is fine; burying is not. A behavior that arrives at the tail of a sentence about how gentle the animal is has been staged so the reader discounts it.
 
@@ -96,7 +105,7 @@ Conditions on the *applicant* are a different thing and do not belong in a profi
 
 #### A narrowed yes names its limit
 
-When the record pairs a broad "good with" attribute with an attribute that narrows it, the copy states the limit as well as the yes. A bare "good with kids" on a dog that also carries "No Small Kids (10 or under)" tells a family with a six-year-old that the dog suits them, when the record says it does not.
+When the record pairs a broad "good with" attribute with an attribute that narrows it, the copy shows the limit as well as the yes: the behavior behind the narrowing when the record has it, and the limit itself when the record gives nothing but the tag (the second case under "Placement limits: describe the behavior behind them"). A bare "good with kids" on a dog that also carries "No Small Kids (10 or under)" tells a family with a six-year-old that the dog suits them, when the record says it does not.
 
 Shelter-management systems name these attributes differently. Pairs like these are the ones to look for:
 
@@ -116,7 +125,7 @@ For Dog Selective, name the dogs, not a handling plan: "has played well with lar
 
 The narrowing attribute is the default, like any tag. When the record contradicts it (the dog has done well with children under 10, or also carries an attribute recording that it met young children and did well), follow "When the filter and the record disagree, write what was seen and flag it" below. Never drop the limit, and never write the broad yes alone.
 
-The limit line is a placement constraint, so it does not count toward the card's one or two struggles (item 3 under "Name one or two light struggles"). A behavior written to explain Dog Selective, such as barking at some dogs on leash, does count.
+Neither the limit line nor a HOUSEHOLD FIT description of how the dog does with other dogs counts toward the card's one or two struggles (item 3 under "Name one or two light struggles").
 
 ### How it is written
 
@@ -190,11 +199,11 @@ A profile states what the animal does. It does not tell the adopter how to handl
 | "She jumps up on people when she is excited" | "so turn away until all four paws are on the floor" |
 | "He barks at visitors and takes time to warm up" | "so he needs a space of his own when guests are over" |
 
-After drafting, reread every "so...", "he needs...", and "he does best with..." clause. Each one is prescription unless it states a placement constraint.
+After drafting, reread every "so...", "he needs...", and "he does best with..." clause. Each one is prescription unless it states a limit under one of the two cases in "Placement limits: describe the behavior behind them."
 
 Name the program the animal is enrolled in (such as the Diamond Dog Program), and list the cues it knows. Both describe the animal rather than instruct the adopter, so both stay.
 
-**The failure to watch for is the compound one: a disclosure with an elimination clause attached to it.** Two rules already forbid each half, "Placement constraints stay" for the screen and this section for the instruction, but they arrive together and in one breath because a writer who has just published something alarming reaches for a sentence that makes it safe. A typical example: "She has bitten when her boundaries weren't respected. For this reason, she is looking for a confident, experienced pet parent who uses positive reinforcement." The bite belongs in the consultation rather than on the card, and everything after "for this reason" is an elimination question, on a senior dog whose reader pool needs widening rather than narrowing. Publish the behavior that belongs on the card, and stop. The reader decides whether they are the right home; the card does not decide it for them.
+**The failure to watch for is the compound one: a disclosure with an elimination clause attached to it.** Two rules already forbid each half, "Placement limits: describe the behavior behind them" for the screen and this section for the instruction, but they arrive together and in one breath because a writer who has just published something alarming reaches for a sentence that makes it safe. A typical example: "She has bitten when her boundaries weren't respected. For this reason, she is looking for a confident, experienced pet parent who uses positive reinforcement." The bite belongs in the consultation rather than on the card, and everything after "for this reason" is an elimination question, on a senior dog whose reader pool needs widening rather than narrowing. Publish the behavior that belongs on the card, and stop. The reader decides whether they are the right home; the card does not decide it for them.
 
 ### When the tag and the record disagree
 
@@ -262,7 +271,7 @@ Do not count automatically generated galleries, such as a feed of volunteer walk
 Run these against the finished draft. Each one restates a rule above, gathered here because this is where they fire.
 
 1. **Count the struggles on the whole card.** One or two, each one a behavior a reader can picture, and the struggle sentences under 20% of the narrative words (the support sentence and closing lines do not count toward that share). A third struggle moves to the history review.
-2. **Reread every "so...", "he needs...", and "he does best with..." clause.** Each is prescription unless it states a placement constraint.
+2. **Reread every "so...", "he needs...", and "he does best with..." clause.** Each is prescription unless it states a limit under one of the two cases in "Placement limits."
 3. **Check the record once more for the five serious incidents.** Confirm none reached the card in any wording, that any placement limit behind one is stated in HOUSEHOLD FIT, and that the closing line (or the Diamond Dog message) is present whenever an incident or a held-back struggle needs it.
 4. **Confirm all four headings exist**, GOOD TO KNOW included, and that the content covers all seven topics: About, Likes, Dogs, Cats, Kids, Training, Struggles. "Untested" (dogs, cats) or "not known" (children) covers a topic. Then check the record for a no-fault reason the dog is at the shelter, and state it if the card does not.
 5. **Read the prose against the attribute panel.** If they disagree, keep the card on that point to what was observed, with no claim either way, save the draft, and flag the conflict alongside it for staff: the tag, the entries, and how they conflict. Do not stop without a draft. One exception needs no flag: when the panel shows a narrowed pair under "A narrowed yes names its limit" and the prose gives the broad yes alone, add the limit from the tag. Flag only when the record contradicts the narrowing tag.

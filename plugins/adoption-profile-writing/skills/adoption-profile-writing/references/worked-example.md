@@ -24,7 +24,7 @@ GOOD TO KNOW
 
 **The cat answer reports the observation rather than a label.** It says what she did around the cats she has passed. If a "No Cats" tag sat beside this sentence with no observation behind it, that would be a tag contradiction for staff to settle before the card ships.
 
-**The kids limit stays; its source does not.** "More comfortable with older teens and adults" is an attribute of the dog, and the shelter's system publishes it as a search filter either way. The copy does not repeat, name, or summarize whatever report sits behind it.
+**The kids limit stays; its source does not.** "More comfortable with older teens and adults" is an attribute of the dog, and the shelter's system publishes it as a search filter either way. The copy does not repeat, name, or summarize whatever report sits behind it. That is also why the limit is stated rather than shown: its only source is a report the card holds back, which is one of the two cases where `SKILL.md` ("Placement limits: describe the behavior behind them") states a limit. Had the record held an ordinary observation behind it, the card would describe that behavior instead and leave the limit to the attribute panel.
 
 **Training lists cues by name.** Five known, one in progress. That tells an adopter more about trainability than any adjective would, and it replaced an "I do best with experienced dog owners" line that nothing in the record supported.
 
