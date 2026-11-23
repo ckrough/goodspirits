@@ -9,7 +9,7 @@ Reference Description:
 
 ABOUT THIS PET
 
-Bramble is always on the move, looking for something new, and every now and then he comes back to check in with you. Bring out a ball and he will play fetch. Bramble came to the shelter with his brother.
+Bramble has places to be. He is always on the move, exploring and looking for something interesting, happy to do his own thing, and every now and then he comes back to check in with you before he is off again. Bring out a ball and the exploring can wait: he will play fetch. Offer a treat and you have his full attention. Bramble came to the shelter with his brother.
 
 HOUSEHOLD FIT
 
