@@ -3,7 +3,7 @@
 EVALS := plugins/adoption-profile-writing/evals
 # Writer model: the skill pins Sonnet 5.5 in its frontmatter, so the eval writes with the same model. MODELS=<model ...> compares others.
 MODELS ?= claude-sonnet-5-5
-JUDGE_MODEL ?= claude-sonnet-5-5
+JUDGE_MODEL ?= claude-opus-5-5
 
 setup:
 	@echo "No dependencies to install: the repo has no lockfile."
