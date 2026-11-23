@@ -13,7 +13,7 @@ On her walks, Clover goes nose down and follows the trail, tracking scents and s
 
 HOUSEHOLD FIT
 
-Clover has played in groups with other dogs and walks past them calmly on the trail. In her foster home she sniffed noses with the family cat, but has kept her distance since. She has lived with children, and at adoption events she has done well with kids from preschoolers to teenagers. Clover goes along easily on outings: she rides quietly in the back seat, greets visitors, and has dozed off on a dog bed beside live music.
+Clover has played in groups with other dogs. When a dog passes on the trail, she wags her tail and makes a low grumble that the people who walk her read as friendly interest. In her foster home she sniffed noses with the family cat and has stayed away since: she is scared of the cat and avoids the rooms that smell of it. She has lived with children, and she has done well meeting kids from preschoolers to teenagers. Clover goes along easily on outings: she rides quietly in the back seat, greets visitors, and has dozed off on a dog bed beside live music.
 
 TRAINING
 
@@ -28,7 +28,7 @@ Hollowbrook Animal Rescue will review Clover's full history with you before you 
 Required facts, in any wording:
 
 1. In her foster home she met the family cat and has kept her distance from it since.
-2. She has lived with children and has done well with children at the shelter's events.
+2. She has lived with children and has done well meeting children of different ages.
 3. She has played with other dogs in groups.
 4. She is housetrained, and in her foster home she settles and sleeps in her crate.
 5. She whines and pulls with excitement as a walk starts, and settles once she is outside.
