@@ -1,6 +1,6 @@
 ABOUT THIS PET
 
-Bramble is always on the move, looking for something new, and every now and then he comes back to check in with you. Bring out a ball and he will play fetch. Once he warms up to someone, he leans against them while they pet him. Bramble came to the shelter with his brother.
+Bramble is always on the move, looking for something new, and every now and then he comes back to check in with you. Bring out a ball and he will play fetch. Bramble came to the shelter with his brother.
 
 HOUSEHOLD FIT
 
