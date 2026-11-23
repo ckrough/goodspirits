@@ -1,8 +1,8 @@
 .PHONY: setup test lint format check verify eval eval-record
 
 EVALS := plugins/adoption-profile-writing/evals
-# Writer models, each run over every case, to show where quality falls off.
-MODELS ?= claude-haiku-5-5 claude-sonnet-5-5 claude-opus-5-5
+# Writer model: the skill pins Sonnet 5.5 in its frontmatter, so the eval writes with the same model. MODELS=<model ...> compares others.
+MODELS ?= claude-sonnet-5-5
 JUDGE_MODEL ?= claude-sonnet-5-5
 
 setup:

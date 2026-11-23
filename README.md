@@ -44,7 +44,7 @@ make eval          # run every case once per writer model (paid model calls; run
 make eval-record   # write each model's summary from the newest sweep to evals/history/, for committing
 ```
 
-`make eval-record` refuses when the plugin has uncommitted changes, so each committed summary names the commit of the skill it scored. A sweep runs the suite with Haiku, Sonnet, and Opus 5.5 writing the profiles, to show where quality falls off as the model gets smaller; `MODELS=<model ...>` narrows it. Every run is judged by `claude-sonnet-5-5` unless `JUDGE_MODEL=<model>` is given, and each summary records both models. A score is a signal to read per case, not a verdict: the judge is a Claude model grading a Claude draft, and four cases cannot show a small difference between two versions of the skill.
+`make eval-record` refuses when the plugin has uncommitted changes, so each committed summary names the commit of the skill it scored. The skill pins `model: claude-sonnet-5-5` in its frontmatter, so it runs on Sonnet 5.5 whatever the session model, and a sweep writes with Sonnet 5.5 to match; `MODELS="<model ...>"` adds other writers for comparison. The baseline sweep showed Haiku, Sonnet, and Opus 5.5 within a few points of each other on every case, so the skill, not the model, is what limits the card. Every run is judged by `claude-sonnet-5-5` unless `JUDGE_MODEL=<model>` is given, and each summary records both models. A score is a signal to read per case, not a verdict: the judge is a Claude model grading a Claude draft, and four cases cannot show a small difference between two versions of the skill.
 
 A marketplace install copies the whole plugin folder, so `evals/` ships with it. The cases are de-identified.
 

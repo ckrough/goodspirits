@@ -1,6 +1,7 @@
 ---
 name: adoption-profile-writing
 description: Writes and rewrites adopter-facing copy about an adoptable dog or cat (pet bios, adoption profiles, kennel cards, adoption listings, and social posts) from the animal's own record, applying a standard four-section format, disclosure rules, placement-constraint rules, and research-backed language rules. Use when drafting, rewriting, tightening, or shortening anything an adopter will read about a specific animal.
+model: claude-sonnet-5-5
 ---
 
 # Writing an Adoption Profile
