@@ -9,7 +9,7 @@ Reference Description:
 
 ABOUT THIS PET
 
-Bramble has places to be. He is always on the move, exploring and looking for something interesting, happy to do his own thing, and every now and then he comes back to check in with you before he is off again. Bring out a ball and the exploring can wait: he will play fetch. Offer a treat and you have his full attention.
+Bramble has places to be. He is always on the move, exploring and looking for something interesting, happy to do his own thing, and every now and then he comes back to check in with you before he is off again. Bring out a ball and the exploring can wait: he will drop anything for a game of fetch. Offer a treat and you have his full attention.
 
 HOUSEHOLD FIT
 
