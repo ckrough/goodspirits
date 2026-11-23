@@ -17,7 +17,7 @@ It does not govern the animal's record. Observation logs and behavior notes are 
 
 ## Procedure
 
-1. **Gather the record**, and read it in time order. Behavior facts come from the animal's own file, never from inference. If the request does not include the record, ask the person you are writing for to paste it in: the shelter-management system's memos, walk notes, any foster notes, and the current profile when this is a rewrite. Do not draft from a name, a photo, or a breed alone. `references/sourcing-behavior-facts.md` names where each kind of note usually lives, how to weigh an evolving record, and when to stop and ask.
+1. **Gather the record**, and read it in time order. Behavior facts come from the animal's own file, never from inference. If the request does not include the record, ask the person you are writing for to paste it in: the shelter-management system's memos, walk notes, any foster notes, and the current profile when this is a rewrite. Do not draft from a name, a photo, or a breed alone. `references/sourcing-behavior-facts.md` names where each kind of note usually lives, how to weigh an evolving record, and which open items to flag for staff.
 2. **Check the record for the five serious incidents** under "Serious incidents go to the consultation" below. None of them goes on the card, but each one decides the closing line, and a child-related incident usually carries a placement limit that does go on the card. Catching them before drafting is cheaper than auditing for them after.
 3. **Choose the one or two struggles the card will name**, under "Name one or two light struggles" below. Everything else the record holds goes to the history review, which makes the closing line required.
 4. **Draft the four sections defined in `references/profile-template.md`**, in the order that file gives: ABOUT THIS PET, HOUSEHOLD FIT, TRAINING, GOOD TO KNOW. The template owns the structure, what each section covers, the closing lines, and the seven topics a finished card has to answer. Each section there carries "What to write" and "Before moving on" checks, and the file includes a finished example. The example is illustrative: take its section structure and its warm, specific register, and write this animal's own openings, sentences, and length from its record.
@@ -27,7 +27,7 @@ It does not govern the animal's record. Observation logs and behavior notes are 
 
 ## The disclosure rules
 
-Three groups. **What must appear** decides whether a fact ships. **How it is written** decides the wording of every fact that does. **When to stop and ask** covers the one case that is not the writer's to resolve.
+Three groups. **What must appear** decides whether a fact ships. **How it is written** decides the wording of every fact that does. **When the tag and the record disagree** covers the one case that is not the writer's to resolve, and how to write the card while it stays open.
 
 ### What must appear
 
@@ -112,9 +112,9 @@ An attribute that records a meeting, such as "Has Met Kids Over 10 and Done Well
 |---|---|
 | "He has done well with older kids he has met, and would do best in a home without children 10 and under." | "He is good with kids." |
 
-For Dog Selective, name the dogs, not a handling plan: "has played well with larger dogs at the shelter" describes the dog, while "does best with slow introductions" tells the adopter what to do and is cut under "Disclose behavior, never prescribe handling" below. Introductions may appear only as an observation of what happened. When the record names no kind of dog the dog has done well with, stop and ask rather than inventing one.
+For Dog Selective, name the dogs, not a handling plan: "has played well with larger dogs at the shelter" describes the dog, while "does best with slow introductions" tells the adopter what to do and is cut under "Disclose behavior, never prescribe handling" below. Introductions may appear only as an observation of what happened. When the record names no kind of dog the dog has done well with, flag it for staff and leave the kind out rather than inventing one.
 
-The narrowing attribute is the default, like any tag. When the record contradicts it (the dog has done well with children under 10, or also carries an attribute recording that it met young children and did well), follow "When the filter and the record disagree, ask" below. Never drop the limit, and never write the broad yes alone.
+The narrowing attribute is the default, like any tag. When the record contradicts it (the dog has done well with children under 10, or also carries an attribute recording that it met young children and did well), follow "When the filter and the record disagree, write what was seen and flag it" below. Never drop the limit, and never write the broad yes alone.
 
 The limit line is a placement constraint, so it does not count toward the card's one or two struggles (item 3 under "Name one or two light struggles"). A behavior written to explain Dog Selective, such as barking at some dogs on leash, does count.
 
@@ -196,15 +196,15 @@ Name the program the animal is enrolled in (such as the Diamond Dog Program), an
 
 **The failure to watch for is the compound one: a disclosure with an elimination clause attached to it.** Two rules already forbid each half, "Placement constraints stay" for the screen and this section for the instruction, but they arrive together and in one breath because a writer who has just published something alarming reaches for a sentence that makes it safe. A typical example: "She has bitten when her boundaries weren't respected. For this reason, she is looking for a confident, experienced pet parent who uses positive reinforcement." The bite belongs in the consultation rather than on the card, and everything after "for this reason" is an elimination question, on a senior dog whose reader pool needs widening rather than narrowing. Publish the behavior that belongs on the card, and stop. The reader decides whether they are the right home; the card does not decide it for them.
 
-### When to stop and ask
+### When the tag and the record disagree
 
-#### When the filter and the record disagree, ask
+#### When the filter and the record disagree, write what was seen and flag it
 
 The tags in the shelter-management system are set by staff who have met the animal, and they are the operating default: write copy consistent with the tag. But a tag that contradicts the written observations is worth catching, because it may be stale, and because a wrong tag silently removes the animal from every search that filters on it.
 
-When a tag and the record disagree, or when the record contradicts itself on a constraint, **stop and ask rather than resolving it in the draft.** Say which tag, which entries, and how they conflict. The person you are writing for takes it to shelter staff. Never flip a tag's meaning in the prose on your own reading of the file, and never quietly drop a constraint because the notes look thin.
+When a tag and the record disagree, or when the record contradicts itself on a constraint, **write the card from what was observed, and flag the conflict; do not resolve it in the prose.** On the point the tag covers, the card reports only what someone saw ("in her foster home she sniffed noses with the family cat and has kept away from it since") and makes no claim either way: it neither repeats the tag nor turns the observation into a limit the record does not set. Write the rest of the card as usual, then, alongside the draft, name the tag, the entries, and how they conflict, so the person you are writing for can take it to shelter staff. Never flip a tag's meaning on your own reading of the file, and never quietly drop a constraint because the notes look thin.
 
-A profile does not ship while its prose and its attribute panel disagree. The conflict clears one of two ways, and both need staff: either the tag is wrong and staff update it, leaving the prose to stand, or the tag is right and the observation behind the prose was partial, so the prose changes to agree with the tag.
+The flag is part of the deliverable, because a profile does not publish while its prose and its attribute panel disagree. The conflict clears one of two ways, and both need staff: either the tag is wrong and staff update it, leaving the prose to stand, or the tag is right and the observation behind the prose was partial, so the prose changes to agree with the tag.
 
 ## Language rules
 
@@ -245,7 +245,7 @@ The research finding these rest on is counterintuitive: emotional, anthropomorph
 
 The register rules and the picture come first, together: a factual voice, observable behavior instead of personality labels, and observations instead of promises, told as moments that build into a picture of life with the animal. A card correct in register that reads as a list of attributes is not finished; it is the most common reason a draft that passes the checker is sent back. Keeping the card inside 175-250 words comes next, then covering all seven topics, then keeping out social words and conditions on the adopter. Never trade a covered topic for length: cut filler, platitudes, and repetition first. When a card runs long or reads as mostly problems, a third struggle is the first thing to move to the history review.
 
-Three defects stop a profile from shipping whatever else it does well: no struggle named anywhere, prose that contradicts a tag, and an absolute claim. A broad yes with no limit beside a narrowing tag is prose that contradicts a tag; the writer adds the limit from the tag, with no need to ask.
+Three defects stop a profile from shipping whatever else it does well: no struggle named anywhere, prose that contradicts a tag, and an absolute claim. A broad yes with no limit beside a narrowing tag is prose that contradicts a tag; the writer adds the limit from the tag, with no need to flag it. A card that reports an observation a tag disagrees with is still written and returned, with the conflict flagged for staff, as "When the filter and the record disagree" describes; it waits on staff before it is published.
 
 ## Length and photos
 
@@ -265,7 +265,7 @@ Run these against the finished draft. Each one restates a rule above, gathered h
 2. **Reread every "so...", "he needs...", and "he does best with..." clause.** Each is prescription unless it states a placement constraint.
 3. **Check the record once more for the five serious incidents.** Confirm none reached the card in any wording, that any placement limit behind one is stated in HOUSEHOLD FIT, and that the closing line (or the Diamond Dog message) is present whenever an incident or a held-back struggle needs it.
 4. **Confirm all four headings exist**, GOOD TO KNOW included, and that the content covers all seven topics: About, Likes, Dogs, Cats, Kids, Training, Struggles. "Untested" (dogs, cats) or "not known" (children) covers a topic. Then check the record for a no-fault reason the dog is at the shelter, and state it if the card does not.
-5. **Read the prose against the attribute panel.** If they disagree, stop and ask. Do not ship the draft. One exception needs no question: when the panel shows a narrowed pair under "A narrowed yes names its limit" and the prose gives the broad yes alone, add the limit from the tag. Stop and ask only when the record contradicts the narrowing tag.
+5. **Read the prose against the attribute panel.** If they disagree, keep the card on that point to what was observed, with no claim either way, save the draft, and flag the conflict alongside it for staff: the tag, the entries, and how they conflict. Do not stop without a draft. One exception needs no flag: when the panel shows a narrowed pair under "A narrowed yes names its limit" and the prose gives the broad yes alone, add the limit from the tag. Flag only when the record contradicts the narrowing tag.
 6. **Read the first sentence alone.** It names the animal and says something it does, not its breed, age, or medical status.
 7. **Read each section for a scene, then for its sources.** Read it aloud. If its sentences could be put in any order without loss, it is a list: rework it under "Build the picture" so each sentence leads to the next, and check that a reader could picture a moment with the animal, not just its attributes. Then trace every detail in a connected sentence to the record or to the person you are writing for: a scene that reads well because a detail was added or two observations were joined has invented something.
 8. **Reread each setting on the card for shelter place and routine names**, including the shelter's own location names, which the checker cannot catch, and rewrite them with the second table under "Plain words, not clinical ones."
@@ -281,4 +281,4 @@ Read these when the situation calls for them; the rules above stand on their own
 | `scripts/check_draft.py` | Every draft, last. "Before you return" step 9. |
 | `references/worked-example.md` | You are rewriting an existing profile and want to see the reasoning: a published-style card annotated line by line with what was cut, what was kept, and why. The card to copy is the one in `profile-template.md`, not this one. |
 | `references/research-basis.md` | A rule here looks wrong, or someone asks why factual copy beats emotional copy. Summarizes Markowitz (2020), Nakamura et al. (2019), Kelling et al. (2026), Rix et al. (2021), Archer et al. (2025), Humane World for Animals (2025), McGuire et al. (2020), and the Shelter Animals Count adoptions checklist (2026), says which rules are editorial decisions rather than findings, where the serious-incident rule comes from, and where the rules stand against the checklist. |
-| `references/sourcing-behavior-facts.md` | You are writing from a live animal's record: which kinds of notes to gather, how to weigh an evolving history, and when to stop and ask. |
+| `references/sourcing-behavior-facts.md` | You are writing from a live animal's record: which kinds of notes to gather, how to weigh an evolving history, and which open items to flag for staff. |

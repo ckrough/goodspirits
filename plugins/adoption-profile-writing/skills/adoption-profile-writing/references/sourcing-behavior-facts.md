@@ -1,6 +1,6 @@
 # Where the Behavior Facts Come From
 
-Every claim in a profile traces to the animal's record. This file names which system holds which notes, how to weigh a record that spans years, and when to stop and ask.
+Every claim in a profile traces to the animal's record. This file names which system holds which notes, how to weigh a record that spans years, and which open items to flag for staff.
 
 ## The sources, richest first
 
@@ -32,16 +32,16 @@ The distinction the table turns on is "recent notes" against "recent notes *of t
 
 **Serious incidents do not decay.** The five listed under "Serious incidents go to the consultation" in `SKILL.md` stand however old the entry is and whatever the recent record does or does not say, and recency weighting never buries one. None goes on the card, but each one still decides the closing line and any placement limit it supports, so find it regardless of its date.
 
-## When to stop and ask
+## Open items for staff
 
-Four situations are for shelter staff to settle, not the writer. In each, tell the person you are writing for which entries or tags conflict and how, so they can take it to staff, and wait:
+Four situations are for shelter staff to settle, not the writer. In each, tell the person you are writing for which entries or tags conflict and how, so they can take it to staff. Do not stop and wait for the answer: write the card, keeping the open point to what was observed.
 
 1. **A tag in the shelter-management system contradicts the written observations.** The tag may be stale, and a wrong one removes the animal from every search that filters on it. Staff set the tags and staff change them.
 2. **The record contradicts itself on a placement constraint.** A single-pet requirement and an active bonded-pair disclaimer in the same file cannot both be written into one card.
 3. **A behavior appears to have evolved but the evidence is thin.** Staff often know an animal's current behavior before it reaches the file, so the answer may exist and simply not be written down.
 4. **An old behavior has no recent observation either way.** The unrefreshed row above. Name the behavior, the date of the last entry recording it, and what the recent notes cover instead, so staff can answer from what they have seen rather than from the file.
 
-Write everything the record does settle, and raise the open item alongside the draft. Do not resolve any of the four by picking the reading that makes the copy easier.
+Write everything the record does settle, state the unsettled point only as what was observed (or leave it off when nothing was), and raise the open item alongside the draft. Do not resolve any of the four by picking the reading that makes the copy easier.
 
 ## When sources disagree on history
 
