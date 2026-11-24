@@ -81,7 +81,7 @@ The card's silence works only if the consultation really comes before the adopte
 
 #### Placement limits: describe the behavior behind them
 
-Limits that are true of the animal ("only dog," "no cats," "a home without young children") are real, and shelter-management systems usually publish them as structured attributes and push them to listing sites such as Petfinder and Adopt-a-Pet, where they drive the search filters. The card does a different job: it shows the behavior that set the limit, as it was seen, and lets the reader judge their own household. "When he sees a child, even across a parking lot, he tucks his tail and tries to get away" tells a family with children everything "would do best in an adult-only home" does, and it tells every other reader what the dog is like. Write it in HOUSEHOLD FIT and stop there: the description replaces the limit, it does not sit beside it, and the attribute panel already carries the filter.
+Limits that are true of the animal ("only dog," "no cats," "a home without young children") are real, and shelter-management systems usually publish them as structured attributes and push them to listing sites such as Petfinder and Adopt-a-Pet, where they drive the search filters. The card does a different job: it shows the behavior that set the limit, as it was seen, and lets the reader judge their own household. "When a child runs toward him, he backs away and hides behind the person holding his leash" tells a family with children everything "would do best in an adult-only home" does, and it tells every other reader what the dog is like. Write it in HOUSEHOLD FIT and stop there: the description replaces the limit, it does not sit beside it, and the attribute panel already carries the filter.
 
 State the limit itself, as a recommendation about the home ("would do best in a home without young children"), in two cases only:
 
@@ -98,8 +98,8 @@ The question to ask about a limit is provenance, not presence: does the record s
 
 | Keep | Cut |
 |---|---|
-| "Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away." | "He would do best in an adult-only home." |
-| "In a home with cats, she locked onto one so intently that the introduction had to stop." | "She would do best in a home without cats." |
+| "Small children worry him: when one runs toward him, he backs away and hides behind the person holding his leash." | "He would do best in an adult-only home." |
+| "When a cat crosses the yard, she rushes the fence and barks until it is out of sight." | "She would do best in a home without cats." |
 | "He is more comfortable with older teens and adults, and would do best in a home without young children." (only source: an incident held for the consultation) | "He's such a goofy bundle of energy that he might be a bit too much for small children." |
 
 The same guidance says to lead with positives and put the challenge last. Ordering is fine; burying is not. A behavior that arrives at the tail of a sentence about how gentle the animal is has been staged so the reader discounts it.
@@ -214,7 +214,7 @@ Name the program the animal is enrolled in (such as the Diamond Dog Program), an
 
 The tags in the shelter-management system are set by staff who have met the animal, and they are the operating default: write copy consistent with the tag. But a tag that contradicts the written observations is worth catching, because it may be stale, and because a wrong tag silently removes the animal from every search that filters on it.
 
-When a tag and the record disagree, or when the record contradicts itself on a constraint, **write the card from what was observed, and flag the conflict; do not resolve it in the prose.** On the point the tag covers, the card reports only what someone saw ("in her foster home she sniffed noses with the family cat and has kept away from it since") and makes no claim either way: it neither repeats the tag nor turns the observation into a limit the record does not set. Write the rest of the card as usual, then, alongside the draft, name the tag, the entries, and how they conflict, so the person you are writing for can take it to shelter staff. Never flip a tag's meaning on your own reading of the file, and never quietly drop a constraint because the notes look thin.
+When a tag and the record disagree, or when the record contradicts itself on a constraint, **write the card from what was observed, and flag the conflict; do not resolve it in the prose.** On the point the tag covers, the card reports only what someone saw ("in her foster home she has growled at the family's rabbit when it hops close") and makes no claim either way: it neither repeats the tag nor turns the observation into a limit the record does not set. Write the rest of the card as usual, then, alongside the draft, name the tag, the entries, and how they conflict, so the person you are writing for can take it to shelter staff. Never flip a tag's meaning on your own reading of the file, and never quietly drop a constraint because the notes look thin.
 
 The flag is part of the deliverable, because a profile does not publish while its prose and its attribute panel disagree. The conflict clears one of two ways, and both need staff: either the tag is wrong and staff update it, leaving the prose to stand, or the tag is right and the observation behind the prose was partial, so the prose changes to agree with the tag.
 
@@ -246,12 +246,12 @@ The research finding these rest on is counterintuitive: emotional, anthropomorph
 
   | Slip | Example | What the record held |
   |---|---|---|
-  | Notes fused into one scene | "On a hike he waded into a stream along the way" | Three-mile hikes in one entry; a wade in a stream on a different outing |
-  | One entry made a habit | "Outdoors she is on the go the whole walk" | One walk where she wanted to keep moving; a later walk spent slowly, sitting on a bench |
-  | A reason or feeling supplied | "He pulls because he is eager to see what is around the next bend" | That he changed direction on an anxious walk, and no reason |
-  | A setting moved | "Checks every corner, changes course, then comes back to check in with you on a walk" | Roaming and checking in, with no leash or walk named |
+  | Notes fused into one scene | "At the lake he swims out after a stick and brings it back" | A swim at a lake in one entry; fetching sticks in the yard in another |
+  | One entry made a habit | "She sleeps through every car ride" | One ride where she slept; a later ride spent pacing and whining |
+  | A reason or feeling supplied | "He barks at the door because he wants to keep you safe" | That he barks when someone knocks, and no reason |
+  | A setting moved | "He trots beside you off leash on the trail" | Trotting beside his walker on leash; off leash only in a fenced yard |
 
-  A behavior seen once is reported as something that happened ("he has waded into a stream and loved it"), not as what he does. When the record is thin, the card is short, not padded.
+  A behavior seen once is reported as something that happened ("she has curled up in a stranger's lap at an adoption event"), not as what she does. When the record is thin, the card is short, not padded.
 
   A struggle keeps the strength the record gives it, judged against the latest entry on that behavior. You may leave a detail out; what you do write about a struggle must not say less than the record, or the opposite of it:
 
