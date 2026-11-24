@@ -46,7 +46,7 @@ The rules come from published adoption research, chiefly Markowitz (2020), which
 
 ## Optional: the draft checker
 
-The plugin includes a small checker, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py), that Claude runs on each draft when Python is available. It checks the headings, word count, how much of the profile covers struggles, trait words, shelter-setting words, first-person pronouns, breed words, banned phrases, and the Diamond Dog message. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
+The plugin includes a small checker, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py), that Claude runs on each draft when Python is available. It checks the headings, word count, how much of the profile covers struggles, trait words, shelter-setting words, first-person pronouns, breed words, banned phrases, and, for dogs in a Diamond Dog behavior program, the standard closing message about that program. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
 
 To run it yourself, from the `skills/adoption-profile-writing` folder:
 

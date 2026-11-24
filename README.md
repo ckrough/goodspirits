@@ -12,7 +12,7 @@ You don't need to know anything technical. Open Claude, paste this message, and 
 
 > Please install the plugins from https://github.com/ckrough/goodspirits for me.
 
-Claude reads this page and either installs the plugin for you or walks you through a few clicks. It takes about two minutes. If Claude can't open web links, follow the steps below for your app yourself.
+Claude reads this page and either installs the plugin for you or walks you through a few clicks. It takes about two minutes. If Claude can't open web links, you can do it yourself. In the Claude app or claude.ai, follow the four numbered steps below, starting with **Customize**. The rest of that section is written for Claude.
 
 ### For the agent doing the install
 

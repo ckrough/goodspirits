@@ -49,7 +49,7 @@ The acceptance criteria of #14, each with where it is covered:
      - It describes what the result looks like (four sections), gives the research summary moved from the root README, and shows the optional checker command.
 2. After step 1, add a `## Installing for a user` section to the top of `CLAUDE.md`, before `## Commands`, then commit when `make check` exits 0.
    - The section is addressed to an agent: when the person asked to install, follow README.md's "For the agent doing the install" section.
-   - It gives the two Claude Code commands inline, marked as a copy of README.md to update together.
+   - It gives the Claude Code shell command for the agent to run, with the slash commands as the fallback when it cannot run shell commands, marked as a copy of README.md to update together. (Amended during build: the clone run showed an agent cannot type slash commands for the person.)
    - It says not to run `make` targets or edit files to install.
    - Reword the opening paragraph so it reads for both audiences.
 
@@ -70,7 +70,7 @@ No unit test is added or changed. The change is documentation with no code path 
   - The answer gives Customize > Plugins > Add marketplace with `ckrough/goodspirits`, then the Add step.
   - The answer contains no terminal commands.
 - Clone run. From a scratch clone of the branch, run `claude -p --setting-sources project "The person asked you to install this."`.
-  - The answer gives `/plugin marketplace add ckrough/goodspirits` and `/plugin install adoption-profile-writing@goodspirits`.
+  - The answer runs `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits`, or falls back to `/plugin marketplace add ckrough/goodspirits` and `/plugin install adoption-profile-writing@goodspirits`.
   - It proposes no `make` target and no file edit.
 - Links. List every relative link in the three files with `grep -o '](\([^h)][^)]*\))'`; `ls` resolves each one.
 - After merge, the operator adds the marketplace once by hand in the desktop app, because the click path cannot be run from here.
