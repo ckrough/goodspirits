@@ -4,17 +4,18 @@ Writes the profile an adopter reads about a dog or cat in your care: the bio on 
 
 ## Install
 
-Paste this into Claude and send it:
+In the Claude desktop app:
 
-> Please install the plugins from https://github.com/ckrough/goodspirits for me.
+1. Open **Customize** in the sidebar, then choose **Plugins**.
+2. Choose **Add**, then **Add marketplace**.
+3. Type `ckrough/goodspirits` and confirm.
+4. Find **Adoption Profile Writing** in the list (under **Discover**) and choose **Add**.
 
-Claude will install it or walk you through a few clicks. The [install section](../../README.md#install) on the main page has the full steps for each app.
+Or paste this into Claude and it will walk you through those steps:
 
-In Claude Code, one line does it:
+> Please help me install the plugins from https://github.com/ckrough/goodspirits.
 
-```
-/plugin install adoption-profile-writing --marketplace ckrough/goodspirits
-```
+The [main page](https://github.com/ckrough/goodspirits#install) has more help if a step doesn't work.
 
 ## How to use it
 
@@ -31,7 +32,7 @@ A profile of about 175 to 250 words in four short sections:
 - **About**: what spending time with the animal is like, told as a small scene.
 - **Household fit**: kids, other pets, and the kind of home that suits them.
 - **Training**: what they already know and what they're working on.
-- **Good to know**: one or two honest challenges an adopter would notice, with how they're improving.
+- **Good to know**: honest challenges an adopter would notice, with how they're improving. The whole profile names one or two, wherever they fit best.
 
 It also suggests using 3 to 5 photos. The examples use `[Name]` and `[Shelter]` as placeholders; Claude fills in your animal's name and your organization.
 
@@ -44,9 +45,13 @@ The rules come from published adoption research, chiefly Markowitz (2020), which
 - **Disclosure without alarm.** Limits on placement stay on the card. Bites, attacks, guarding that made contact, incidents with children, and harm to cats or small animals don't go on the card. Instead the card says the shelter will review the animal's history with the adopter before they meet.
 - **No gatekeeping.** It cuts conditions placed on the adopter ("experienced owners only") and keeps limits on the home ("no cats"). When a narrower tag sits beside a broad one, such as "No Small Kids" beside "Good with Kids", the profile states the limit along with the yes.
 
-## Optional: the draft checker
+## What the plugin contains, runs, and sends
 
-The plugin includes a small checker, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py), that Claude runs on each draft when Python is available. It checks the headings, word count, how much of the profile covers struggles, trait words, shelter-setting words, first-person pronouns, breed words, banned phrases, and, for dogs in a Diamond Dog behavior program, the standard closing message about that program. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
+The plugin is one skill: written instructions for Claude plus reference pages, all plain text. It has no connectors, no hooks, and no agents. It doesn't connect to any service, collect anything, or send your notes anywhere. Your notes stay in your conversation with Claude, as with any other chat.
+
+It includes one small script, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py). Claude runs it on each draft when Python is available, in the same place Claude runs any other code for you. The script uses only Python's standard library. It reads the one draft file it's given and prints a list of fixes. It makes no network connections and writes no files.
+
+The script checks the headings, word count, and how much of the profile covers struggles. It also flags trait words, shelter-setting words, first-person pronouns, breed words, and banned phrases. For dogs in a Diamond Dog behavior program, it checks the standard closing message about that program. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
 
 To run it yourself, from the `skills/adoption-profile-writing` folder:
 
@@ -54,8 +59,8 @@ To run it yourself, from the `skills/adoption-profile-writing` folder:
 python3 scripts/check_draft.py path/to/draft.md
 ```
 
-It exits 0 when the draft passes and 1 when it lists fixes. It needs only Python 3.
+It exits 0 when the draft passes and 1 when it lists fixes.
 
 ## License
 
-Apache License 2.0. See [LICENSE](../../LICENSE).
+Apache License 2.0. See the [LICENSE](https://github.com/ckrough/goodspirits/blob/main/LICENSE) file.

@@ -2,17 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
-goodspirits is a Claude Code plugin marketplace for animal-rescue volunteers and staff. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
+goodspirits is a Claude plugin marketplace for animal-rescue volunteers and staff. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
 
 ## Installing for a user
 
-If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`. In Claude Code, run this shell command yourself, then ask the person to type `/reload-plugins` or start a new session. This is a copy of `README.md`, so update both together.
+The people who use this plugin are shelter volunteers working in the Claude desktop app. If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`: walk them through Customize > Plugins > Add > Add marketplace, `ckrough/goodspirits`, then Add on Adoption Profile Writing, one step at a time in plain words.
 
-```
-claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits
-```
-
-If you can't run shell commands, ask the person to type `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`.
+In a Claude Code session, run `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits` and ask them to type `/reload-plugins`. This copies `README.md`; update both together.
 
 Do not run `make` targets or edit files in this repository to install. The sections below are for maintainers.
 

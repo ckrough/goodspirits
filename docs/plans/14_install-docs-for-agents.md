@@ -36,6 +36,17 @@ The acceptance criteria of #14, each with where it is covered:
 - `README.md`
 - `plugins/adoption-profile-writing/README.md`
 - `CLAUDE.md`
+- `.claude-plugin/marketplace.json`: added in step 3; the description drops "Claude Code" and the version goes to 0.4.2.
+- `plugins/adoption-profile-writing/.claude-plugin/plugin.json`: added in step 3; the version goes to 0.4.2, since the plugin folder's README changed.
+
+## Amendment: Claude Desktop audience and directory preparation
+
+Added during ship, at the operator's direction. The people who install this use the Claude desktop app, and the docs describe that audience directly. The operator also asked for the marketplace and plugin to be prepared for the Claude plugin directory, following claude.com/docs/directory/publish and claude.com/docs/plugins/pre-submission-checklist, without submitting.
+
+- The root README and CLAUDE.md lead with the desktop-app click path. Claude Code and the Agent Skills folder copy shrink to one fallback paragraph for the agent.
+- The plugin README is the directory listing's description, and only the plugin folder ships, so its links that left the folder (`../../README.md`, `../../LICENSE`) become full GitHub URLs. It gains a "What the plugin contains, runs, and sends" section, because the checklist's security-scan guidance asks the README to describe everything the plugin runs, sends, or fetches.
+- Checklist audit of the tracked plugin folder: 8 text files, each under 256 KiB, no system files, binaries, hooks, MCP servers, or package launchers. The manifest sets `name`, `description`, `author`, `version`, and `license` (Apache-2.0). The README has well over 40 words. The repository is public.
+- Left for the operator: an icon (`claude plugin validate` warns `ICON_MISSING`; the portal takes the icon only once, so the choice is theirs), the portal's **Validate** run, and loading the plugin in the desktop app.
 
 ## Work order
 
@@ -52,6 +63,7 @@ The acceptance criteria of #14, each with where it is covered:
    - It gives the Claude Code shell command for the agent to run, with the slash commands as the fallback when it cannot run shell commands, marked as a copy of README.md to update together. (Amended during build: the clone run showed an agent cannot type slash commands for the person.)
    - It says not to run `make` targets or edit files to install.
    - Reword the opening paragraph so it reads for both audiences.
+3. Apply the amendment above: make README.md, the plugin README, and CLAUDE.md desktop-first; add the plugin README's disclosure section and absolute links; update the two manifests. Commit when `make check` exits 0 and `claude plugin validate ./plugins/adoption-profile-writing` prints `✔ Validation passed`.
 
 ## Tests
 
