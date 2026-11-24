@@ -2,7 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
-goodspirits is a Claude Code plugin marketplace. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
+goodspirits is a Claude Code plugin marketplace for animal-rescue volunteers and staff. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
+
+## Installing for a user
+
+If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`. In Claude Code, that comes down to these two commands, then `/reload-plugins`. This is a copy of `README.md`, so update both together.
+
+```
+/plugin marketplace add ckrough/goodspirits
+/plugin install adoption-profile-writing@goodspirits
+```
+
+Do not run `make` targets or edit files in this repository to install. The sections below are for maintainers.
 
 ## Commands
 
