@@ -42,7 +42,7 @@ The plugin is saved to their Claude account, so after these steps it works in ev
 
 Don't edit any files in this repository or run its `make` commands to install. Those are for people who maintain this project.
 
-In a Claude Code session, run `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits` and ask them to type `/reload-plugins`. In another app that reads Agent Skills, copy the folder [`plugins/adoption-profile-writing/skills/adoption-profile-writing`](plugins/adoption-profile-writing/skills/adoption-profile-writing/) into that app's skills folder.
+In a Claude Code session, ask them to type `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`. In another app that reads Agent Skills, copy the folder [`plugins/adoption-profile-writing/skills/adoption-profile-writing`](plugins/adoption-profile-writing/skills/adoption-profile-writing/) into that app's skills folder.
 
 ## What's included
 

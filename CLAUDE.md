@@ -8,7 +8,7 @@ goodspirits is a Claude plugin marketplace for animal-rescue volunteers and staf
 
 The people who use this plugin are shelter volunteers working in the Claude desktop app. If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`: walk them through Customize > Plugins > Add > Add marketplace, `ckrough/goodspirits`, then Add on Adoption Profile Writing, one step at a time in plain words.
 
-In a Claude Code session, run `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits` and ask them to type `/reload-plugins`. This copies `README.md`; update both together.
+In a Claude Code session, ask them to type `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`. These three commands copy the ones in README.md's "For the agent doing the install" section; update both together.
 
 Do not run `make` targets or edit files in this repository to install. The sections below are for maintainers.
 

@@ -21,20 +21,20 @@ The [main page](https://github.com/ckrough/goodspirits#install) has more help if
 
 1. Start a new conversation in Claude.
 2. Paste in what you know about the animal: walk notes, foster notes, staff memos from your shelter's records system, or the current profile if you want it rewritten.
-3. Ask, for example: "Write an adoption profile for Biscuit from these notes."
+3. Ask, and name your shelter or rescue, for example: "Write an adoption profile for Biscuit from these notes. We're Happy Tails Rescue."
 
-Claude writes from the notes you give it and doesn't guess. If the notes are thin, it asks you for more instead of making things up.
+Claude writes only from the notes you give it. If you don't include notes, it asks for them, and it leaves out anything the notes don't support, such as something that happened only once.
 
 ## What you get
 
 A profile of about 175 to 250 words in four short sections:
 
-- **About**: what spending time with the animal is like, told as a small scene.
-- **Household fit**: kids, other pets, and the kind of home that suits them.
-- **Training**: what they already know and what they're working on.
-- **Good to know**: honest challenges an adopter would notice, with how they're improving. The whole profile names one or two, wherever they fit best.
+- **ABOUT THIS PET**: what spending time with the animal is like, told as a small scene.
+- **HOUSEHOLD FIT**: kids, other pets, and the kind of home that suits them.
+- **TRAINING**: what they already know and what they're working on.
+- **GOOD TO KNOW**: honest challenges an adopter would notice, with how they're improving. The whole profile names one or two, wherever they fit best.
 
-It also suggests using 3 to 5 photos. The examples use `[Name]` and `[Shelter]` as placeholders; Claude fills in your animal's name and your organization.
+It also suggests using 3 to 5 photos. The examples use `[Name]` and `[Shelter]` as placeholders; Claude fills in the animal's name and the shelter name you give it.
 
 ## Why it's written this way
 
@@ -49,7 +49,7 @@ The rules come from published adoption research, chiefly Markowitz (2020), which
 
 The plugin is one skill: written instructions for Claude plus reference pages, all plain text. It has no connectors, no hooks, and no agents. It doesn't connect to any service, collect anything, or send your notes anywhere. Your notes stay in your conversation with Claude, as with any other chat.
 
-It includes one small script, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py). Claude runs it on each draft when Python is available, in the same place Claude runs any other code for you. The script uses only Python's standard library. It reads the one draft file it's given and prints a list of fixes. It makes no network connections and writes no files.
+It includes one small script, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py). When Python is available, Claude saves each draft as a temporary Markdown file in its own workspace, the same place Claude runs any other code for you, and runs the script on it. The script uses only Python's standard library. It reads that one draft file and prints a list of fixes. It makes no network connections and writes no files of its own.
 
 The script checks the headings, word count, and how much of the profile covers struggles. It also flags trait words, shelter-setting words, first-person pronouns, breed words, and banned phrases. For dogs in a Diamond Dog behavior program, it checks the standard closing message about that program. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
 
