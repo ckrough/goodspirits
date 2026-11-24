@@ -1,10 +1,10 @@
 ABOUT THIS PET
 
-Throw a tennis ball and Juniper is off: he runs it down and, half the time, drops it right back into your hand. He is just as easy on a walk, keeping the leash loose and checking in with you along the way. When it is time for a rest, he curls up next to you on a bench and watches the dogs and people go by.
+Throw a tennis ball and Juniper is off: he runs it down and, half the time, drops it right back into your hand. He is easy on a walk, keeping the leash loose and checking in with you along the way. When it is time for a rest, he curls up next to you on a bench and watches the dogs and people go by.
 
 HOUSEHOLD FIT
 
-Relaxed dogs are Juniper's favorites, and he has played with many of them in groups. Birds, rabbits, and squirrels catch his eye, and he wants to chase them. Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away. Indoors, he has hopped onto the couch, stretched across a lap, and rolled over for belly rubs.
+Relaxed dogs are Juniper's favorites, and he has played with many of them in groups. Birds, rabbits, and squirrels catch his eye, and he wants to chase them. Children frighten him at any age: when he sees one, even across a parking lot, he tucks his tail and tries to get away.
 
 TRAINING
 

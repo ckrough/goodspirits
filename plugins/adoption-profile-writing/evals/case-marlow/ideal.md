@@ -1,10 +1,10 @@
 ABOUT THIS PET
 
-Marlow is a hiker. Take him out on the trails and he is good for three miles at a stretch, and after a day out there he has stretched out in the grass for a good roll. Come to a stream and he may wade right in. Some days he is cuddly instead and just wants to sit in the shade, close to you. He is easy company in town too: he has walked through the pet store and left the toys on the shelves alone.
+Marlow is a hiker. Take him out on the trails and he is good for miles, and after a day out he has stretches out in the grass. Come to a stream and he may wade right in. Some days he is cuddly instead and just wants to sit in the shade, close to you. He is easy company in town too: he has walked through the pet store and left the toys on the shelves alone.
 
 HOUSEHOLD FIT
 
-Put Marlow in a group of dogs and he digs, wrestles, or just wanders alongside his favorites; he has played with many. When he met a cat he gave it the space it asked for and barked when it hissed, and the person who introduced them would not leave him alone with one. With people he does not know, he likes room: he would rather they not lean over him.
+Put Marlow in a group of dogs and he digs, wrestles, or just wanders alongside his favorites. When he met a cat he gave it the space it asked for and barked when it hissed. With people he does not know, he likes room and he would rather they not lean over him.
 
 TRAINING
 
