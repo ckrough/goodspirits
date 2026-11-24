@@ -6,12 +6,13 @@ goodspirits is a Claude Code plugin marketplace for animal-rescue volunteers and
 
 ## Installing for a user
 
-If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`. In Claude Code, that comes down to these two commands, then `/reload-plugins`. This is a copy of `README.md`, so update both together.
+If the person asked you to install goodspirits, follow the "For the agent doing the install" section of `README.md`. In Claude Code, run this shell command yourself, then ask the person to type `/reload-plugins` or start a new session. This is a copy of `README.md`, so update both together.
 
 ```
-/plugin marketplace add ckrough/goodspirits
-/plugin install adoption-profile-writing@goodspirits
+claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits
 ```
+
+If you can't run shell commands, ask the person to type `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`.
 
 Do not run `make` targets or edit files in this repository to install. The sections below are for maintainers.
 

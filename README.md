@@ -29,15 +29,21 @@ This repository is a plugin marketplace named `goodspirits`. It holds one plugin
 
 The plugin is saved to their Claude account, so it also works in chat, in Cowork, and in Claude Code signed in to the same account. A new conversation or task picks it up.
 
-**Claude Code.** Run these yourself if you can run commands. Otherwise ask the person to type them into Claude Code one at a time:
+**Claude Code.** If you can run shell commands, run this one yourself. It adds the marketplace and installs the plugin:
+
+```
+claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits
+```
+
+Then ask the person to type `/reload-plugins` in Claude Code, or start a new session.
+
+You can't type slash commands for them. If you can't run shell commands, ask the person to type these into Claude Code one at a time:
 
 ```
 /plugin marketplace add ckrough/goodspirits
 /plugin install adoption-profile-writing@goodspirits
 /reload-plugins
 ```
-
-From a terminal, one command does the first two steps: `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits`.
 
 **Another agent app that supports Agent Skills.** Copy the folder [`plugins/adoption-profile-writing/skills/adoption-profile-writing`](plugins/adoption-profile-writing/skills/adoption-profile-writing/) into that app's skills folder, keeping the folder name. The skill's instructions are in `SKILL.md` inside it.
 
