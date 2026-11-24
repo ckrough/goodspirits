@@ -2,7 +2,7 @@
 
 Free writing helpers for people who volunteer or work at animal shelters and rescues. I volunteer with a shelter, built these tools for that work, and shaped them so any rescue can use them.
 
-The one helper here today writes **adoption profiles**: the short write-up about a dog or cat that goes on your website, kennel card, or adoption listing. You give it the animal's notes, and it gives you back an honest, warm profile that helps the right family say yes.
+The helper here writes **adoption profiles**: the short write-up about a dog or cat that goes on your website, kennel card, or adoption listing. You give it the animal's notes, and it gives you back an honest, warm profile that helps the right family say yes.
 
 It works in the Claude desktop app, and in claude.ai in a web browser.
 

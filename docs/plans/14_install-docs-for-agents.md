@@ -16,7 +16,7 @@ An agent reaches this repository in one of two ways. A chat or Cowork agent fetc
 The install paths come from Anthropic's current docs (claude.com/docs/plugins/overview, claude.com/docs/cowork/guide/plugins, code.claude.com/docs/en/plugins/install), read on 2026-11-24:
 
 - claude.ai, the desktop app, and Cowork: Customize > Plugins > Add > Add marketplace, enter `ckrough/goodspirits`, then find Adoption Profile Writing under Discover and select Add. The plugin is saved to the account and shows up in chat, Cowork, and Claude Code signed in to the same account (after `/reload-plugins`). A chat agent cannot click these buttons, so the README tells the agent to walk the person through them one step at a time.
-- Claude Code: `/plugin marketplace add ckrough/goodspirits` then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`. From a shell, `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits` does both steps; `claude plugin install --help` confirms the `--marketplace` flag.
+- Claude Code: the person types `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`. (The shell form `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits` is valid, but the step 3 amendment drops it from the docs: a sandboxed agent cannot write the user-scope settings it needs.)
 - Other harnesses that read Agent Skills: copy `plugins/adoption-profile-writing/skills/adoption-profile-writing/` into that harness's skills folder.
 
 The research summary and checker usage move from the root README into the new plugin README, which is the plugin's own page. The maintainer sections of CLAUDE.md (Commands, Issue tracker, Plugin enablement) stay unchanged below the new section.
@@ -98,6 +98,6 @@ No experiment warranted: the install steps come from Anthropic's published docs.
 - Important: nothing checks the CLAUDE.md path -> amended: added a clone run with `--setting-sources project`.
 - Nit: failure list covers only an Owner block -> amended: plan without plugins, existing marketplace, and the no-Python fallback added; the claude.ai code-execution prerequisite is left out because the docs read do not state it.
 - Nit: other harnesses read AGENTS.md, not CLAUDE.md -> amended in Context.
-- Nit: install commands in three places -> amended: the plugin README links instead of repeating them; CLAUDE.md keeps the commands, marked as a copy.
+- Nit: install commands in three places -> amended: the plugin README links instead of repeating them; CLAUDE.md keeps the commands, marked as a copy. (Superseded by the step 3 amendment: the plugin README carries the four desktop-app steps as the listing description.)
 - Nit: steps 1 and 2 are not independent -> amended: step 2 runs after step 1, and the heading text is fixed in the plan.
 - Nit: acceptance criteria not mapped -> amended: table in Context and the link-check method in Verification.

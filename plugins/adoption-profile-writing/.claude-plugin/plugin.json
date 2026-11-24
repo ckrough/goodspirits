@@ -3,7 +3,7 @@
   "name": "adoption-profile-writing",
   "displayName": "Adoption Profile Writing",
   "version": "0.4.2",
-  "description": "Writes and rewrites adopter-facing copy about an adoptable dog or cat from the animal's own record. Applies a four-section format (About, Household Fit, Training, Good To Know), keeps serious incidents off the card and routes them to a staff conversation, keeps placement constraints, drops social and humanizing words, and checks each draft's headings, word count, and banned phrases with a bundled standard-library script.",
+  "description": "Writes and rewrites adopter-facing copy about an adoptable dog or cat from the animal's own record. Applies a four-section format (ABOUT THIS PET, HOUSEHOLD FIT, TRAINING, GOOD TO KNOW), keeps serious incidents off the card and routes them to a staff conversation, keeps placement constraints, drops social and humanizing words, and checks each draft's headings, word count, and banned phrases with a bundled standard-library script.",
   "author": {
     "name": "Chris Krough",
     "email": "chris@krough.org"
