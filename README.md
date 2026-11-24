@@ -1,39 +1,62 @@
 # goodspirits
 
-A Claude Code plugin marketplace for animal-rescue work. I volunteer with a shelter, and these are the tools I built for that work, generalized so any rescue can use them.
+Free writing helpers for people who volunteer or work at animal shelters and rescues. I volunteer with a shelter, built these tools for that work, and shaped them so any rescue can use them.
+
+The helper here writes **adoption profiles**: the short write-up about a dog or cat that goes on your website, kennel card, or adoption listing. You give it the animal's notes, and it gives you back an honest, warm profile that helps the right family say yes.
+
+It works in the Claude desktop app, and in claude.ai in a web browser.
 
 ## Install
 
-```
-/plugin marketplace add ckrough/goodspirits
-/plugin install adoption-profile-writing@goodspirits
-```
+Open the Claude desktop app, paste this message, and send it:
 
-## Plugins
+> Please help me install the plugins from https://github.com/ckrough/goodspirits.
+
+Claude reads this page and walks you through four clicks. It takes about two minutes.
+
+If you'd rather do it yourself, these are the same four steps:
+
+1. In the Claude desktop app, open **Customize** in the sidebar, then choose **Plugins**.
+2. Choose **Add**, then **Add marketplace**.
+3. Type `ckrough/goodspirits` and confirm.
+4. Find **Adoption Profile Writing** in the list (under **Discover**) and choose **Add**.
+
+That's it. Start a new conversation to use it.
+
+### For the agent doing the install
+
+You are helping a shelter volunteer who uses the Claude desktop app. Use plain words, give one step at a time, and wait for them to say each step is done before you give the next. Keep everything inside the app.
+
+This repository is a plugin marketplace named `goodspirits`. It holds one plugin, `adoption-profile-writing`, shown in the app as **Adoption Profile Writing**. You can't press buttons in their app, so guide them through the four steps above, in order. The same steps work in claude.ai in a browser.
+
+The plugin is saved to their Claude account, so after these steps it works in every new chat and Cowork task on that account.
+
+**Check that it worked.** Ask them to start a new conversation and say "Help me write an adoption profile." Claude should use the Adoption Profile Writing skill and ask for the animal's notes.
+
+**If a step fails:**
+
+- *No Add marketplace option, or adding it is refused.* On a Team or Enterprise plan, the organization's Owner decides whether members can add marketplaces. Ask them to send their Owner this page's link.
+- *No Customize or Plugins page.* Their app may need updating, or their plan may not offer plugins. Ask them to update the Claude desktop app and try again.
+- *"Marketplace already added."* That's fine. Go straight to step 4.
+- *Anything mentions Python.* They can ignore it. The plugin's draft checker is optional, and the skill checks drafts by hand without it.
+
+Don't edit any files in this repository or run its `make` commands to install. Those are for people who maintain this project.
+
+In a Claude Code session, ask them to type `/plugin marketplace add ckrough/goodspirits`, then `/plugin install adoption-profile-writing@goodspirits`, then `/reload-plugins`. In another app that reads Agent Skills, copy the folder [`plugins/adoption-profile-writing/skills/adoption-profile-writing`](plugins/adoption-profile-writing/skills/adoption-profile-writing/) into that app's skills folder.
+
+## What's included
 
 | Plugin | What it does |
 |---|---|
-| [adoption-profile-writing](plugins/adoption-profile-writing/) | Writes and rewrites adoptable-pet profiles (bios, kennel cards, listings) from the animal's own record. |
+| [Adoption Profile Writing](plugins/adoption-profile-writing/) | Writes and rewrites adoptable-pet profiles (bios, kennel cards, listings) from the animal's own notes. |
 
-### adoption-profile-writing
+## Using it
 
-The skill drafts a profile in four sections: ABOUT, HOUSEHOLD FIT, TRAINING, and GOOD TO KNOW. Its rules come from published adoption research, chiefly Markowitz (2020), which compared 676,004 Petfinder profiles of adopted and unadopted pets, and Kelling et al. (2026), which tested how 561 readers understood adoption-ad wording. Rix et al. (2021) and Archer et al. (2025) add the voice and breed-label rules. `references/research-basis.md` cites each study and checks the rules against the Shelter Animals Count adoptions checklist.
+After installing, start a new conversation and paste in what you know about the animal: walk notes, foster notes, staff memos, or the current profile you want to improve. Then ask, for example:
 
-- **Observed behavior, told as a scene.** It describes behavior that someone observed, from the side of a person spending time with the animal, and it does not predict how the animal will act in a new home. It writes behaviors rather than trait labels such as "timid" or "reactive", always in the third person, and leaves the breed to the attribute panel.
-- **One or two light struggles.** Every card names at least one struggle an adopter would notice and no more than two, each with where it happens or how it is improving. The rest of the record goes to the shelter's history review before the meet.
-- **Disclosure without alarm.** Placement constraints stay on the card. Bites, attacks, guarding that made contact, incidents with children, and harm to cats or small animals do not go on the card. Instead the card says the shelter will review the animal's history with the adopter before they meet.
-- **No gatekeeping.** It cuts conditions placed on the applicant ("experienced owners only") and keeps limits on the home ("no cats"). When a tag narrows a broad one, such as "No Small Kids" beside "Good with Kids", the card states the limit with the yes.
-- **Measured length.** It targets 175 to 250 words and 3 to 5 photos.
+> Write an adoption profile for Biscuit from these notes.
 
-`scripts/check_draft.py` checks a draft's headings, word count, struggle share, trait words, shelter-setting words (for review), first-person pronouns, breed words, banned phrases, and the Diamond Dog message. It needs only the Python 3 standard library:
-
-```
-python3 scripts/check_draft.py path/to/draft.md
-```
-
-Run it from the skill folder. It exits 0 when the draft passes and 1 when it lists fixes.
-
-The profile examples use `[Name]` and `[Shelter]` placeholders. Replace them with your animal and your organization.
+The [plugin's page](plugins/adoption-profile-writing/) explains what the profile looks like, why it's written that way, and what the plugin does with your notes.
 
 ## License
 
