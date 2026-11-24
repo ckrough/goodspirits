@@ -1,67 +1,70 @@
 # goodspirits
 
-Tools for animal-rescue volunteers and staff. The first one writes adoption profiles: the bios, kennel cards, and listings that help an animal find a home. You give Claude what you know about the animal, and it writes a profile based on what research says helps adopters respond.
+Free writing helpers for people who volunteer or work at animal shelters and rescues. I volunteer with a shelter, built these tools for that work, and shaped them so any rescue can use them.
 
-I volunteer with a shelter, and I built this for that work, generalized so any rescue can use it.
+The one helper here today writes **adoption profiles**: the short write-up about a dog or cat that goes on your website, kennel card, or adoption listing. You give it the animal's notes, and it gives you back an honest, warm profile that helps the right family say yes.
+
+It works inside Claude: the Claude app on your computer or phone, claude.ai in a web browser, Cowork, or Claude Code.
 
 ## Install
 
-You do not need to be technical. Paste this link into Claude (or another AI assistant) and ask it to install goodspirits for you:
+You don't need to know anything technical. Open Claude, paste this message, and send it:
 
-```
-https://github.com/ckrough/goodspirits
-```
+> Please install the plugins from https://github.com/ckrough/goodspirits for me.
 
-You can also paste `ckrough/goodspirits`. Claude will walk you through the few clicks it needs from you.
+Claude reads this page and either installs the plugin for you or walks you through a few clicks. It takes about two minutes. If Claude can't open web links, follow the steps below for your app yourself.
 
 ### For the agent doing the install
 
-The person asking is likely not technical. Do the steps you can, and walk them through the ones only they can do, one step at a time, in plain words. Use no terminal commands unless they are in Claude Code. This repository is a plugin marketplace named `goodspirits`, with one plugin, `adoption-profile-writing`.
+You are helping someone who may not be technical. Use plain words, give one step at a time, and wait for them to say each step is done before you give the next. Don't ask them to open a terminal unless they are already using Claude Code.
 
-Pick the surface the person is using.
+This repository is a plugin marketplace named `goodspirits`. It holds one plugin, `adoption-profile-writing` (shown as **Adoption Profile Writing**). Install that plugin. Work out which app the person is using, then follow the matching steps.
 
-**Claude on the web, the desktop app, or Cowork.** You cannot click these buttons, so tell the person:
+**Claude app on the desktop or phone, claude.ai in a browser, or Cowork.** You can't press these buttons yourself, so guide the person through them:
 
-1. Open Customize, then Plugins.
-2. Select Add, then Add marketplace.
-3. Enter `ckrough/goodspirits`.
-4. Find Adoption Profile Writing under Discover and select Add.
+1. Open **Customize** in the sidebar, then choose **Plugins**.
+2. Choose **Add**, then **Add marketplace**.
+3. Type `ckrough/goodspirits` and confirm.
+4. Find **Adoption Profile Writing** in the list (under **Discover**) and choose **Add**.
 
-The plugin is saved to their account, so it also shows up in Claude Code signed in to the same account (after `/reload-plugins`).
+The plugin is saved to their Claude account, so it also works in chat, in Cowork, and in Claude Code signed in to the same account. A new conversation or task picks it up.
 
-**Claude Code.** Run these, then `/reload-plugins`:
+**Claude Code.** Run these yourself if you can run commands. Otherwise ask the person to type them into Claude Code one at a time:
 
 ```
 /plugin marketplace add ckrough/goodspirits
 /plugin install adoption-profile-writing@goodspirits
+/reload-plugins
 ```
 
-From a shell, this does both steps in one command: `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits`.
+From a terminal, one command does the first two steps: `claude plugin install adoption-profile-writing --marketplace ckrough/goodspirits`.
 
-**Another assistant that reads Agent Skills.** Copy the folder `plugins/adoption-profile-writing/skills/adoption-profile-writing/` from this repository into that assistant's skills folder.
+**Another agent app that supports Agent Skills.** Copy the folder [`plugins/adoption-profile-writing/skills/adoption-profile-writing`](plugins/adoption-profile-writing/skills/adoption-profile-writing/) into that app's skills folder, keeping the folder name. The skill's instructions are in `SKILL.md` inside it.
 
-**Confirm it worked.** Ask Claude to write an adoption profile for an animal and check that the Adoption Profile Writing skill loads.
+**Check that it worked.** Ask the person to start a new conversation and say "Help me write an adoption profile." Claude should use the Adoption Profile Writing skill and ask for the animal's notes.
 
-**If a step fails.**
+**If a step fails:**
 
-- There is no Add marketplace option: on a Team or Enterprise plan, an owner may have turned it off. Ask the person to request it from their organization's owner.
-- The plan has no plugins: tell the person, and use the skill-folder copy above if their assistant supports it.
-- The marketplace already exists: skip to step 4 (or the `/plugin install` command).
-- The skill works without Python. The draft checker described in the plugin README is optional.
+- *No Add marketplace option, or adding it is refused.* On a Team or Enterprise plan, the organization's Owner decides whether members can add marketplaces. Ask the person to send their Owner this page's link.
+- *No Plugins page at all.* Their plan or app version may not offer plugins. Use the Claude Code steps if they have Claude Code, or the Agent Skills copy step in another app.
+- *"Marketplace already added."* That's fine. Go straight to installing the plugin.
+- *No Python on their computer.* That's fine too. The plugin's draft checker is optional, and the skill checks drafts by hand without it.
+
+Don't run the repository's `make` commands or edit any files to install. Those are for people who maintain this project.
 
 ## What's included
 
 | Plugin | What it does |
 |---|---|
-| [adoption-profile-writing](plugins/adoption-profile-writing/) | Writes and rewrites adoptable-pet profiles (bios, kennel cards, listings) from the animal's own record. |
+| [Adoption Profile Writing](plugins/adoption-profile-writing/) | Writes and rewrites adoptable-pet profiles (bios, kennel cards, listings) from the animal's own notes. |
 
 ## Using it
 
-Ask Claude to write a profile and paste in what you know about the animal. For example:
+After installing, start a new conversation and paste in what you know about the animal: walk notes, foster notes, staff memos, or the current profile you want to improve. Then ask, for example:
 
-> Write an adoption profile for this dog. Here are the intake notes and what the volunteers have seen: ...
+> Write an adoption profile for Biscuit from these notes.
 
-The plugin's [README](plugins/adoption-profile-writing/README.md) describes the result and the research behind it.
+The [plugin's page](plugins/adoption-profile-writing/) explains what the profile looks like and why it's written that way.
 
 ## License
 

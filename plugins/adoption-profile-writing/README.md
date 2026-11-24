@@ -1,33 +1,61 @@
-# adoption-profile-writing
+# Adoption Profile Writing
 
-A Claude skill that writes and rewrites adoptable-pet profiles (bios, kennel cards, listings) from the animal's own record.
+Writes the profile an adopter reads about a dog or cat in your care: the bio on your website, the kennel card, or the adoption listing. You give Claude the animal's own notes, and it writes a profile that is honest about behavior, warm to read, and built on published research about which profiles get pets adopted.
 
-To install it, follow the [install steps in the main README](../../README.md#install).
+## Install
 
-## Using it
+Paste this into Claude and send it:
 
-Ask Claude to write a profile and paste in what you know about the animal: the intake notes, behavior notes, tags, and anything staff or volunteers have observed. For example, "Write an adoption profile for this dog" followed by the record. The skill loads on its own.
+> Please install the plugins from https://github.com/ckrough/goodspirits for me.
 
-The result is a profile in four sections: ABOUT, HOUSEHOLD FIT, TRAINING, and GOOD TO KNOW.
+Claude will install it or walk you through a few clicks. The [install section](../../README.md#install) on the main page has the full steps for each app.
 
-## What the skill does
+In Claude Code, one line does it:
 
-The skill drafts a profile in four sections. Its rules come from published adoption research, chiefly Markowitz (2020), which compared 676,004 Petfinder profiles of adopted and unadopted pets, and Kelling et al. (2026), which tested how 561 readers understood adoption-ad wording. Rix et al. (2021) and Archer et al. (2025) add the voice and breed-label rules. `skills/adoption-profile-writing/references/research-basis.md` cites each study and checks the rules against the Shelter Animals Count adoptions checklist.
+```
+/plugin install adoption-profile-writing --marketplace ckrough/goodspirits
+```
 
-- **Observed behavior, told as a scene.** It describes behavior that someone observed, from the side of a person spending time with the animal, and it does not predict how the animal will act in a new home. It writes behaviors rather than trait labels such as "timid" or "reactive", always in the third person, and leaves the breed to the attribute panel.
-- **One or two light struggles.** Every card names at least one struggle an adopter would notice and no more than two, each with where it happens or how it is improving. The rest of the record goes to the shelter's history review before the meet.
-- **Disclosure without alarm.** Placement constraints stay on the card. Bites, attacks, guarding that made contact, incidents with children, and harm to cats or small animals do not go on the card. Instead the card says the shelter will review the animal's history with the adopter before they meet.
-- **No gatekeeping.** It cuts conditions placed on the applicant ("experienced owners only") and keeps limits on the home ("no cats"). When a tag narrows a broad one, such as "No Small Kids" beside "Good with Kids", the card states the limit with the yes.
-- **Measured length.** It targets 175 to 250 words and 3 to 5 photos.
+## How to use it
 
-The profile examples use `[Name]` and `[Shelter]` placeholders. Replace them with your animal and your organization.
+1. Start a new conversation in Claude.
+2. Paste in what you know about the animal: walk notes, foster notes, staff memos from your shelter's records system, or the current profile if you want it rewritten.
+3. Ask, for example: "Write an adoption profile for Biscuit from these notes."
 
-## Optional draft checker
+Claude writes from the notes you give it and doesn't guess. If the notes are thin, it asks you for more instead of making things up.
 
-`skills/adoption-profile-writing/scripts/check_draft.py` checks a draft's headings, word count, struggle share, trait words, shelter-setting words (for review), first-person pronouns, breed words, banned phrases, and the Diamond Dog message. It needs only the Python 3 standard library, and the skill works without it:
+## What you get
+
+A profile of about 175 to 250 words in four short sections:
+
+- **About**: what spending time with the animal is like, told as a small scene.
+- **Household fit**: kids, other pets, and the kind of home that suits them.
+- **Training**: what they already know and what they're working on.
+- **Good to know**: one or two honest challenges an adopter would notice, with how they're improving.
+
+It also suggests using 3 to 5 photos. The examples use `[Name]` and `[Shelter]` as placeholders; Claude fills in your animal's name and your organization.
+
+## Why it's written this way
+
+The rules come from published adoption research, chiefly Markowitz (2020), which compared 676,004 Petfinder profiles of adopted and unadopted pets, and Kelling et al. (2026), which tested how 561 readers understood adoption-ad wording. Rix et al. (2021) and Archer et al. (2025) add the voice and breed-label rules. [`research-basis.md`](skills/adoption-profile-writing/references/research-basis.md) cites each study and checks the rules against the Shelter Animals Count adoptions checklist.
+
+- **Behavior someone saw, told as a scene.** The profile describes what someone actually observed, from the side of a person spending time with the animal. It doesn't predict how the animal will act in a new home. It describes behaviors instead of labels such as "timid" or "reactive", writes in the third person, and leaves the breed to your listing's breed field.
+- **One or two honest struggles.** Every profile names at least one struggle an adopter would notice and no more than two, each with where it happens or how it's improving. The rest of the record is for the shelter's history review before the meet.
+- **Disclosure without alarm.** Limits on placement stay on the card. Bites, attacks, guarding that made contact, incidents with children, and harm to cats or small animals don't go on the card. Instead the card says the shelter will review the animal's history with the adopter before they meet.
+- **No gatekeeping.** It cuts conditions placed on the adopter ("experienced owners only") and keeps limits on the home ("no cats"). When a narrower tag sits beside a broad one, such as "No Small Kids" beside "Good with Kids", the profile states the limit along with the yes.
+
+## Optional: the draft checker
+
+The plugin includes a small checker, [`check_draft.py`](skills/adoption-profile-writing/scripts/check_draft.py), that Claude runs on each draft when Python is available. It checks the headings, word count, how much of the profile covers struggles, trait words, shelter-setting words, first-person pronouns, breed words, banned phrases, and the Diamond Dog message. You don't need to run it yourself, and the skill checks drafts by hand when Python isn't there.
+
+To run it yourself, from the `skills/adoption-profile-writing` folder:
 
 ```
 python3 scripts/check_draft.py path/to/draft.md
 ```
 
-Run it from the skill folder. It exits 0 when the draft passes and 1 when it lists fixes.
+It exits 0 when the draft passes and 1 when it lists fixes. It needs only Python 3.
+
+## License
+
+Apache License 2.0. See [LICENSE](../../LICENSE).
