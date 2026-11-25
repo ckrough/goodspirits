@@ -197,10 +197,10 @@ HOUSEHOLD FIT
 In groups of dogs at the shelter, [Name] plays chase with dogs her size, and she gives another dog room when it growls or turns away. On leash she walks past other dogs without barking or pulling. She has not been tested with cats, and how she does with children is not known.
 
 TRAINING
-[Name] knows sit, down, and wait, and she is learning to come when called. She waits at her door until her walker says "okay," and she works eagerly for treats.
+[Name] knows sit, down, and wait. She waits at her door until you say "okay," then trots out beside you for her walk.
 
 GOOD TO KNOW
-[Name] jumps up to greet people when she is excited, mostly at her door, and it eases once she is out walking. She pulls toward joggers and bikes on walks and is learning to turn back to her walker.
+[Name] jumps up to greet people when she is excited, mostly at her door, and it eases once she is out walking. She pulls toward joggers and bikes on walks and is learning to turn back to you.
 
 [Name] is a [Shelter] Diamond Dog: [Shelter] provides training and guidance to help you settle her into her new home, at no cost to you.
 
