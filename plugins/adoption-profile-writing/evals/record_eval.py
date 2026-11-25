@@ -1,13 +1,17 @@
 """Record a summary of each model's `claude plugin eval` run in evals/history/, for committing.
 
 Usage: python3 record_eval.py [--plugin DIR] [--model MODEL] [aggregate-result.json ...]
+       python3 record_eval.py [--plugin DIR] --stamp SWEEP_DIR
 
-`make eval` runs the suite once per writer model into evals/results/<sweep>/<model>/.
+`make eval` stamps each sweep directory with --stamp before it runs (the commit and any
+uncommitted plugin changes), runs the suite once per writer model into
+evals/results/<sweep>/<model>/, and marks the sweep complete when every model finished.
 With no result named, this records every model's run in the newest sweep, one file each,
 named <run-start>_<commit>_<model>.json. The result file does not name the writer model,
-so it is read from the run's directory, or from --model for a named result. Each summary
-names the commit of the skill that ran, so it refuses when the plugin has uncommitted
-changes, or when the plugin's last commit is newer than a run. Standard library only.
+so it is read from the run's directory, or from --model for a single named result. Each
+summary names the commit of the skill that ran, so it refuses a sweep that ran at another
+commit, started with uncommitted plugin changes, or did not finish, and it refuses while
+the plugin has uncommitted changes. Standard library only.
 """
 
 from __future__ import annotations
@@ -22,6 +26,9 @@ from pathlib import Path
 
 # Run output that changes without changing the skill under test.
 IGNORED_DIRS = ("evals/results/", "evals/history/")
+# Written into each sweep directory: the commit and changes it started with, and its completion.
+STAMP = "source.json"
+COMPLETE = "complete"
 
 
 def git(cwd: Path, *args: str) -> str:
@@ -50,10 +57,26 @@ def uncommitted_changes(plugin: Path) -> list[str]:
     return blocking
 
 
-def last_plugin_commit_time(plugin: Path) -> datetime:
-    excludes = [f":(exclude){d}" for d in IGNORED_DIRS]
-    stamp = git(plugin, "log", "-1", "--format=%cI", "--", ".", *excludes).strip()
-    return datetime.fromisoformat(stamp)
+def stamp_sweep(plugin: Path, sweep_dir: Path) -> None:
+    """Record the commit a sweep starts at, and any uncommitted plugin changes it starts with."""
+    sweep_dir.mkdir(parents=True, exist_ok=True)
+    source = {"commit": git(plugin, "rev-parse", "HEAD").strip(), "uncommitted": uncommitted_changes(plugin)}
+    (sweep_dir / STAMP).write_text(json.dumps(source, indent=2) + "\n", encoding="utf-8")
+
+
+def sweep_problem(sweep_dir: Path, head: str) -> str | None:
+    """Why a sweep cannot be recorded against HEAD, or None when it can."""
+    stamp = sweep_dir / STAMP
+    if not stamp.is_file():
+        return f"{sweep_dir} has no record of the commit it ran at; run make eval, which stamps each sweep"
+    source = json.loads(stamp.read_text(encoding="utf-8"))
+    if source.get("uncommitted"):
+        return f"{sweep_dir} had uncommitted changes when it started, so no commit names the skill that ran"
+    if source.get("commit") != head:
+        return f"{sweep_dir} ran at {source.get('commit')}, not HEAD {head}"
+    if not (sweep_dir / COMPLETE).is_file():
+        return f"{sweep_dir} did not finish: make eval writes {COMPLETE} only after every model's run"
+    return None
 
 
 def case_tags(plugin: Path, case_dir: str) -> list[str]:
@@ -121,27 +144,38 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("results", nargs="*", type=Path, help="aggregate-result.json files (default: every model's run in the newest sweep)")
     parser.add_argument("--plugin", type=Path, default=Path(__file__).resolve().parent.parent, help="plugin directory")
-    parser.add_argument("--model", help="writer model of the named results (default: each result's directory name)")
+    parser.add_argument("--model", help="writer model of a single named result (default: the result's directory name)")
+    parser.add_argument("--stamp", type=Path, metavar="SWEEP_DIR", help="record the commit and changes a sweep starts with, then exit")
     args = parser.parse_args(argv)
     plugin = args.plugin.resolve()
+
+    if args.stamp:
+        stamp_sweep(plugin, args.stamp)
+        return 0
 
     changes = uncommitted_changes(plugin)
     if changes:
         print("refusing to record: the plugin has uncommitted changes, so no commit names the skill that ran:", file=sys.stderr)
         print("\n".join(changes), file=sys.stderr)
         return 1
-
-    paths = args.results or newest_sweep(plugin)
-    runs = []
-    for path in paths:
-        result = json.loads(path.read_text(encoding="utf-8"))
-        started = datetime.fromisoformat(result["startedAt"])
-        if last_plugin_commit_time(plugin) > started:
-            print(f"refusing to record: {path} started {result['startedAt']}, before the plugin's last commit, so it scored an older skill", file=sys.stderr)
-            return 1
-        runs.append((path, result, started))
+    if args.model and len(args.results) != 1:
+        print("refusing to record: --model names the writer of one named result only", file=sys.stderr)
+        return 1
 
     commit = git(plugin, "rev-parse", "HEAD").strip()
+    paths = [p.resolve() for p in args.results] or newest_sweep(plugin)
+    runs = []
+    for path in paths:
+        if path.parent.parent.parent.name != "results":
+            print(f"refusing to record: {path} is not in results/<sweep>/<model>/, so its sweep and model are unknown", file=sys.stderr)
+            return 1
+        problem = sweep_problem(path.parent.parent, commit)
+        if problem:
+            print(f"refusing to record: {problem}", file=sys.stderr)
+            return 1
+        result = json.loads(path.read_text(encoding="utf-8"))
+        runs.append((path, result, datetime.fromisoformat(result["startedAt"])))
+
     for path, result, started in runs:
         model = args.model or path.parent.name
         summary = summarize(result, commit, plugin, model, path.parent.parent.name)

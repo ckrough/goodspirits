@@ -212,7 +212,7 @@ What it shows:
 
 - The opening is a scene a reader can step into, and the rest of ABOUT THIS PET stays on what she seeks out: a knee to rest on, belly rubs, a stuffed toy.
 - Each household answer names its setting: groups of dogs at the shelter, on leash. Cats are stated as not observed and children as not known, matching the tags, with no hedge attached.
-- GOOD TO KNOW names two light struggles a reader can picture, says where the mouthing happens, and ends on progress. The card stays about the dog.
+- GOOD TO KNOW names two light struggles a reader can picture, says where the jumping happens, and ends on progress. The card stays about the dog.
 - For a Diamond Dog, the Diamond Dog message names the support, the way to meet her, and the history review before the meet.
 - The card tells shelter observations as life with her, the common case when a record has no foster notes.
 - The page address opens the card, so a listing-site reader sees the way to the shelter's page first.

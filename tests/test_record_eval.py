@@ -90,11 +90,23 @@ class RecordEvalTest(unittest.TestCase):
         git(self.repo, "commit", "-q", "-m", "init", date="2026-01-01T00:00:00Z")
         self.result = self.write_result(SWEEP, "agent-y")
 
-    def write_result(self, sweep: str, model: str) -> Path:
-        path = self.plugin / "evals/results" / sweep / model / "aggregate-result.json"
+    def write_result(self, sweep: str, model: str, stamp: bool = True) -> Path:
+        sweep_dir = self.plugin / "evals/results" / sweep
+        if stamp and not (sweep_dir / RECORDER.STAMP).exists():
+            self.stamp(sweep)
+        path = sweep_dir / model / "aggregate-result.json"
         path.parent.mkdir(parents=True)
         path.write_text(json.dumps(fixture_result()))
+        if stamp:
+            (sweep_dir / RECORDER.COMPLETE).touch()
         return path
+
+    def stamp(self, sweep: str) -> None:
+        sweep_dir = self.plugin / "evals/results" / sweep
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(out):
+            code = RECORDER.main(["--plugin", str(self.plugin), "--stamp", str(sweep_dir)])
+        self.assertEqual(code, 0, out.getvalue())
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -155,17 +167,54 @@ class RecordEvalTest(unittest.TestCase):
         code, out = self.record()
         self.assertEqual(code, 0, out)
 
-    def test_refuses_run_older_than_last_plugin_commit(self):
+    def test_refuses_sweep_run_at_another_commit(self):
         (self.plugin / "SKILL.md").write_text("changed after the run\n")
         git(self.repo, "commit", "-q", "-am", "later", date="2026-01-03T00:00:00Z")
         code, out = self.record()
         self.assertEqual(code, 1)
-        self.assertIn("before", out)
+        self.assertIn("ran at", out)
+        self.assertEqual(self.history(), [])
+
+    def test_refuses_sweep_started_with_uncommitted_changes(self):
+        (self.plugin / "SKILL.md").write_text("edited before the run\n")
+        self.write_result("2026-01-02T11-00-00Z", "agent-y")
+        (self.plugin / "SKILL.md").write_text("skill\n")
+        code, out = self.record()
+        self.assertEqual(code, 1)
+        self.assertIn("uncommitted changes when it started", out)
+        self.assertEqual(self.history(), [])
+
+    def test_refuses_sweep_that_did_not_finish(self):
+        (self.result.parent.parent / RECORDER.COMPLETE).unlink()
+        code, out = self.record()
+        self.assertEqual(code, 1)
+        self.assertIn("did not finish", out)
+
+    def test_refuses_sweep_without_a_stamp(self):
+        self.write_result("2026-01-02T11-00-00Z", "agent-y", stamp=False)
+        code, out = self.record()
+        self.assertEqual(code, 1)
+        self.assertIn("no record of the commit", out)
 
     def test_records_named_result(self):
         code, out = self.record(str(self.result))
         self.assertEqual(code, 0, out)
         self.assertEqual(len(self.history()), 1)
+
+    def test_model_flag_takes_one_named_result(self):
+        other = self.write_result(SWEEP, "agent-z")
+        code, out = self.record("--model", "agent-q", str(self.result), str(other))
+        self.assertEqual(code, 1)
+        self.assertIn("one named result", out)
+        self.assertEqual(self.history(), [])
+
+    def test_refuses_result_outside_the_sweep_layout(self):
+        stray = self.plugin / "evals/results/stray/aggregate-result.json"
+        stray.parent.mkdir(parents=True)
+        stray.write_text(json.dumps(fixture_result()))
+        code, out = self.record(str(stray))
+        self.assertEqual(code, 1)
+        self.assertIn("results/<sweep>/<model>/", out)
 
 
 if __name__ == "__main__":
