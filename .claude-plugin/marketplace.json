@@ -4,7 +4,7 @@
     "name": "Chris Krough",
     "email": "chris@krough.org"
   },
-  "description": "Claude Code plugins for animal-rescue volunteers and shelter staff: writing adoption profiles that are honest about behavior and built on adoption research.",
+  "description": "Claude plugins for animal-rescue volunteers and shelter staff: writing adoption profiles that are honest about behavior and built on adoption research.",
   "version": "0.5.0",
   "plugins": [
     {
