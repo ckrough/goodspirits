@@ -1,0 +1,723 @@
+{
+  "commit": "4274baf282de1bcd355af8f74bc5cfe8efa586ec",
+  "started_at": "2026-11-25T13:27:21.952Z",
+  "claude_version": "2.1.332",
+  "plugin_version": "0.5.0",
+  "sweep": "2026-11-25T13-27-21Z",
+  "model": "claude-sonnet-5-5",
+  "judge_model": "claude-opus-5-5",
+  "ablation": "with-without",
+  "duration_seconds": 4644,
+  "cost_usd": 17.497986200000007,
+  "mean_delta": 0.5016339869281046,
+  "cases": {
+    "case-bramble": {
+      "tags": [
+        "bite",
+        "placement-constraint",
+        "changed-record"
+      ],
+      "runs": 3,
+      "score_with": 0.8148148148148149,
+      "score_without": 0.5,
+      "delta": 0.3148148148148149,
+      "graders": {
+        "heading-about-this-pet": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-good-to-know": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-household-fit": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-training": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "history-review": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "latest-observation": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "matches-ideal": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.0,
+          "without": 1.0
+        },
+        "no-incident-words": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "placement-adult-only": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "profile-saved": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "record-fidelity": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.3333,
+          "without": 1.0
+        },
+        "rubric-absolute-claims": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-concreteness": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-first-person": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-length": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-observed": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-opening-and-flow": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "rubric-register": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-screening": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-social-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-struggles": {
+          "weight": 2,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "skill-fired": {
+          "weight": 1,
+          "scored": false,
+          "with": 1.0,
+          "without": null
+        }
+      }
+    },
+    "case-clover": {
+      "tags": [
+        "tag-conflict",
+        "foster-notes",
+        "changed-record"
+      ],
+      "runs": 3,
+      "score_with": 0.7962962962962964,
+      "score_without": 0.25,
+      "delta": 0.5462962962962964,
+      "graders": {
+        "adopter-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "cat-tag-conflict": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-about-this-pet": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-good-to-know": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-household-fit": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-training": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "hearsay-not-on-card": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "history-review": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "matches-ideal": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.0,
+          "without": 0.0
+        },
+        "profile-saved": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "record-fidelity": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.3333
+        },
+        "rubric-absolute-claims": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-concreteness": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-first-person": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-length": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-observed": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.3333
+        },
+        "rubric-opening-and-flow": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.0,
+          "without": 0.0
+        },
+        "rubric-register": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-screening": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-social-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-struggles": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "skill-fired": {
+          "weight": 1,
+          "scored": false,
+          "with": 1.0,
+          "without": null
+        },
+        "surrender-reason": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        }
+      }
+    },
+    "case-juniper": {
+      "tags": [
+        "changed-record",
+        "placement-constraint"
+      ],
+      "runs": 3,
+      "score_with": 0.8039215686274509,
+      "score_without": 0.36274509803921573,
+      "delta": 0.44117647058823517,
+      "graders": {
+        "heading-about-this-pet": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-good-to-know": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-household-fit": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-training": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "history-review": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "latest-observation": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.6667
+        },
+        "matches-ideal": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 1.0
+        },
+        "placement-adults-no-small-animals": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "profile-saved": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "record-fidelity": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.3333,
+          "without": 0.3333
+        },
+        "rubric-absolute-claims": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-concreteness": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-first-person": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-length": {
+          "weight": 2,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "rubric-observed": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "rubric-opening-and-flow": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.3333,
+          "without": 0.0
+        },
+        "rubric-register": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-screening": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-social-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-struggles": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "skill-fired": {
+          "weight": 1,
+          "scored": false,
+          "with": 1.0,
+          "without": null
+        }
+      }
+    },
+    "case-marlow": {
+      "tags": [
+        "placement-constraint"
+      ],
+      "runs": 3,
+      "score_with": 0.784313725490196,
+      "score_without": 0.22549019607843138,
+      "delta": 0.5588235294117646,
+      "graders": {
+        "guarding-disclosed": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-about-this-pet": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-good-to-know": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-household-fit": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-training": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "history-review": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "matches-ideal": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.3333
+        },
+        "placement-adults-no-cats": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "profile-saved": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "record-fidelity": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.0,
+          "without": 0.0
+        },
+        "rubric-absolute-claims": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-concreteness": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-first-person": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-length": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-observed": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.3333
+        },
+        "rubric-opening-and-flow": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.3333,
+          "without": 0.0
+        },
+        "rubric-register": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.3333
+        },
+        "rubric-screening": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-social-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-struggles": {
+          "weight": 2,
+          "scored": true,
+          "with": 0.3333,
+          "without": 0.0
+        },
+        "skill-fired": {
+          "weight": 1,
+          "scored": false,
+          "with": 1.0,
+          "without": null
+        }
+      }
+    },
+    "case-tansy": {
+      "tags": [
+        "placement-constraint"
+      ],
+      "runs": 3,
+      "score_with": 0.8823529411764706,
+      "score_without": 0.2352941176470588,
+      "delta": 0.6470588235294118,
+      "graders": {
+        "heading-about-this-pet": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-good-to-know": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-household-fit": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "heading-training": {
+          "weight": 0.5,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "history-review": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "matches-ideal": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.3333
+        },
+        "placement-no-cats": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "profile-saved": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "record-fidelity": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.3333,
+          "without": 0.0
+        },
+        "rubric-absolute-claims": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-concreteness": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-first-person": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-length": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-observed": {
+          "weight": 3,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "rubric-opening-and-flow": {
+          "weight": 3,
+          "scored": true,
+          "with": 0.6667,
+          "without": 0.0
+        },
+        "rubric-register": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-screening": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-social-words": {
+          "weight": 1,
+          "scored": true,
+          "with": 1.0,
+          "without": 1.0
+        },
+        "rubric-struggles": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        },
+        "skill-fired": {
+          "weight": 1,
+          "scored": false,
+          "with": 1.0,
+          "without": null
+        },
+        "snap-not-on-card": {
+          "weight": 2,
+          "scored": true,
+          "with": 1.0,
+          "without": 0.0
+        }
+      }
+    }
+  }
+}
