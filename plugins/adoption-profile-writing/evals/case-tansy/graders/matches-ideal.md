@@ -13,7 +13,7 @@ Tansy is a lap dog once she knows you: she climbs in, gives kisses, and leans ag
 
 HOUSEHOLD FIT
 
-Tansy play bows and hops around her favorite dogs, and she has played with several in groups. Cats are another matter: in a home with cats, she locked onto one so intently that the introduction had to stop. How she does with children is not known.
+Tansy play bows and hops around her favorite dogs, and she has played with several in groups. Cats are another matter: in a home with cats, she locked onto one and took a long while to settle afterward. How she does with children is not known.
 
 TRAINING
 
@@ -29,7 +29,7 @@ To meet Tansy, please submit an adoption application. Hollowbrook Animal Rescue 
 
 Required facts, in any wording:
 
-1. At an introduction in a home with cats, she locked onto one so intently that the introduction had to stop.
+1. In a home with cats, she locked onto one and took a long while to settle afterward.
 2. How she does with children is not known.
 3. She has played with dogs in groups.
 4. She takes time to warm up to new people and may bark, growl, and pull toward a stranger on walks, and practice has made her calmer.

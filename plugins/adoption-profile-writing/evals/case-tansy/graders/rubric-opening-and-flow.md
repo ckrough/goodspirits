@@ -9,7 +9,7 @@ Rubric dimensions 6 and 10, identity-forward opening and narrative flow. The car
 
 What each section is for:
 - ABOUT THIS PET builds the picture. It moves through typical moments with the animal, drawn from what the animal does again and again, and something in each sentence puts the reader there: the reader as "you", what brings the behavior out ("Bring out a ball and", "Once he warms up to someone"), where or when it happens, or what comes next.
-- HOUSEHOLD FIT goes topic by topic through who the animal would live with: other dogs, cats, small animals, children, people it does not know. That order is its structure, not a list, as long as each topic says what the animal did or does ("she locked onto one so intently that the introduction had to stop") rather than giving a bare verdict ("No cats. Good with dogs.").
+- HOUSEHOLD FIT goes topic by topic through who the animal would live with: other dogs, cats, small animals, children, people it does not know. That order is its structure, not a list, as long as each topic says what the animal did or does ("when a cat crosses the yard, she rushes the fence and barks until it is out of sight") rather than giving a bare verdict ("No cats. Good with dogs.").
 - TRAINING names what the animal knows and how it works with a person. It may be short.
 
 FAIL when any of these holds:

@@ -4,7 +4,7 @@ Tansy is a lap dog once she knows you: she climbs in, gives kisses, and leans ag
 
 HOUSEHOLD FIT
 
-Tansy play bows and hops around her favorite dogs, and she has played with several in groups. Cats are another matter: in a home with cats, she locked onto one so intently that the introduction had to stop. How she does with children is not known.
+Tansy play bows and hops around her favorite dogs, and she has played with several in groups. Cats are another matter: in a home with cats, she locked onto one and took a long while to settle afterward. How she does with children is not known.
 
 TRAINING
 
