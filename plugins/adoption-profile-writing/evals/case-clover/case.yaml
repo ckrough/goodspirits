@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: case-clover
+tags: [tag-conflict, foster-notes, changed-record]
+context:
+  scaffold_script: fixture.sh

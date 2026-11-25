@@ -58,6 +58,33 @@ After installing, start a new conversation and paste in what you know about the 
 
 The [plugin's page](plugins/adoption-profile-writing/) explains what the profile looks like, why it's written that way, and what the plugin does with your notes.
 
+## Evals
+
+This section is for people who maintain the plugin.
+
+The plugin carries an eval suite under `plugins/adoption-profile-writing/evals/`, run by Claude Code's built-in `claude plugin eval`. Each case gives the skill one anonymized shelter record and asks for a profile, then scores the draft against an ideal profile written for that record, plus graders for the rules the record tests: a bite kept off the card, a placement limit shown as the behavior behind it rather than stated, and a record whose later entries overrule its earlier ones. Every case also runs without the skill, so the report shows each case's score with the skill, without it, and the difference.
+
+```
+make eval          # run every case on the skill's pinned writer model (paid model calls; run outside the Claude sandbox)
+make eval-record   # write each model's summary from the newest sweep to evals/history/, for committing
+```
+
+`make eval` stamps each sweep with the commit it starts at and marks it complete when it finishes, and `make eval-record` refuses a sweep that ran at another commit, started with uncommitted plugin changes, or did not finish, so each committed summary names the commit of the skill it scored. The skill pins `model: claude-sonnet-5-5` in its frontmatter, so it runs on Sonnet 5.5 whatever the session model, and a sweep writes with Sonnet 5.5 to match. `make eval` refuses any other writer: the pin takes over once the skill fires, so the with-skill arm would run on Sonnet and the without-skill arm on the other model. The baseline sweep showed Haiku, Sonnet, and Opus 5.5 within a few points of each other on every case, so the skill, not the model, is what limits the card. Every run is judged by `claude-opus-5-5`, a stronger model than the writer, unless `JUDGE_MODEL=<model>` is given, and each summary records both models. Sweeps judged by Sonnet 5.5, the baseline included, do not compare with Opus-judged ones. A score is a signal to read per case, not a verdict: the judge is a Claude model grading a Claude draft, and five cases cannot show a small difference between two versions of the skill.
+
+A marketplace install copies the whole plugin folder, so `evals/` ships with it. The cases are de-identified.
+
+To add a case, create `evals/case-<pseudonym>/` with:
+
+- `resources/record.md`: the record, de-identified, opening with a `Listing attributes:` block (Kids, Dogs, Cats, as the shelter's listing shows them). No real name of an animal or a person, no shelter ID, address, or calendar date; dates become days, weeks, or months from intake. No year anywhere in the case, citations included.
+- `deidentification.md`: each change, named by its ISO/IEC 20889 technique (pseudonymization, generalization, or suppression).
+- `ideal.md`: the ideal profile, passing `check_draft.py`. Two ideals run over its 250-word band and are kept: `case-clover` is the operator's published Description with its HOUSEHOLD FIT corrected against the record (29 over), and `case-marlow` carries two program blocks and an opening section the operator approved at that length (18 over).
+- `case.yaml`: `schema_version: "1.1"`, `name`, `tags: [..]` in flow form (`bite`, `placement-constraint`, `changed-record`, `tag-conflict`, `foster-notes`, and `ideal-pending` until the ideal is approved), and `context: scaffold_script: fixture.sh`.
+- `fixture.sh`, copied unchanged from another case: it copies `resources/` into the run's workspace.
+- `prompt.md`: the request, asking for the profile saved to `profile.md`.
+- `graders/`: copy the shared graders unchanged from another case (`profile-saved`, `skill-fired`, the four headings, and the `rubric-*` graders: regexes carrying the FOHA profile grader's lexicons for first-person voice, social words, adopter screening, and absolute claims, and judge graders for its register, concreteness, observed-not-promised, opening and flow, struggle balance, and length dimensions), then paste the ideal into `matches-ideal.md` and list under it the 3 to 5 required facts a card must state; the ideal's other facts are optional. Copy `record-fidelity.md` from another case and replace everything after "The record:" with the new record, so the judge can fail a card that says what the record does not. Add a grader per rule the record tests.
+
+`tests/test_evals.py`, part of `make check`, checks each case's files, tags, and graders, that the shared graders are identical in every case, that each ideal passes its case's regex graders, that `matches-ideal.md` embeds `ideal.md`, that `record-fidelity.md` ends with `record.md` under the same instructions in every case, and that no case holds a calendar date.
+
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE) for the full text.

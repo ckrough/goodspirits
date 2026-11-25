@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with this repository.
 
-goodspirits is a Claude plugin marketplace for animal-rescue volunteers and staff. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py`, a standard-library Python checker, plus Markdown skill files.
+goodspirits is a Claude plugin marketplace for animal-rescue volunteers and staff. Its one plugin, `adoption-profile-writing`, writes shelter adoption profiles. The only code is two standard-library Python scripts, the draft checker `plugins/adoption-profile-writing/skills/adoption-profile-writing/scripts/check_draft.py` and the eval recorder `plugins/adoption-profile-writing/evals/record_eval.py`, plus Markdown skill files and the eval suite under `plugins/adoption-profile-writing/evals/`.
 
 ## Installing for a user
 
@@ -22,6 +22,10 @@ Do not run `make` targets or edit files in this repository to install. The secti
 | `make format` | `uvx ruff@0.17.5 format plugins tests` |
 | `make check` | `make test`, then `make lint` |
 | `make verify` | `make check`, then `claude plugin validate` on the marketplace and on the plugin |
+| `make eval` | One sweep: `claude plugin eval` on the working-tree plugin once per writer model in `$(MODELS)` (default `claude-sonnet-5-5`, the model the skill pins), each with `--model`, `--judge-model $(JUDGE_MODEL)` (default `claude-opus-5-5`, a stronger model than the writer), `--threshold 0`, `--no-publish`, `--scaffold`, `--trust-plugin`, `--allow-tools Write`, and `--output-dir evals/results/<sweep>/<model>/` |
+| `make eval-record` | `evals/record_eval.py`: writes a summary of each model's run in the newest sweep, with the model and judge, to `evals/history/<run-start>_<hash>_<model>.json`, refusing when the plugin has uncommitted changes, or when the sweep ran at another commit, started with uncommitted plugin changes, or did not finish (`make eval` stamps each sweep with its commit and marks it complete) |
+
+`make eval` makes paid model calls (the five cases three times with and three times without the skill, 30 runs, about 45 minutes; the Opus judge costs more than the $5 the Sonnet judge did) and cannot start its agents inside the Claude sandbox, so run it as `! make eval`. It stays out of `check`, `verify`, and CI. Its raw output under `evals/results/` is gitignored; commit only the summaries `make eval-record` writes. The writer is the model the skill pins in its frontmatter; `make eval` refuses any other in `MODELS`, because the pin takes over once the skill fires and the with- and without-skill arms would run on different models. Change the judge with `JUDGE_MODEL=<model>`. Compare scores only between runs with the same writer model and judge, and with no change to the graders between their commits.
 
 `format` is kept out of `check` on purpose, so the curated phrase lists in `check_draft.py` stay dense.
 

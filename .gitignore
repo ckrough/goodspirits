@@ -2,3 +2,4 @@
 .claude/*
 !.claude/settings.json
 __pycache__/
+plugins/adoption-profile-writing/evals/results/
